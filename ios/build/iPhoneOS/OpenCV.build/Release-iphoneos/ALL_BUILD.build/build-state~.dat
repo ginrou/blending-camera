@@ -1,0 +1,28 @@
+TALL_BUILD
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ALL_BUILD.build/Script-CAB4F029A69041F8971D498A.sh
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ALL_BUILD.build/Script-CAB4F029A69041F8971D498A.sh
+c000000005055AFD700000000000000E4
+t1347792855
+s228
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesbd701b57e705b641^23dd1b57e705b641^---0#1#0#--18"Check dependencies36"034F18B4-2651-473E-9B3A-AC251976F455-
+
+CPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ALL_BUILD.build/Script-CAB4F029A69041F8971D498A.sh
+s369485655.110226
+e369485655.167970
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ALL_BUILD.build/Script-CAB4F029A69041F8971D498A.sh
+oecho ""
+o
+oecho Build\ all\ projects
+oBuild all projects
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'85971c57e705b641^26002b57e705b641^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-369485655#0#8#-0#-----2@26"echo Build\ all\ projects-369485655#9#26#-0#-----2@19"Build all projects-369485655#35#19#-0#-----0#0#0#--417"PhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ALL_BUILD.build/Script-CAB4F029A69041F8971D498A.sh    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    /bin/sh -c /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ALL_BUILD.build/Script-CAB4F029A69041F8971D498A.sh36"2B7015BE-0417-4BC6-A7CB-566DA2E7EAD3-
+

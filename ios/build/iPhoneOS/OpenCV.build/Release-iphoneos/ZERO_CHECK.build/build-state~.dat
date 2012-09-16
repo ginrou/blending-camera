@@ -1,0 +1,28 @@
+TZERO_CHECK
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ZERO_CHECK.build/Script-740FA8E3E8164AB4BCA93D0D.sh
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ZERO_CHECK.build/Script-740FA8E3E8164AB4BCA93D0D.sh
+c000000005055AF6600000000000000E5
+t1347792742
+s229
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciese09ccde6e605b641^49bdcfe6e605b641^---0#1#0#--18"Check dependencies36"E5AD77BB-E477-4EAD-8928-199258F8AAAD-
+
+CPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ZERO_CHECK.build/Script-740FA8E3E8164AB4BCA93D0D.sh
+s369485542.973552
+e369485543.109043
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ZERO_CHECK.build/Script-740FA8E3E8164AB4BCA93D0D.sh
+oecho ""
+o
+omake -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/CMakeScripts/ReRunCMake.make
+omake[1]: `CMakeFiles/cmake.check_cache' is up to date.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'e59bf9e6e605b641^9aec1be7e605b641^-171"echo ""make -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/CMakeScripts/ReRunCMake.makemake[1]: `CMakeFiles/cmake.check_cache' is up to date.3(21%IDEActivityLogMessage2@8"echo ""-369485543#0#8#-0#-----2@107"make -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/CMakeScripts/ReRunCMake.make-369485543#9#107#-0#-----2@55"make[1]: `CMakeFiles/cmake.check_cache' is up to date.-369485543#116#55#-0#-----0#0#0#--419"PhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ZERO_CHECK.build/Script-740FA8E3E8164AB4BCA93D0D.sh    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    /bin/sh -c /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/OpenCV.build/Release-iphoneos/ZERO_CHECK.build/Script-740FA8E3E8164AB4BCA93D0D.sh36"A659F30E-9D69-470D-B4C8-F21DD290AD07-
+

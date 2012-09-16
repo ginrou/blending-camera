@@ -1,0 +1,24 @@
+dependencies: \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/world/src/world_init.cpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/world/src/precomp.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/cvconfig.h \
+  /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/opencv2/opencv_modules.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/video/include/opencv2/video/video.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/video/include/opencv2/video/tracking.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/core.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/types_c.h \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/version.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/operations.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/mat.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include/opencv2/imgproc/imgproc.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include/opencv2/imgproc/types_c.h \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/core_c.h \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/video/include/opencv2/video/background_segm.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include/opencv2/features2d/features2d.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include/opencv2/flann/miniflann.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include/opencv2/flann/defines.h \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include/opencv2/flann/config.h \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include/opencv2/nonfree/nonfree.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include/opencv2/nonfree/features2d.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/ml/include/opencv2/ml/ml.hpp \
+  /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/world/include/opencv2/world/world.hpp

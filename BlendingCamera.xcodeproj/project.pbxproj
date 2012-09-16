@@ -20,6 +20,8 @@
 		9A8E2F591605E25400391C57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3A1605E25400391C57 /* Foundation.framework */; };
 		9A8E2F611605E25400391C57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8E2F5F1605E25400391C57 /* InfoPlist.strings */; };
 		9A8E2F641605E25400391C57 /* BlendingCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F631605E25400391C57 /* BlendingCameraTests.m */; };
+		9A8E2F6E1605E9B200391C57 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F6D1605E9B200391C57 /* opencv2.framework */; };
+		9A8E2F79160620F700391C57 /* BCImageConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F78160620F700391C57 /* BCImageConverter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,9 @@
 		9A8E2F601605E25400391C57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9A8E2F621605E25400391C57 /* BlendingCameraTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlendingCameraTests.h; sourceTree = "<group>"; };
 		9A8E2F631605E25400391C57 /* BlendingCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlendingCameraTests.m; sourceTree = "<group>"; };
+		9A8E2F6D1605E9B200391C57 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ios/opencv2.framework; sourceTree = "<group>"; };
+		9A8E2F77160620F700391C57 /* BCImageConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCImageConverter.h; sourceTree = "<group>"; };
+		9A8E2F78160620F700391C57 /* BCImageConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCImageConverter.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +67,7 @@
 				9A8E2F391605E25400391C57 /* UIKit.framework in Frameworks */,
 				9A8E2F3B1605E25400391C57 /* Foundation.framework in Frameworks */,
 				9A8E2F3D1605E25400391C57 /* CoreGraphics.framework in Frameworks */,
+				9A8E2F6E1605E9B200391C57 /* opencv2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				9A8E2F3E1605E25400391C57 /* BlendingCamera */,
+				9A8E2F6D1605E9B200391C57 /* opencv2.framework */,
 				9A8E2F5C1605E25400391C57 /* BlendingCameraTests */,
 				9A8E2F371605E25400391C57 /* Frameworks */,
 				9A8E2F351605E25400391C57 /* Products */,
@@ -111,11 +118,10 @@
 		9A8E2F3E1605E25400391C57 /* BlendingCamera */ = {
 			isa = PBXGroup;
 			children = (
+				9A8E2F761605EB4400391C57 /* ViewController */,
+				9A8E2F751605EB3700391C57 /* ImageProcessings */,
 				9A8E2F471605E25400391C57 /* BCAppDelegate.h */,
 				9A8E2F481605E25400391C57 /* BCAppDelegate.m */,
-				9A8E2F4A1605E25400391C57 /* BCViewController.h */,
-				9A8E2F4B1605E25400391C57 /* BCViewController.m */,
-				9A8E2F4D1605E25400391C57 /* BCViewController.xib */,
 				9A8E2F3F1605E25400391C57 /* Supporting Files */,
 			);
 			path = BlendingCamera;
@@ -149,6 +155,25 @@
 				9A8E2F5F1605E25400391C57 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A8E2F751605EB3700391C57 /* ImageProcessings */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F77160620F700391C57 /* BCImageConverter.h */,
+				9A8E2F78160620F700391C57 /* BCImageConverter.m */,
+			);
+			name = ImageProcessings;
+			sourceTree = "<group>";
+		};
+		9A8E2F761605EB4400391C57 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F4A1605E25400391C57 /* BCViewController.h */,
+				9A8E2F4B1605E25400391C57 /* BCViewController.m */,
+				9A8E2F4D1605E25400391C57 /* BCViewController.xib */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +287,7 @@
 				9A8E2F451605E25400391C57 /* main.m in Sources */,
 				9A8E2F491605E25400391C57 /* BCAppDelegate.m in Sources */,
 				9A8E2F4C1605E25400391C57 /* BCViewController.m in Sources */,
+				9A8E2F79160620F700391C57 /* BCImageConverter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,12 +343,14 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -344,11 +372,13 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
@@ -363,9 +393,15 @@
 		9A8E2F681605E25400391C57 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ios\"",
+				);
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlendingCamera/BlendingCamera-Prefix.pch";
 				INFOPLIST_FILE = "BlendingCamera/BlendingCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -374,9 +410,15 @@
 		9A8E2F691605E25400391C57 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ios\"",
+				);
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlendingCamera/BlendingCamera-Prefix.pch";
 				INFOPLIST_FILE = "BlendingCamera/BlendingCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

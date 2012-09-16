@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface BCViewController : UIViewController
+<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
+
+-(IBAction)loadButtonTapped:(id)sender;
 
 @end

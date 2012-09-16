@@ -1,0 +1,511 @@
+Tzlib
+v5
+r1
+cCheck dependencies
+cSymLink /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a normal i386
+cPhaseScriptExecution "CMake PostBuild Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Script-6BF690562BA04247801270D6.sh
+cStrip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+cSetOwnerAndGroup ginrou799:staff /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+cSetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk
+c000000005023BF5F0000000000000110
+t1344520031
+s272
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a
+t1347792862
+s130920
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.o
+t1347792862
+s2612
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.o
+t1347792862
+s1244
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.o
+t1347792862
+s14208
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.o
+t1347792862
+s26668
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.o
+t1347792862
+s616
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.o
+t1347792862
+s7296
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.o
+t1347792862
+s8160
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.o
+t1347792862
+s7100
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.o
+t1347792862
+s10928
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.o
+t1347792862
+s2968
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.o
+t1347792862
+s21076
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.o
+t1347792862
+s2996
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.o
+t1347792862
+s19520
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.o
+t1347792862
+s1008
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zlib.LinkFileList
+c000000005055AFDE00000000000009E0
+t1347792862
+s2528
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.o
+t1347792862
+s1352
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Script-6BF690562BA04247801270D6.sh
+c000000005055AFDE0000000000000103
+t1347792862
+s259
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+t2
+s0
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/zconf.h
+c000000005055AE6D0000000000003C11
+t1347792493
+s15377
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c
+c000000005055AD8D0000000000001368
+t1347792269
+s4968
+i"zutil.h"
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c
+c000000005055AD8D00000000000009D8
+t1347792269
+s2520
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c
+c000000005055AD8D0000000000003376
+t1347792269
+s13174
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.h
+c000000005055AD8D0000000000007762
+t1347792269
+s30562
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c
+c000000005055AD8D00000000000116E0
+t1347792269
+s71392
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.h
+c000000005055AD8D00000000000031F3
+t1347792269
+s12787
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c
+c000000005055AD8D00000000000002A6
+t1347792269
+s678
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzguts.h
+c000000005055AD8D000000000000178D
+t1347792269
+s6029
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c
+c000000005055AD8D0000000000003DD1
+t1347792269
+s15825
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c
+c000000005055AD8D0000000000004856
+t1347792269
+s18518
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c
+c000000005055AD8D0000000000003DC9
+t1347792269
+s15817
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c
+c000000005055AD8D00000000000058AD
+t1347792269
+s22701
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c
+c000000005055AD8D000000000000347F
+t1347792269
+s13439
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.h
+c000000005055AD8D00000000000001AB
+t1347792269
+s427
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffixed.h
+c000000005055AD8D00000000000018BC
+t1347792269
+s6332
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c
+c000000005055AD8D000000000000CEF6
+t1347792269
+s52982
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.h
+c000000005055AD8D00000000000018FF
+t1347792269
+s6399
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c
+c000000005055AD8D00000000000032E8
+t1347792269
+s13032
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.h
+c000000005055AD8D0000000000000B70
+t1347792269
+s2928
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c
+c000000005055AD8D000000000000AC81
+t1347792269
+s44161
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.h
+c000000005055AD8D0000000000002118
+t1347792269
+s8472
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c
+c000000005055AD8D00000000000007CA
+t1347792269
+s1994
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zlib.h
+c000000005055AD8D00000000000152BD
+t1347792269
+s86717
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c
+c000000005055AD8D0000000000001CF4
+t1347792269
+s7412
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.h
+c000000005055AD8D0000000000001A6D
+t1347792269
+s6765
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies195552c3e705b641^c38352c3e705b641^---0#1#0#--18"Check dependencies36"F0D29056-89EF-4A31-96C2-1D8E5A8B3D1C-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.736928
+e369485662.853666
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c2c61bd5ee705b641^61a4db5ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.o 3rdparty/zlib/adler32.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/adler32.o36"6091DF89-C1EE-4EF6-B018-DD64EF2B3B40-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.736712
+e369485662.847159
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c5070bd5ee705b641^ddebd85ee705b641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c0000000000000000^3034"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.o 3rdparty/zlib/compress.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/compress.o36"71CD26F6-4761-4F4B-A6B1-E867023D25F5-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.736572
+e369485662.878367
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c622ebd5ee705b641^ad15e15ee705b641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c0000000000000000^3016"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.o 3rdparty/zlib/crc32.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/crc32.o36"1996E866-659F-4798-A206-1C5EA24BBEC6-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.737967
+e369485662.946696
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c516cbd5ee705b641^215bf25ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.o 3rdparty/zlib/deflate.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/deflate.o36"748918B6-5C80-499B-A534-FED91973D876-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.736540
+e369485662.848752
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c857bbd5ee705b641^47e6d95ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.o 3rdparty/zlib/gzclose.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzclose.o36"BE94C6C2-A1BC-4A96-B947-B2D7BBD2A661-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.736835
+e369485662.914175
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.cd95cbd5ee705b641^a307ea5ee705b641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c0000000000000000^3016"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.o 3rdparty/zlib/gzlib.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzlib.o36"29198CF5-152D-46CA-A1F2-3730A5C1A298-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.736706
+e369485662.855560
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c677ebd5ee705b641^eba7db5ee705b641^---0#0#0#-19%DVTDocumentLocation2@96"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c0000000000000000^3022"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.o 3rdparty/zlib/gzread.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzread.o36"51479101-45F6-4380-A922-CED29F8FDF68-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.836914
+e369485662.893532
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.cc45cd65ee705b641^9599e65ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.o 3rdparty/zlib/gzwrite.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/gzwrite.o36"06A0262A-F955-4A96-A662-55AB1FCEF0CE-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.850206
+e369485662.921272
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c23c0d95ee705b641^e319ec5ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.o 3rdparty/zlib/infback.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/infback.o36"2B1006D2-C477-4DD7-9E36-2D78DF96A8D6-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.861944
+e369485662.915537
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.cebc5dc5ee705b641^9015ec5ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.o 3rdparty/zlib/inffast.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inffast.o36"940E8FEF-9D62-45DC-9CA1-23504417A241-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.849627
+e369485662.962292
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c349dd95ee705b641^9b5af65ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.o 3rdparty/zlib/inflate.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inflate.o36"011153AB-FE33-4CE6-B074-61712A8CACE8-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.859865
+e369485662.910214
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c9b3ddc5ee705b641^594fe95ee705b641^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c0000000000000000^3034"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.o 3rdparty/zlib/inftrees.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/inftrees.o36"FACE7424-D46E-44A5-9E70-14B8C324DA83-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.879529
+e369485662.955293
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c234ce15ee705b641^118ff45ee705b641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c0000000000000000^3016"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.o 3rdparty/zlib/trees.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/trees.o36"E6CEB6E2-D62C-40A5-A9BC-3AEC2AF8A0C4-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.894812
+e369485662.918531
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.ce82ee55ee705b641^0d18ec5ee705b641^---0#0#0#-19%DVTDocumentLocation2@97"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c0000000000000000^3028"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.o 3rdparty/zlib/uncompr.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/uncompr.o36"006BBCA8-0D30-4B7F-AFC2-087571A77013-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s369485662.911701
+e369485662.939586
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection87"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.ccb82e95ee705b641^1bbbf05ee705b641^---0#0#0#-19%DVTDocumentLocation2@95"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c0000000000000000^3016"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.o 3rdparty/zlib/zutil.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -DNO_FSEEKO -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zutil.o36"3ED79E4E-D4F5-46D3-B0B8-EB3996269831-
+
+CLibtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a normal i386
+s369485662.968851
+e369485662.989445
+r1
+xLibtool
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection127"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a normal i386bc22f85ee705b641^f44efd5ee705b641^---0#0#0#--1124"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a normal i386    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -L/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -filelist /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zlib.LinkFileList -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a36"B7CC9E21-7505-45B6-BE44-F2291B7EFEE1-
+
+CLibtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a normal i386
+s369485763.349745
+e369485763.370179
+r1
+xLibtool
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection140"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a normal i3860a9f59c3e705b641^82c45ec3e705b641^---0#0#0#--1150"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a normal i386    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -L/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release -filelist /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Objects-normal/i386/zlib.LinkFileList -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a36"F21DEC20-D3CF-4B67-9802-1B39C153455C-
+
+CPhaseScriptExecution "CMake PostBuild Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Script-6BF690562BA04247801270D6.sh
+s369485763.378835
+e369485763.409477
+r1
+xPhaseScriptExecution
+xCMake PostBuild Rules
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Script-6BF690562BA04247801270D6.sh
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.zlib.Release
+omake[1]: Nothing to be done for `PostBuild.zlib.Release'.
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.zlib.Release
+omake[1]: Nothing to be done for `PostBuild.zlib.Release'.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Run custom shell script 'CMake PostBuild Rules'4b5661c3e705b641^aed368c3e705b641^-882"echo "Depend check for xcode"Depend check for xcodecd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.zlib.Releasemake[1]: Nothing to be done for `PostBuild.zlib.Release'.echo "Depend check for xcode"Depend check for xcodecd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.zlib.Releasemake[1]: Nothing to be done for `PostBuild.zlib.Release'.8(21%IDEActivityLogMessage2@30"echo "Depend check for xcode"-369485763#0#30#-0#-----2@23"Depend check for xcode-369485763#30#23#-0#-----2@309"cd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.zlib.Release-369485763#53#309#-0#-----2@58"make[1]: Nothing to be done for `PostBuild.zlib.Release'.-369485763#362#58#-0#-----2@30"echo "Depend check for xcode"-369485763#420#30#-0#-----2@23"Depend check for xcode-369485763#450#23#-0#-----2@351"cd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.zlib.Release-369485763#473#351#-0#-----2@58"make[1]: Nothing to be done for `PostBuild.zlib.Release'.-369485763#824#58#-0#-----0#0#0#--473"PhaseScriptExecution "CMake PostBuild Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Script-6BF690562BA04247801270D6.sh    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    /bin/sh -c /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/OpenCV.build/Release-iphonesimulator/zlib.build/Script-6BF690562BA04247801270D6.sh36"131F7879-422E-4135-8E2F-4CC21CAE6DF1-
+
+CSetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+s369485763.447758
+e369485763.451460
+r1
+xSetMode
+xu+w,go-w,a+rX
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection142"SetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a75b072c3e705b641^579373c3e705b641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a0000000000000000^603"SetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /bin/chmod -RH u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a36"C1B12B8E-EB5B-4578-A1A0-BEC5CE801A78-
+
+CSetOwnerAndGroup ginrou799:staff /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+s369485763.433168
+e369485763.438221
+r1
+xSetOwnerAndGroup
+xginrou799:staff
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection153"SetOwnerAndGroup ginrou799:staff /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a62f66ec3e705b641^5e3070c3e705b641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a0000000000000000^625"SetOwnerAndGroup "ginrou799:staff" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/sbin/chown -RH "ginrou799:staff" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a36"370BDAAE-CF65-4B24-9E69-A88EB9DFA6EB-
+
+CStrip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+s369485763.418149
+e369485763.424955
+r1
+xStrip
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"Strip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.aeb1c6bc3e705b641^19cb6cc3e705b641^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a0000000000000000^654"Strip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -S /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a36"C526328F-02EF-4E0D-A840-83E3B732F544-
+
+CSymLink /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+s369485763.325347
+e369485763.329456
+r1
+xSymLink
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection115"Process /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a965a53c3e705b641^f35754c3e705b641^---0#0#0#--788"SymLink /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /bin/ln -sf /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/zlib/UninstalledProducts/libzlib.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/3rdparty/lib/Release/libzlib.a36"5D747590-6FD3-4E92-A114-AE3A3ED3E6DA-
+

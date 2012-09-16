@@ -1,0 +1,718 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              93CA6B43A22E4BB7BD3C5009 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = BC0851E193944C1782BAA3E8 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            1C2DE66F5F0E4DE7ACB477A8 /* CMake Rules */,
+                     );
+                     dependencies = (
+                            ECF835AE37004DD5B14BEFE1 /* PBXTargetDependency */,
+                            EAABFC5EAB8543A8B39D8995 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              BCE6681ACB2F4288AD6DAB64 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = BFF55944981C4BF1A396FDD3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            3D12B9426EC6498DADA2AAA1 /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              8775713A92E14C10A401472C /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = F793742F99DC4624B47D1AE5 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            08FBA489F7E2459CA35EA244 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            492EACA8B7594835B03EFFCE /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+7DD65B054D5A4387ADC7993C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include/opencv2/features2d/features2d.hpp */ = {isa = PBXBuildFile; fileRef = C8FBABA358C04E3CB359ECA0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include/opencv2/features2d/features2d.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+73DD4B5F78B944B7868E4325 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/bagofwords.cpp */ = {isa = PBXBuildFile; fileRef = C188A03298DF46AAA5BE2334 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/bagofwords.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+5657CFA80EAD45C4A166FF31 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/blobdetector.cpp */ = {isa = PBXBuildFile; fileRef = BC500172BD554B978D460816 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/blobdetector.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+55A988AC9D544D9A96BB7A89 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brief.cpp */ = {isa = PBXBuildFile; fileRef = 86AE2FDF57C742E68557EB5B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brief.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+DC7E74D32D944231BAC5DCC9 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brisk.cpp */ = {isa = PBXBuildFile; fileRef = 21A1DB0893084E3489550E1C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brisk.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+21D03709E79049168F70BD4D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/descriptors.cpp */ = {isa = PBXBuildFile; fileRef = 348C56B2A4F149BCAFFD5C7D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/descriptors.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+D455CCD6440B414397DBA895 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/detectors.cpp */ = {isa = PBXBuildFile; fileRef = 020B3F80183D49358B59B6D7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/detectors.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+08A7E22321D94F408E0888ED /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/draw.cpp */ = {isa = PBXBuildFile; fileRef = CD7713D359594590A88D5218 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/draw.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+50B1923328CE4133904A37C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/dynamic.cpp */ = {isa = PBXBuildFile; fileRef = 57F6C2195DB8490F96AA3A86 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/dynamic.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+8E3A835B695644A58DB616C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/evaluation.cpp */ = {isa = PBXBuildFile; fileRef = 3BD336FE001B43388426C11C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/evaluation.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+A2CC6561EF2F40FEB30F6829 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast.cpp */ = {isa = PBXBuildFile; fileRef = A4B44ADD46B541F7B10D7FDC /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+64AB615173B043688E2A940F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.cpp */ = {isa = PBXBuildFile; fileRef = 679E99F71402493A95C63AC2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+9A4DA08FD47C4DD9831183AD /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/features2d_init.cpp */ = {isa = PBXBuildFile; fileRef = F02B93A26BD043C8812A5EBC /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/features2d_init.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+0ADB75354E71493EA50F33F4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/freak.cpp */ = {isa = PBXBuildFile; fileRef = EB8FF3CD39D849618D6DF812 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/freak.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+E0E4866BD5E14EE3B6862E70 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/keypoint.cpp */ = {isa = PBXBuildFile; fileRef = 7CC028CB6AAF4679AEA858EE /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/keypoint.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+03F1174BCFF84FA1B402ED46 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/matchers.cpp */ = {isa = PBXBuildFile; fileRef = 7470A22DA1784285BF4357B0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/matchers.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+42DC8ADBD0854C4B982624A0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/mser.cpp */ = {isa = PBXBuildFile; fileRef = A97210D38E7B4016A216D7B5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/mser.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+B1A43B5318E8415DA2010B3A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/orb.cpp */ = {isa = PBXBuildFile; fileRef = F82EDEE987084F49BF1A3075 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/orb.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+439EC7E9C4414B34B8FE269E /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.cpp */ = {isa = PBXBuildFile; fileRef = FC1BA2977B93473AB09F79C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+9D3C520F4A1A4F8796C4ACF7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/stardetector.cpp */ = {isa = PBXBuildFile; fileRef = 575ABBE385684304A2480A4F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/stardetector.cpp */; settings = { COMPILER_FLAGS = ""; }; };
+5C3BF2C17646461099E2A513 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.hpp */ = {isa = PBXBuildFile; fileRef = 67AA8D9C467D406A95B08A8C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+9600077BF440426E908D1449 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.hpp */ = {isa = PBXBuildFile; fileRef = CE9AD02167E740C88472EA57 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.hpp */; settings = { COMPILER_FLAGS = ""; }; };
+490670991A7949EFA6BF8765 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A50BFF056FDF4B80B5EB7BC0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              45E81742883B4F36A3A108F1 /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              2839B3104B08451EB1BF5238 /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              C985DF7589084E14A3E302E0 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              4D58CB79F6C2482199695F0D /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 04D7049010994243BED94671 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = BCE6681ACB2F4288AD6DAB64;
+                     remoteInfo = ZERO_CHECK;
+              };
+              164F7AE978724EDB86EAA4AE /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 04D7049010994243BED94671 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 1F4CF7ACC01944CAB84A4517;
+                     remoteInfo = opencv_features2d;
+              };
+              E9DD02B8DDB34482936ECCE2 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 04D7049010994243BED94671 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 93CA6B43A22E4BB7BD3C5009;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+A50BFF056FDF4B80B5EB7BC0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text"; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+C8FBABA358C04E3CB359ECA0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include/opencv2/features2d/features2d.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.h"; name = "features2d.hpp"; path = "include/opencv2/features2d/features2d.hpp"; sourceTree = SOURCE_ROOT; };
+C188A03298DF46AAA5BE2334 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/bagofwords.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "bagofwords.cpp"; path = "src/bagofwords.cpp"; sourceTree = SOURCE_ROOT; };
+BC500172BD554B978D460816 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/blobdetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "blobdetector.cpp"; path = "src/blobdetector.cpp"; sourceTree = SOURCE_ROOT; };
+86AE2FDF57C742E68557EB5B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brief.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "brief.cpp"; path = "src/brief.cpp"; sourceTree = SOURCE_ROOT; };
+21A1DB0893084E3489550E1C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brisk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "brisk.cpp"; path = "src/brisk.cpp"; sourceTree = SOURCE_ROOT; };
+348C56B2A4F149BCAFFD5C7D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/descriptors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "descriptors.cpp"; path = "src/descriptors.cpp"; sourceTree = SOURCE_ROOT; };
+020B3F80183D49358B59B6D7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/detectors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "detectors.cpp"; path = "src/detectors.cpp"; sourceTree = SOURCE_ROOT; };
+CD7713D359594590A88D5218 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/draw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "draw.cpp"; path = "src/draw.cpp"; sourceTree = SOURCE_ROOT; };
+57F6C2195DB8490F96AA3A86 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/dynamic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "dynamic.cpp"; path = "src/dynamic.cpp"; sourceTree = SOURCE_ROOT; };
+3BD336FE001B43388426C11C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/evaluation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "evaluation.cpp"; path = "src/evaluation.cpp"; sourceTree = SOURCE_ROOT; };
+A4B44ADD46B541F7B10D7FDC /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "fast.cpp"; path = "src/fast.cpp"; sourceTree = SOURCE_ROOT; };
+679E99F71402493A95C63AC2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "fast_score.cpp"; path = "src/fast_score.cpp"; sourceTree = SOURCE_ROOT; };
+F02B93A26BD043C8812A5EBC /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/features2d_init.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "features2d_init.cpp"; path = "src/features2d_init.cpp"; sourceTree = SOURCE_ROOT; };
+EB8FF3CD39D849618D6DF812 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/freak.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "freak.cpp"; path = "src/freak.cpp"; sourceTree = SOURCE_ROOT; };
+7CC028CB6AAF4679AEA858EE /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/keypoint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "keypoint.cpp"; path = "src/keypoint.cpp"; sourceTree = SOURCE_ROOT; };
+7470A22DA1784285BF4357B0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/matchers.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "matchers.cpp"; path = "src/matchers.cpp"; sourceTree = SOURCE_ROOT; };
+A97210D38E7B4016A216D7B5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/mser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "mser.cpp"; path = "src/mser.cpp"; sourceTree = SOURCE_ROOT; };
+F82EDEE987084F49BF1A3075 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/orb.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "orb.cpp"; path = "src/orb.cpp"; sourceTree = SOURCE_ROOT; };
+FC1BA2977B93473AB09F79C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "precomp.cpp"; path = "src/precomp.cpp"; sourceTree = SOURCE_ROOT; };
+575ABBE385684304A2480A4F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/stardetector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "stardetector.cpp"; path = "src/stardetector.cpp"; sourceTree = SOURCE_ROOT; };
+67AA8D9C467D406A95B08A8C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.h"; name = "fast_score.hpp"; path = "src/fast_score.hpp"; sourceTree = SOURCE_ROOT; };
+CE9AD02167E740C88472EA57 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.h"; name = "precomp.hpp"; path = "src/precomp.hpp"; sourceTree = SOURCE_ROOT; };
+0E25B35C872648CBAA4DCED7 /* opencv_features2d */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libopencv_features2d.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              88696D2FECC04E7DA0221FDA  = {
+                     isa = PBXGroup;
+                     children = (
+                            B39567FC951E41BF8A954A46 /* Sources */,
+                            18E6F6FBC6EC48B8A7E73334 /* Resources */,
+                            123A2273E93942888C60E367 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              B39567FC951E41BF8A954A46 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AC257C22F35F4F21A1199215 /* ALL_BUILD */,
+                            ACDD150393544DC69FBD2DE7 /* ZERO_CHECK */,
+                            593629AE4E3F46CD9380B62F /* modules */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              18E6F6FBC6EC48B8A7E73334 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              AC257C22F35F4F21A1199215 /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4CCF77D6F7924C4780428FAF /* CMake Rules */,
+                            A50BFF056FDF4B80B5EB7BC0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              4CCF77D6F7924C4780428FAF /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              ACDD150393544DC69FBD2DE7 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            B289443B86784F23A1AEA84C /* CMake Rules */,
+                            A50BFF056FDF4B80B5EB7BC0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              B289443B86784F23A1AEA84C /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              593629AE4E3F46CD9380B62F /* modules */ = {
+                     isa = PBXGroup;
+                     children = (
+                            64348F02CAB4419397E6B684 /* opencv_features2d */,
+                     );
+                     name = modules;
+                     sourceTree = "<group>";
+              };
+              64348F02CAB4419397E6B684 /* opencv_features2d */ = {
+                     isa = PBXGroup;
+                     children = (
+                            8A39C31913D944D58C58D57F /* Include */,
+                            96C7847D7C4A4910B6788E07 /* Src */,
+                            A50BFF056FDF4B80B5EB7BC0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/CMakeLists.txt */,
+                     );
+                     name = opencv_features2d;
+                     sourceTree = "<group>";
+              };
+              8A39C31913D944D58C58D57F /* Include */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C8FBABA358C04E3CB359ECA0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include/opencv2/features2d/features2d.hpp */,
+                     );
+                     name = Include;
+                     sourceTree = "<group>";
+              };
+              96C7847D7C4A4910B6788E07 /* Src */ = {
+                     isa = PBXGroup;
+                     children = (
+                            C188A03298DF46AAA5BE2334 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/bagofwords.cpp */,
+                            BC500172BD554B978D460816 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/blobdetector.cpp */,
+                            86AE2FDF57C742E68557EB5B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brief.cpp */,
+                            21A1DB0893084E3489550E1C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brisk.cpp */,
+                            348C56B2A4F149BCAFFD5C7D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/descriptors.cpp */,
+                            020B3F80183D49358B59B6D7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/detectors.cpp */,
+                            CD7713D359594590A88D5218 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/draw.cpp */,
+                            57F6C2195DB8490F96AA3A86 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/dynamic.cpp */,
+                            3BD336FE001B43388426C11C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/evaluation.cpp */,
+                            A4B44ADD46B541F7B10D7FDC /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast.cpp */,
+                            679E99F71402493A95C63AC2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.cpp */,
+                            F02B93A26BD043C8812A5EBC /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/features2d_init.cpp */,
+                            EB8FF3CD39D849618D6DF812 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/freak.cpp */,
+                            7CC028CB6AAF4679AEA858EE /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/keypoint.cpp */,
+                            7470A22DA1784285BF4357B0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/matchers.cpp */,
+                            A97210D38E7B4016A216D7B5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/mser.cpp */,
+                            F82EDEE987084F49BF1A3075 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/orb.cpp */,
+                            FC1BA2977B93473AB09F79C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.cpp */,
+                            575ABBE385684304A2480A4F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/stardetector.cpp */,
+                            67AA8D9C467D406A95B08A8C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.hpp */,
+                            CE9AD02167E740C88472EA57 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.hpp */,
+                     );
+                     name = Src;
+                     sourceTree = "<group>";
+              };
+              123A2273E93942888C60E367 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            0E25B35C872648CBAA4DCED7 /* opencv_features2d */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              1F4CF7ACC01944CAB84A4517 /* opencv_features2d */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = 9F5D2D438B934199860A1423 /* Build configuration list for PBXNativeTarget "opencv_features2d" */;
+                     buildPhases = (
+                            1FD91CF6093142E1AA40F15C /* Sources */,
+                            4EBBDB5B611F4399A3086893 /* CMake PostBuild Rules */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            ECF835AE37004DD5B14BEFE1 /* PBXTargetDependency */,
+                     );
+                     name = opencv_features2d;
+                     productName = opencv_features2d;
+                     productReference = 0E25B35C872648CBAA4DCED7 /* opencv_features2d */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              04D7049010994243BED94671 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = 8C011868CA64487381971769 /* Build configuration list for PBXProject  "opencv_features2d" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            2839B3104B08451EB1BF5238 /* Debug */,
+                            C985DF7589084E14A3E302E0 /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = 88696D2FECC04E7DA0221FDA;
+                     projectDirPath = /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d;
+                     projectRoot = "";
+                     targets = (
+                            93CA6B43A22E4BB7BD3C5009 /* ALL_BUILD */,
+                            BCE6681ACB2F4288AD6DAB64 /* ZERO_CHECK */,
+                            8775713A92E14C10A401472C /* install */,
+                            1F4CF7ACC01944CAB84A4517 /* opencv_features2d */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              8BBA38F927D94E589A8CD2D7 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              1C2DE66F5F0E4DE7ACB477A8 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              F5FEE4521250455B96672055 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              3D12B9426EC6498DADA2AAA1 /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              C93F6CB0CD1246A580DFE3FA /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              08FBA489F7E2459CA35EA244 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              4EBBDB5B611F4399A3086893 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d/CMakeScripts/opencv_features2d_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              1FD91CF6093142E1AA40F15C /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            73DD4B5F78B944B7868E4325 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/bagofwords.cpp */,
+                            5657CFA80EAD45C4A166FF31 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/blobdetector.cpp */,
+                            55A988AC9D544D9A96BB7A89 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brief.cpp */,
+                            DC7E74D32D944231BAC5DCC9 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/brisk.cpp */,
+                            21D03709E79049168F70BD4D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/descriptors.cpp */,
+                            D455CCD6440B414397DBA895 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/detectors.cpp */,
+                            08A7E22321D94F408E0888ED /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/draw.cpp */,
+                            50B1923328CE4133904A37C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/dynamic.cpp */,
+                            8E3A835B695644A58DB616C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/evaluation.cpp */,
+                            A2CC6561EF2F40FEB30F6829 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast.cpp */,
+                            64AB615173B043688E2A940F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/fast_score.cpp */,
+                            9A4DA08FD47C4DD9831183AD /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/features2d_init.cpp */,
+                            0ADB75354E71493EA50F33F4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/freak.cpp */,
+                            E0E4866BD5E14EE3B6862E70 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/keypoint.cpp */,
+                            03F1174BCFF84FA1B402ED46 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/matchers.cpp */,
+                            42DC8ADBD0854C4B982624A0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/mser.cpp */,
+                            B1A43B5318E8415DA2010B3A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/orb.cpp */,
+                            439EC7E9C4414B34B8FE269E /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/precomp.cpp */,
+                            9D3C520F4A1A4F8796C4ACF7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src/stardetector.cpp */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              ECF835AE37004DD5B14BEFE1 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = BCE6681ACB2F4288AD6DAB64 /* ZERO_CHECK */;
+                     targetProxy = 4D58CB79F6C2482199695F0D /* PBXContainerItemProxy */;
+              };
+              EAABFC5EAB8543A8B39D8995 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 1F4CF7ACC01944CAB84A4517 /* opencv_features2d */;
+                     targetProxy = 164F7AE978724EDB86EAA4AE /* PBXContainerItemProxy */;
+              };
+              492EACA8B7594835B03EFFCE /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 93CA6B43A22E4BB7BD3C5009 /* ALL_BUILD */;
+                     targetProxy = E9DD02B8DDB34482936ECCE2 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              196CDA989FFF495AA1CA6D47 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d/build;
+                     };
+                     name = Debug;
+              };
+              FA834B9C979340438762DAC6 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d/build;
+                     };
+                     name = Release;
+              };
+              4885E827B3C742718B1C444D /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              48F2FD6B145049E28FCA4406 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              C428CA10F5F9479E875C584F /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              3B04FB6E4F47453494CD2FF2 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              0986DD45C6AE4CC19279B9EF /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              A1478341927F4F0D858A2B7B /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              88C0262E958849B39E1226B3 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            CONFIGURATION_BUILD_DIR = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/lib/Debug;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "      ";
+                            OTHER_CPLUSPLUSFLAGS = "-headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden      ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_features2d;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              E458B6E5441D4745B80338B5 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            CONFIGURATION_BUILD_DIR = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/lib/Release;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 3;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/src, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, /opt/local/include/eigen3, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "      ";
+                            OTHER_CPLUSPLUSFLAGS = "-headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden   -DNDEBUG     -fomit-frame-pointer -ffast-math   ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = opencv_features2d;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/modules/features2d;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              8C011868CA64487381971769 /* Build configuration list for PBXProject  "opencv_features2d" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            196CDA989FFF495AA1CA6D47 /* Debug */,
+                            FA834B9C979340438762DAC6 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              BC0851E193944C1782BAA3E8 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            4885E827B3C742718B1C444D /* Debug */,
+                            48F2FD6B145049E28FCA4406 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              BFF55944981C4BF1A396FDD3 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            C428CA10F5F9479E875C584F /* Debug */,
+                            3B04FB6E4F47453494CD2FF2 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              F793742F99DC4624B47D1AE5 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            0986DD45C6AE4CC19279B9EF /* Debug */,
+                            A1478341927F4F0D858A2B7B /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              9F5D2D438B934199860A1423 /* Build configuration list for PBXNativeTarget "opencv_features2d" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            88C0262E958849B39E1226B3 /* Debug */,
+                            E458B6E5441D4745B80338B5 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 04D7049010994243BED94671;
+}

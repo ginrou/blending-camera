@@ -1,0 +1,28 @@
+TZERO_CHECK
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ZERO_CHECK.build/Script-CD72710397D64E39A3AAF70B.sh
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ZERO_CHECK.build/Script-CD72710397D64E39A3AAF70B.sh
+c000000005055AFDE00000000000000F3
+t1347792862
+s243
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies6aa13cc3e705b641^67ef3cc3e705b641^---0#1#0#--18"Check dependencies36"A71A4980-DECD-4563-A5DE-E88565904600-
+
+CPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ZERO_CHECK.build/Script-CD72710397D64E39A3AAF70B.sh
+s369485763.241709
+e369485763.305129
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ZERO_CHECK.build/Script-CD72710397D64E39A3AAF70B.sh
+oecho ""
+o
+omake -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/ReRunCMake.make
+omake[1]: `CMakeFiles/cmake.check_cache' is up to date.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'b0743ec3e705b641^1a324ec3e705b641^-178"echo ""make -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/ReRunCMake.makemake[1]: `CMakeFiles/cmake.check_cache' is up to date.3(21%IDEActivityLogMessage2@8"echo ""-369485763#0#8#-0#-----2@114"make -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/ReRunCMake.make-369485763#9#114#-0#-----2@55"make[1]: `CMakeFiles/cmake.check_cache' is up to date.-369485763#123#55#-0#-----0#0#0#--447"PhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ZERO_CHECK.build/Script-CD72710397D64E39A3AAF70B.sh    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    /bin/sh -c /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ZERO_CHECK.build/Script-CD72710397D64E39A3AAF70B.sh36"5237A402-214D-4941-BB5B-30B15E464670-
+

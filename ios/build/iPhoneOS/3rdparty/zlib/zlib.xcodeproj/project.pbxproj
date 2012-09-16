@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+       archiveVersion = 1;
+       classes = {
+       };
+       objectVersion = 46;
+       objects = {
+
+/* Begin PBXAggregateTarget section */
+              93CA6B43A22E4BB7BD3C5009 /* ALL_BUILD */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 5186E07A8259421ABF6C88BB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+                     buildPhases = (
+                            23B9ED523A3C45BEA00B687B /* CMake Rules */,
+                     );
+                     dependencies = (
+                            5A6B763970E74C3E86088596 /* PBXTargetDependency */,
+                            44FE98C8DA48400A84EB1743 /* PBXTargetDependency */,
+                     );
+                     name = ALL_BUILD;
+                     productName = ALL_BUILD;
+              };
+              BCE6681ACB2F4288AD6DAB64 /* ZERO_CHECK */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 8913333686B84F9496F8B451 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+                     buildPhases = (
+                            FAEAA655CD1B490B8AB33B9C /* CMake Rules */,
+                     );
+                     dependencies = (
+                     );
+                     name = ZERO_CHECK;
+                     productName = ZERO_CHECK;
+              };
+              8775713A92E14C10A401472C /* install */ = {
+                     isa = PBXAggregateTarget;
+                     buildConfigurationList = 974F8AF461154B378952CE28 /* Build configuration list for PBXAggregateTarget "install" */;
+                     buildPhases = (
+                            87F0A3E5C01A414C853726F1 /* CMake PostBuild Rules */,
+                     );
+                     dependencies = (
+                            45C2638202814882941FE3B3 /* PBXTargetDependency */,
+                     );
+                     name = install;
+                     productName = install;
+              };
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+4FFDA49AC3994F68855CE39B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c */ = {isa = PBXBuildFile; fileRef = DF35ECC46793414B99942EF6 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c */; settings = { COMPILER_FLAGS = ""; }; };
+2466F15BF8DA4D4A9FFC1E28 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c */ = {isa = PBXBuildFile; fileRef = CE0FB4EF1B9C405686024CE3 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c */; settings = { COMPILER_FLAGS = ""; }; };
+AF144A8CD58D497DB25297DD /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c */ = {isa = PBXBuildFile; fileRef = A1CBB96092804D9BADB26713 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c */; settings = { COMPILER_FLAGS = ""; }; };
+B51E2C92177B424E9EC1899C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c */ = {isa = PBXBuildFile; fileRef = D99007BCB48D4C8AADD067B2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c */; settings = { COMPILER_FLAGS = ""; }; };
+A81483CDE4114DA59AB58A1D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c */ = {isa = PBXBuildFile; fileRef = 6BCC17C31C5F42518C1E208F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c */; settings = { COMPILER_FLAGS = ""; }; };
+20F01713E3A34E8684FDB6CB /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c */ = {isa = PBXBuildFile; fileRef = C01418CFEB544240840227C2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c */; settings = { COMPILER_FLAGS = ""; }; };
+87E87B3CA3D94D5990341063 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c */ = {isa = PBXBuildFile; fileRef = 4F23216B1DF84FE28ECDA195 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c */; settings = { COMPILER_FLAGS = ""; }; };
+8778DBDB2F434151BAE8F6F2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c */ = {isa = PBXBuildFile; fileRef = A711AC10FA934A96BC1756A4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c */; settings = { COMPILER_FLAGS = ""; }; };
+D3601C5E791B4C3A91F4B76D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c */ = {isa = PBXBuildFile; fileRef = 5E70799B05A5462AA7D7849D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c */; settings = { COMPILER_FLAGS = ""; }; };
+9DEC2659DA4F4DE5BCF0C900 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c */ = {isa = PBXBuildFile; fileRef = 25707D67427648AA835F09ED /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c */; settings = { COMPILER_FLAGS = ""; }; };
+63E103A3DD204CEA99E176C7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c */ = {isa = PBXBuildFile; fileRef = 99AEE6F28B4C4E1191C8A1E5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c */; settings = { COMPILER_FLAGS = ""; }; };
+5EF5E047604343FCBD64C3DB /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c */ = {isa = PBXBuildFile; fileRef = 91B9CCB76DE9442FB0BE7C5C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c */; settings = { COMPILER_FLAGS = ""; }; };
+1205EE4ADB4F41EA9ECA1AF5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c */ = {isa = PBXBuildFile; fileRef = 68FCA2C555C747E29B518D78 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c */; settings = { COMPILER_FLAGS = ""; }; };
+AB645B3AE5994756B899529E /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c */ = {isa = PBXBuildFile; fileRef = 8E20026BB9B84C8985DC9D2B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c */; settings = { COMPILER_FLAGS = ""; }; };
+2CEB9AD752234782ADD0D5AD /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c */ = {isa = PBXBuildFile; fileRef = D50059D913894A27AB7098C0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c */; settings = { COMPILER_FLAGS = ""; }; };
+85C89703A3D544DCB758C766 /* /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/zconf.h */ = {isa = PBXBuildFile; fileRef = 4B942975796B4F46B823C704 /* /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/zconf.h */; settings = { COMPILER_FLAGS = ""; }; };
+8D1411A1FDD54A018E73F686 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zlib.h */ = {isa = PBXBuildFile; fileRef = 71E4E7569F1F4A96BD23E3C7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zlib.h */; settings = { COMPILER_FLAGS = ""; }; };
+30A3022FB0504FE59644C079 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.h */ = {isa = PBXBuildFile; fileRef = 1344F703500642219C87C2C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.h */; settings = { COMPILER_FLAGS = ""; }; };
+7B61D27689BB41A4A8D4C0A9 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.h */ = {isa = PBXBuildFile; fileRef = 358D25FD72904A2B94FA0B2D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.h */; settings = { COMPILER_FLAGS = ""; }; };
+1CFCB3D6DF2043FFA18BA13C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzguts.h */ = {isa = PBXBuildFile; fileRef = 01110497301A43FF92A3D6E4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzguts.h */; settings = { COMPILER_FLAGS = ""; }; };
+DB68D289BA1042A8A68E2725 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.h */ = {isa = PBXBuildFile; fileRef = B6894F4AA5AE4D2298FC5A54 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.h */; settings = { COMPILER_FLAGS = ""; }; };
+13D8A0B4B7FC4719A12AF733 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffixed.h */ = {isa = PBXBuildFile; fileRef = 6B8520123B9E41D29A4A981E /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffixed.h */; settings = { COMPILER_FLAGS = ""; }; };
+09D748D1EA404F49BCBA62E7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.h */ = {isa = PBXBuildFile; fileRef = 1CFAB3E3B3F04A4891C1A22D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.h */; settings = { COMPILER_FLAGS = ""; }; };
+FE8F61930B384138B477CDF4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.h */ = {isa = PBXBuildFile; fileRef = 08C400CDDC5547849378B54A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.h */; settings = { COMPILER_FLAGS = ""; }; };
+6B5B7AC9CBEA4C5EBE6006EA /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.h */ = {isa = PBXBuildFile; fileRef = C5A9444F51FB46A0824E9E7A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.h */; settings = { COMPILER_FLAGS = ""; }; };
+B340A1E1309B436BAD33A232 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.h */ = {isa = PBXBuildFile; fileRef = 3FA3C6AD38BE43C884ABC27C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.h */; settings = { COMPILER_FLAGS = ""; }; };
+A41DCE8B060843D59522C884 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = CCD0CBD705CF47DE870C43B7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+              CF1D3F956D154C6FBBAAFB0C /*  */ = {
+                     isa = PBXBuildStyle;
+              };
+              8A2582D907694264AF22DC5E /* Debug */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Debug;
+              };
+              7ECE18798DC34C24BAAD0D63 /* Release */ = {
+                     isa = PBXBuildStyle;
+                     buildSettings = {
+                            COPY_PHASE_STRIP = NO;
+                     };
+                     name = Release;
+              };
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+              1ED2574D117842EA83C5D9BF /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 74C33FB1245643479356C285 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = BCE6681ACB2F4288AD6DAB64;
+                     remoteInfo = ZERO_CHECK;
+              };
+              7C68F4C3E7984CED8C4B76C2 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 74C33FB1245643479356C285 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 21A855AC6D08422BA3F3BA9B;
+                     remoteInfo = zlib;
+              };
+              9A85680A5FCA4C96A5F7B562 /* PBXContainerItemProxy */ = {
+                     isa = PBXContainerItemProxy;
+                     containerPortal = 74C33FB1245643479356C285 /* Project object */;
+                     proxyType = 1;
+                     remoteGlobalIDString = 93CA6B43A22E4BB7BD3C5009;
+                     remoteInfo = ALL_BUILD;
+              };
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+CCD0CBD705CF47DE870C43B7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text"; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
+DF35ECC46793414B99942EF6 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "adler32.c"; path = "adler32.c"; sourceTree = SOURCE_ROOT; };
+CE0FB4EF1B9C405686024CE3 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "compress.c"; path = "compress.c"; sourceTree = SOURCE_ROOT; };
+A1CBB96092804D9BADB26713 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "crc32.c"; path = "crc32.c"; sourceTree = SOURCE_ROOT; };
+D99007BCB48D4C8AADD067B2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "deflate.c"; path = "deflate.c"; sourceTree = SOURCE_ROOT; };
+6BCC17C31C5F42518C1E208F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "gzclose.c"; path = "gzclose.c"; sourceTree = SOURCE_ROOT; };
+C01418CFEB544240840227C2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "gzlib.c"; path = "gzlib.c"; sourceTree = SOURCE_ROOT; };
+4F23216B1DF84FE28ECDA195 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "gzread.c"; path = "gzread.c"; sourceTree = SOURCE_ROOT; };
+A711AC10FA934A96BC1756A4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "gzwrite.c"; path = "gzwrite.c"; sourceTree = SOURCE_ROOT; };
+5E70799B05A5462AA7D7849D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "inflate.c"; path = "inflate.c"; sourceTree = SOURCE_ROOT; };
+25707D67427648AA835F09ED /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "infback.c"; path = "infback.c"; sourceTree = SOURCE_ROOT; };
+99AEE6F28B4C4E1191C8A1E5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "inftrees.c"; path = "inftrees.c"; sourceTree = SOURCE_ROOT; };
+91B9CCB76DE9442FB0BE7C5C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "inffast.c"; path = "inffast.c"; sourceTree = SOURCE_ROOT; };
+68FCA2C555C747E29B518D78 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "trees.c"; path = "trees.c"; sourceTree = SOURCE_ROOT; };
+8E20026BB9B84C8985DC9D2B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "uncompr.c"; path = "uncompr.c"; sourceTree = SOURCE_ROOT; };
+D50059D913894A27AB7098C0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.c"; name = "zutil.c"; path = "zutil.c"; sourceTree = SOURCE_ROOT; };
+4B942975796B4F46B823C704 /* /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/zconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "zconf.h"; path = "../../../ios/build/iPhoneOS/3rdparty/zlib/zconf.h"; sourceTree = SOURCE_ROOT; };
+71E4E7569F1F4A96BD23E3C7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zlib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "zlib.h"; path = "zlib.h"; sourceTree = SOURCE_ROOT; };
+1344F703500642219C87C2C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "crc32.h"; path = "crc32.h"; sourceTree = SOURCE_ROOT; };
+358D25FD72904A2B94FA0B2D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "deflate.h"; path = "deflate.h"; sourceTree = SOURCE_ROOT; };
+01110497301A43FF92A3D6E4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzguts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "gzguts.h"; path = "gzguts.h"; sourceTree = SOURCE_ROOT; };
+B6894F4AA5AE4D2298FC5A54 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "inffast.h"; path = "inffast.h"; sourceTree = SOURCE_ROOT; };
+6B8520123B9E41D29A4A981E /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffixed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "inffixed.h"; path = "inffixed.h"; sourceTree = SOURCE_ROOT; };
+1CFAB3E3B3F04A4891C1A22D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "inflate.h"; path = "inflate.h"; sourceTree = SOURCE_ROOT; };
+08C400CDDC5547849378B54A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "inftrees.h"; path = "inftrees.h"; sourceTree = SOURCE_ROOT; };
+C5A9444F51FB46A0824E9E7A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "trees.h"; path = "trees.h"; sourceTree = SOURCE_ROOT; };
+3FA3C6AD38BE43C884ABC27C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "zutil.h"; path = "zutil.h"; sourceTree = SOURCE_ROOT; };
+FBE90EDAD8CD4F8387B63B3E /* zlib */ = {isa = PBXFileReference; explicitFileType = "archive.ar"; path = "libzlib.a"; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+              C7DB7BAD66D64DA887483D09  = {
+                     isa = PBXGroup;
+                     children = (
+                            A2D33CA47B524095BF8F0379 /* Sources */,
+                            4FBB94A3934349E8A95062A1 /* Resources */,
+                            8D3B0A6AD6444D46A723B5D6 /* Products */,
+                     );
+                     sourceTree = "<group>";
+              };
+              A2D33CA47B524095BF8F0379 /* Sources */ = {
+                     isa = PBXGroup;
+                     children = (
+                            1C5C8070578B40C484474D9B /* ALL_BUILD */,
+                            573C5B51A8BB469CA7765617 /* ZERO_CHECK */,
+                            06B04E7C99434843B8F5CAA8 /* 3rdparty */,
+                     );
+                     name = Sources;
+                     sourceTree = "<group>";
+              };
+              4FBB94A3934349E8A95062A1 /* Resources */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = Resources;
+                     sourceTree = "<group>";
+              };
+              1C5C8070578B40C484474D9B /* ALL_BUILD */ = {
+                     isa = PBXGroup;
+                     children = (
+                            AF9EF4ECE0AE4E179C26806A /* CMake Rules */,
+                            CCD0CBD705CF47DE870C43B7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/CMakeLists.txt */,
+                     );
+                     name = ALL_BUILD;
+                     sourceTree = "<group>";
+              };
+              AF9EF4ECE0AE4E179C26806A /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              573C5B51A8BB469CA7765617 /* ZERO_CHECK */ = {
+                     isa = PBXGroup;
+                     children = (
+                            18413CC4491A4706817415CD /* CMake Rules */,
+                            CCD0CBD705CF47DE870C43B7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/CMakeLists.txt */,
+                     );
+                     name = ZERO_CHECK;
+                     sourceTree = "<group>";
+              };
+              18413CC4491A4706817415CD /* CMake Rules */ = {
+                     isa = PBXGroup;
+                     children = (
+                     );
+                     name = "CMake Rules";
+                     sourceTree = "<group>";
+              };
+              06B04E7C99434843B8F5CAA8 /* 3rdparty */ = {
+                     isa = PBXGroup;
+                     children = (
+                            801D0D523AFC431B80927A5A /* zlib */,
+                     );
+                     name = 3rdparty;
+                     sourceTree = "<group>";
+              };
+              801D0D523AFC431B80927A5A /* zlib */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4E4CF3A9FFDA45E88FB86941 /* Source Files */,
+                            8CFE3E40AD17413781B088B6 /* Header Files */,
+                            CCD0CBD705CF47DE870C43B7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/CMakeLists.txt */,
+                     );
+                     name = zlib;
+                     sourceTree = "<group>";
+              };
+              4E4CF3A9FFDA45E88FB86941 /* Source Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            DF35ECC46793414B99942EF6 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c */,
+                            CE0FB4EF1B9C405686024CE3 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c */,
+                            A1CBB96092804D9BADB26713 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c */,
+                            D99007BCB48D4C8AADD067B2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c */,
+                            6BCC17C31C5F42518C1E208F /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c */,
+                            C01418CFEB544240840227C2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c */,
+                            4F23216B1DF84FE28ECDA195 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c */,
+                            A711AC10FA934A96BC1756A4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c */,
+                            5E70799B05A5462AA7D7849D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c */,
+                            25707D67427648AA835F09ED /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c */,
+                            99AEE6F28B4C4E1191C8A1E5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c */,
+                            91B9CCB76DE9442FB0BE7C5C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c */,
+                            68FCA2C555C747E29B518D78 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c */,
+                            8E20026BB9B84C8985DC9D2B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c */,
+                            D50059D913894A27AB7098C0 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c */,
+                     );
+                     name = "Source Files";
+                     sourceTree = "<group>";
+              };
+              8CFE3E40AD17413781B088B6 /* Header Files */ = {
+                     isa = PBXGroup;
+                     children = (
+                            4B942975796B4F46B823C704 /* /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/zconf.h */,
+                            71E4E7569F1F4A96BD23E3C7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zlib.h */,
+                            1344F703500642219C87C2C8 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.h */,
+                            358D25FD72904A2B94FA0B2D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.h */,
+                            01110497301A43FF92A3D6E4 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzguts.h */,
+                            B6894F4AA5AE4D2298FC5A54 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.h */,
+                            6B8520123B9E41D29A4A981E /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffixed.h */,
+                            1CFAB3E3B3F04A4891C1A22D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.h */,
+                            08C400CDDC5547849378B54A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.h */,
+                            C5A9444F51FB46A0824E9E7A /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.h */,
+                            3FA3C6AD38BE43C884ABC27C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.h */,
+                     );
+                     name = "Header Files";
+                     sourceTree = "<group>";
+              };
+              8D3B0A6AD6444D46A723B5D6 /* Products */ = {
+                     isa = PBXGroup;
+                     children = (
+                            FBE90EDAD8CD4F8387B63B3E /* zlib */,
+                     );
+                     name = Products;
+                     sourceTree = "<group>";
+              };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+              21A855AC6D08422BA3F3BA9B /* zlib */ = {
+                     isa = PBXNativeTarget;
+                     buildConfigurationList = F811A7BD0909402BA202F4FA /* Build configuration list for PBXNativeTarget "zlib" */;
+                     buildPhases = (
+                            6D4E8069AEDC4CA9AF12AB53 /* Sources */,
+                            2437AC208B9F42C9AC364874 /* CMake PostBuild Rules */,
+                     );
+                     buildRules = (
+                     );
+                     dependencies = (
+                            5A6B763970E74C3E86088596 /* PBXTargetDependency */,
+                     );
+                     name = zlib;
+                     productName = zlib;
+                     productReference = FBE90EDAD8CD4F8387B63B3E /* zlib */;
+                     productType = "com.apple.product-type.library.static";
+              };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+              74C33FB1245643479356C285 /* Project object */ = {
+                     isa = PBXProject;
+                     attributes = {
+                            BuildIndependentTargetsInParallel = YES;
+                     };
+                     buildConfigurationList = E0285F932B284F8DA3F796B0 /* Build configuration list for PBXProject  "zlib" */;
+                     buildSettings = {
+                     };
+                     buildStyles = (
+                            8A2582D907694264AF22DC5E /* Debug */,
+                            7ECE18798DC34C24BAAD0D63 /* Release */,
+                     );
+                     compatibilityVersion = "Xcode 3.2";
+                     hasScannedForEncodings = 0;
+                     mainGroup = C7DB7BAD66D64DA887483D09;
+                     projectDirPath = /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib;
+                     projectRoot = "";
+                     targets = (
+                            93CA6B43A22E4BB7BD3C5009 /* ALL_BUILD */,
+                            BCE6681ACB2F4288AD6DAB64 /* ZERO_CHECK */,
+                            8775713A92E14C10A401472C /* install */,
+                            21A855AC6D08422BA3F3BA9B /* zlib */,
+                     );
+              };
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+              D36210F0527A46D38C83A2B4 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              23B9ED523A3C45BEA00B687B /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              3C9C87135E6B4DD791C66279 /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              FAEAA655CD1B490B8AB33B9C /* CMake Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              CB49DB45CD364347A597DAEB /*  */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     inputPaths = (
+                     );
+                     outputPaths = (
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "# shell script goes here
+exit 0";
+                     showEnvVarsInLog = 0;
+              };
+              87F0A3E5C01A414C853726F1 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+              2437AC208B9F42C9AC364874 /* CMake PostBuild Rules */ = {
+                     isa = PBXShellScriptBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                     );
+                     name = "CMake PostBuild Rules";
+                     runOnlyForDeploymentPostprocessing = 0;
+                     shellPath = /bin/sh;
+                     shellScript = "make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/CMakeScripts/zlib_postBuildPhase.make$CONFIGURATION all";
+                     showEnvVarsInLog = 0;
+              };
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+              6D4E8069AEDC4CA9AF12AB53 /* Sources */ = {
+                     isa = PBXSourcesBuildPhase;
+                     buildActionMask = 2147483647;
+                     files = (
+                            4FFDA49AC3994F68855CE39B /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/adler32.c */,
+                            2466F15BF8DA4D4A9FFC1E28 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/compress.c */,
+                            AF144A8CD58D497DB25297DD /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/crc32.c */,
+                            B51E2C92177B424E9EC1899C /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/deflate.c */,
+                            A81483CDE4114DA59AB58A1D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzclose.c */,
+                            20F01713E3A34E8684FDB6CB /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzlib.c */,
+                            87E87B3CA3D94D5990341063 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzread.c */,
+                            8778DBDB2F434151BAE8F6F2 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/gzwrite.c */,
+                            D3601C5E791B4C3A91F4B76D /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inflate.c */,
+                            9DEC2659DA4F4DE5BCF0C900 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/infback.c */,
+                            63E103A3DD204CEA99E176C7 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inftrees.c */,
+                            5EF5E047604343FCBD64C3DB /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/inffast.c */,
+                            1205EE4ADB4F41EA9ECA1AF5 /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/trees.c */,
+                            AB645B3AE5994756B899529E /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/uncompr.c */,
+                            2CEB9AD752234782ADD0D5AD /* /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib/zutil.c */,
+                     );
+                     runOnlyForDeploymentPostprocessing = 0;
+              };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+              5A6B763970E74C3E86088596 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = BCE6681ACB2F4288AD6DAB64 /* ZERO_CHECK */;
+                     targetProxy = 1ED2574D117842EA83C5D9BF /* PBXContainerItemProxy */;
+              };
+              44FE98C8DA48400A84EB1743 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 21A855AC6D08422BA3F3BA9B /* zlib */;
+                     targetProxy = 7C68F4C3E7984CED8C4B76C2 /* PBXContainerItemProxy */;
+              };
+              45C2638202814882941FE3B3 /* PBXTargetDependency */ = {
+                     isa = PBXTargetDependency;
+                     target = 93CA6B43A22E4BB7BD3C5009 /* ALL_BUILD */;
+                     targetProxy = 9A85680A5FCA4C96A5F7B562 /* PBXContainerItemProxy */;
+              };
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+              C0FF8A7A9A8948338CC16113 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/build;
+                     };
+                     name = Debug;
+              };
+              D4FC343C124646C8BD331002 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            SDKROOT = "/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.1.sdk";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib/build;
+                     };
+                     name = Release;
+              };
+              32D400AAB1E448A9AFF82E37 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              591BCBF7FF2943C7AAB0A097 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ALL_BUILD;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              28F01FF9AC0A47DAAC693207 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              21C0D57EAA774A7EA0091A18 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = ZERO_CHECK;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              6F9A13B0BC5A4F40A28FC5B7 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              183AB96D224240A6BF7B1AE3 /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "  ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = install;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+              1C6C5418BD90453E8AECDE46 /* Debug */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            CONFIGURATION_BUILD_DIR = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/lib/Debug;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "      ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = zlib;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Debug;
+              };
+              9DDD40F641DF45E1A610FEBF /* Release */ = {
+                     isa = XCBuildConfiguration;
+                     buildSettings = {
+                            ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+                            CONFIGURATION_BUILD_DIR = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/lib/Release;
+                            EXECUTABLE_PREFIX = lib;
+                            EXECUTABLE_SUFFIX = ".a";
+                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+                            GCC_OPTIMIZATION_LEVEL = 0;
+                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", HAVE_CVCONFIG_H, HAVE_ALLOCA, HAVE_ALLOCA_H, HAVE_LIBPTHREAD, HAVE_UNISTD_H, NO_FSEEKO, );
+                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+                            HEADER_SEARCH_PATHS = (/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/opencv/3rdparty/zlib, /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS, );
+                            INSTALL_PATH = "";
+                            LIBRARY_STYLE = STATIC;
+                            ONLY_ACTIVE_ARCH = NO;
+                            OTHER_CFLAGS = "      ";
+                            OTHER_LDFLAGS = "";
+                            OTHER_REZFLAGS = "";
+                            PRODUCT_NAME = zlib;
+                            SECTORDER_FLAGS = "";
+                            SYMROOT = /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneOS/3rdparty/zlib;
+                            USE_HEADERMAP = NO;
+                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
+                     };
+                     name = Release;
+              };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+              E0285F932B284F8DA3F796B0 /* Build configuration list for PBXProject  "zlib" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            C0FF8A7A9A8948338CC16113 /* Debug */,
+                            D4FC343C124646C8BD331002 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              5186E07A8259421ABF6C88BB /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            32D400AAB1E448A9AFF82E37 /* Debug */,
+                            591BCBF7FF2943C7AAB0A097 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              8913333686B84F9496F8B451 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            28F01FF9AC0A47DAAC693207 /* Debug */,
+                            21C0D57EAA774A7EA0091A18 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              974F8AF461154B378952CE28 /* Build configuration list for PBXAggregateTarget "install" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            6F9A13B0BC5A4F40A28FC5B7 /* Debug */,
+                            183AB96D224240A6BF7B1AE3 /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+              F811A7BD0909402BA202F4FA /* Build configuration list for PBXNativeTarget "zlib" */ = {
+                     isa = XCConfigurationList;
+                     buildConfigurations = (
+                            1C6C5418BD90453E8AECDE46 /* Debug */,
+                            9DDD40F641DF45E1A610FEBF /* Release */,
+                     );
+                     defaultConfigurationIsVisible = 0;
+                     defaultConfigurationName = Debug;
+              };
+/* End XCConfigurationList section */
+       };
+       rootObject = 74C33FB1245643479356C285;
+}

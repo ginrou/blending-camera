@@ -1,0 +1,765 @@
+Topencv_nonfree
+v5
+r1
+cCheck dependencies
+cSymLink /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/nonfree_init.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/surf.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/sift.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLibtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a normal i386
+cPhaseScriptExecution "CMake PostBuild Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Script-11CC7D3CE2F44DF8A9F0693C.sh
+cStrip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+cSetOwnerAndGroup ginrou799:staff /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+cSetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk
+c000000005023BF5F0000000000000110
+t1344520031
+s272
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/cvconfig.h
+c000000005055AE6E0000000000001445
+t1347792494
+s5189
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a
+t1347792919
+s131472
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.o
+t1347792917
+s17480
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/opencv_nonfree.LinkFileList
+c000000005055B01300000000000002D3
+t1347792915
+s723
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o
+t1347792916
+s152
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.o
+t1347792918
+s44864
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.o
+t1347792918
+s61700
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Script-11CC7D3CE2F44DF8A9F0693C.sh
+c000000005055B0130000000000000111
+t1347792915
+s273
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+t2
+s0
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/core.hpp
+c000000005055AD8E000000000002B69D
+t1347792270
+s177821
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/core_c.h
+c000000005055AD8E0000000000013298
+t1347792270
+s78488
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/eigen.hpp
+c000000005055AD8E00000000000026D3
+t1347792270
+s9939
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/internal.hpp
+c000000005055AD8E00000000000086D8
+t1347792270
+s34520
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/mat.hpp
+c000000005055AD8E0000000000013923
+t1347792270
+s80163
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/operations.hpp
+c000000005055AD8E000000000001F0BB
+t1347792270
+s127163
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/types_c.h
+c000000005055AD8E000000000000E0BE
+t1347792270
+s57534
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include/opencv2/core/version.hpp
+c000000005055AD8E00000000000009EA
+t1347792270
+s2538
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include/opencv2/features2d/features2d.hpp
+c000000005055AD8E000000000000F898
+t1347792270
+s63640
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include/opencv2/flann/config.h
+c000000005055AD8E00000000000006FD
+t1347792270
+s1789
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include/opencv2/flann/defines.h
+c000000005055AD8E0000000000001226
+t1347792270
+s4646
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include/opencv2/flann/miniflann.hpp
+c000000005055AD8E00000000000016BE
+t1347792270
+s5822
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include/opencv2/imgproc/imgproc.hpp
+c000000005055AD8E000000000000D4E7
+t1347792270
+s54503
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include/opencv2/imgproc/types_c.h
+c000000005055AD8E00000000000037C5
+t1347792270
+s14277
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include/opencv2/nonfree/features2d.hpp
+c000000005055AD8E00000000000016ED
+t1347792270
+s5869
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include/opencv2/nonfree/nonfree.hpp
+c000000005055AD8E0000000000000935
+t1347792270
+s2357
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/nonfree_init.cpp
+c000000005055AD8E0000000000000DD8
+t1347792270
+s3544
+i"precomp.hpp"
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.cpp
+c000000005055AD8E0000000000000897
+t1347792270
+s2199
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.hpp
+c000000005055AD8E0000000000000957
+t1347792270
+s2391
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/sift.cpp
+c000000005055AD8E0000000000007644
+t1347792270
+s30276
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/surf.cpp
+c000000005055AD8E000000000000965C
+t1347792270
+s38492
+
+N/opt/local/include/eigen3/Eigen/Core
+c000000004F3575790000000000002F49
+t1328903545
+s12105
+
+N/opt/local/include/eigen3/Eigen/src/Core/../plugins/ArrayCwiseBinaryOps.h
+c000000004F35757900000000000013CA
+t1328903545
+s5066
+
+N/opt/local/include/eigen3/Eigen/src/Core/../plugins/ArrayCwiseUnaryOps.h
+c000000004F35757900000000000013BB
+t1328903545
+s5051
+
+N/opt/local/include/eigen3/Eigen/src/Core/../plugins/BlockMethods.h
+c000000004F3575790000000000004E0E
+t1328903545
+s19982
+
+N/opt/local/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseBinaryOps.h
+c000000004F3575790000000000000A8E
+t1328903545
+s2702
+
+N/opt/local/include/eigen3/Eigen/src/Core/../plugins/CommonCwiseUnaryOps.h
+c000000004F3575790000000000001CC7
+t1328903545
+s7367
+
+N/opt/local/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseBinaryOps.h
+c000000004F35757900000000000014F9
+t1328903545
+s5369
+
+N/opt/local/include/eigen3/Eigen/src/Core/../plugins/MatrixCwiseUnaryOps.h
+c000000004F3575790000000000000D35
+t1328903545
+s3381
+
+N/opt/local/include/eigen3/Eigen/src/Core/Array.h
+c000000004F357579000000000000302D
+t1328903545
+s12333
+
+N/opt/local/include/eigen3/Eigen/src/Core/ArrayBase.h
+c000000004F35757900000000000023BD
+t1328903545
+s9149
+
+N/opt/local/include/eigen3/Eigen/src/Core/ArrayWrapper.h
+c000000004F3575790000000000001D9F
+t1328903545
+s7583
+
+N/opt/local/include/eigen3/Eigen/src/Core/Assign.h
+c000000004F3575790000000000005ADA
+t1328903545
+s23258
+
+N/opt/local/include/eigen3/Eigen/src/Core/BandMatrix.h
+c000000004F35757900000000000035C8
+t1328903545
+s13768
+
+N/opt/local/include/eigen3/Eigen/src/Core/Block.h
+c000000004F3575790000000000003876
+t1328903545
+s14454
+
+N/opt/local/include/eigen3/Eigen/src/Core/BooleanRedux.h
+c000000004F357579000000000000108D
+t1328903545
+s4237
+
+N/opt/local/include/eigen3/Eigen/src/Core/CommaInitializer.h
+c000000004F357579000000000000153A
+t1328903545
+s5434
+
+N/opt/local/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h
+c000000004F3575790000000000002942
+t1328903545
+s10562
+
+N/opt/local/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h
+c000000004F357579000000000000716A
+t1328903545
+s29034
+
+N/opt/local/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h
+c000000004F3575790000000000001535
+t1328903545
+s5429
+
+N/opt/local/include/eigen3/Eigen/src/Core/CwiseUnaryView.h
+c000000004F35757900000000000016C5
+t1328903545
+s5829
+
+N/opt/local/include/eigen3/Eigen/src/Core/DenseBase.h
+c000000004F3575790000000000005ED5
+t1328903545
+s24277
+
+N/opt/local/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h
+c000000004F3575790000000000006EAC
+t1328903545
+s28332
+
+N/opt/local/include/eigen3/Eigen/src/Core/DenseStorage.h
+c000000004F3575790000000000003528
+t1328903545
+s13608
+
+N/opt/local/include/eigen3/Eigen/src/Core/Diagonal.h
+c000000004F3575790000000000002343
+t1328903545
+s9027
+
+N/opt/local/include/eigen3/Eigen/src/Core/DiagonalMatrix.h
+c000000004F3575790000000000002D37
+t1328903545
+s11575
+
+N/opt/local/include/eigen3/Eigen/src/Core/DiagonalProduct.h
+c000000004F35757900000000000017E6
+t1328903545
+s6118
+
+N/opt/local/include/eigen3/Eigen/src/Core/Dot.h
+c000000004F357579000000000000277C
+t1328903545
+s10108
+
+N/opt/local/include/eigen3/Eigen/src/Core/EigenBase.h
+c000000004F35757900000000000018EB
+t1328903545
+s6379
+
+N/opt/local/include/eigen3/Eigen/src/Core/Flagged.h
+c000000004F3575790000000000001335
+t1328903545
+s4917
+
+N/opt/local/include/eigen3/Eigen/src/Core/ForceAlignedAccess.h
+c000000004F357579000000000000143B
+t1328903545
+s5179
+
+N/opt/local/include/eigen3/Eigen/src/Core/Functors.h
+c000000004F3575790000000000008CD8
+t1328903545
+s36056
+
+N/opt/local/include/eigen3/Eigen/src/Core/Fuzzy.h
+c000000004F357579000000000000185F
+t1328903545
+s6239
+
+N/opt/local/include/eigen3/Eigen/src/Core/GenericPacketMath.h
+c000000004F3575790000000000002EF3
+t1328903545
+s12019
+
+N/opt/local/include/eigen3/Eigen/src/Core/GlobalFunctions.h
+c000000004F3575790000000000000F73
+t1328903545
+s3955
+
+N/opt/local/include/eigen3/Eigen/src/Core/IO.h
+c000000004F3575790000000000002037
+t1328903545
+s8247
+
+N/opt/local/include/eigen3/Eigen/src/Core/Map.h
+c000000004F3575790000000000002269
+t1328903545
+s8809
+
+N/opt/local/include/eigen3/Eigen/src/Core/MapBase.h
+c000000004F35757900000000000022AC
+t1328903545
+s8876
+
+N/opt/local/include/eigen3/Eigen/src/Core/MathFunctions.h
+c000000004F357579000000000000615C
+t1328903545
+s24924
+
+N/opt/local/include/eigen3/Eigen/src/Core/Matrix.h
+c000000004F3575790000000000004866
+t1328903545
+s18534
+
+N/opt/local/include/eigen3/Eigen/src/Core/MatrixBase.h
+c000000004F3575790000000000005AB9
+t1328903545
+s23225
+
+N/opt/local/include/eigen3/Eigen/src/Core/NestByValue.h
+c000000004F3575790000000000000F5A
+t1328903545
+s3930
+
+N/opt/local/include/eigen3/Eigen/src/Core/NoAlias.h
+c000000004F35757900000000000016D7
+t1328903545
+s5847
+
+N/opt/local/include/eigen3/Eigen/src/Core/NumTraits.h
+c000000004F3575790000000000001AF2
+t1328903545
+s6898
+
+N/opt/local/include/eigen3/Eigen/src/Core/PermutationMatrix.h
+c000000004F3575790000000000005F77
+t1328903545
+s24439
+
+N/opt/local/include/eigen3/Eigen/src/Core/PlainObjectBase.h
+c000000004F357579000000000000811A
+t1328903545
+s33050
+
+N/opt/local/include/eigen3/Eigen/src/Core/Product.h
+c000000004F3575790000000000006CB3
+t1328903545
+s27827
+
+N/opt/local/include/eigen3/Eigen/src/Core/ProductBase.h
+c000000004F3575790000000000002B78
+t1328903545
+s11128
+
+N/opt/local/include/eigen3/Eigen/src/Core/Random.h
+c000000004F35757900000000000017E2
+t1328903545
+s6114
+
+N/opt/local/include/eigen3/Eigen/src/Core/Redux.h
+c000000004F35757900000000000036AF
+t1328903545
+s13999
+
+N/opt/local/include/eigen3/Eigen/src/Core/Replicate.h
+c000000004F3575790000000000001C9E
+t1328903545
+s7326
+
+N/opt/local/include/eigen3/Eigen/src/Core/ReturnByValue.h
+c000000004F3575790000000000000F25
+t1328903545
+s3877
+
+N/opt/local/include/eigen3/Eigen/src/Core/Reverse.h
+c000000004F35757900000000000020B9
+t1328903545
+s8377
+
+N/opt/local/include/eigen3/Eigen/src/Core/Select.h
+c000000004F357579000000000000199D
+t1328903545
+s6557
+
+N/opt/local/include/eigen3/Eigen/src/Core/SelfAdjointView.h
+c000000004F3575790000000000002FD0
+t1328903545
+s12240
+
+N/opt/local/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h
+c000000004F3575790000000000001E2C
+t1328903545
+s7724
+
+N/opt/local/include/eigen3/Eigen/src/Core/SolveTriangular.h
+c000000004F3575790000000000002953
+t1328903545
+s10579
+
+N/opt/local/include/eigen3/Eigen/src/Core/StableNorm.h
+c000000004F3575790000000000001B58
+t1328903545
+s7000
+
+N/opt/local/include/eigen3/Eigen/src/Core/Stride.h
+c000000004F35757900000000000010F2
+t1328903545
+s4338
+
+N/opt/local/include/eigen3/Eigen/src/Core/Swap.h
+c000000004F35757900000000000011D9
+t1328903545
+s4569
+
+N/opt/local/include/eigen3/Eigen/src/Core/Transpose.h
+c000000004F3575790000000000003B3E
+t1328903545
+s15166
+
+N/opt/local/include/eigen3/Eigen/src/Core/Transpositions.h
+c000000004F3575790000000000003EB7
+t1328903545
+s16055
+
+N/opt/local/include/eigen3/Eigen/src/Core/TriangularMatrix.h
+c000000004F35757900000000000077D5
+t1328903545
+s30677
+
+N/opt/local/include/eigen3/Eigen/src/Core/VectorBlock.h
+c000000004F3575790000000000002875
+t1328903545
+s10357
+
+N/opt/local/include/eigen3/Eigen/src/Core/VectorwiseOp.h
+c000000004F3575790000000000005849
+t1328903545
+s22601
+
+N/opt/local/include/eigen3/Eigen/src/Core/Visitor.h
+c000000004F3575790000000000001D80
+t1328903545
+s7552
+
+N/opt/local/include/eigen3/Eigen/src/Core/arch/Default/Settings.h
+c000000004F35757900000000000009CE
+t1328903545
+s2510
+
+N/opt/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h
+c000000004F3575790000000000004870
+t1328903545
+s18544
+
+N/opt/local/include/eigen3/Eigen/src/Core/arch/SSE/MathFunctions.h
+c000000004F357579000000000000342B
+t1328903545
+s13355
+
+N/opt/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h
+c000000004F35757900000000000064B3
+t1328903545
+s25779
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/CoeffBasedProduct.h
+c000000004F3575790000000000004AA0
+t1328903545
+s19104
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h
+c000000004F357579000000000000AB2D
+t1328903545
+s43821
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h
+c000000004F35757900000000000040FF
+t1328903545
+s16639
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h
+c000000004F3575790000000000002AB2
+t1328903545
+s10930
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h
+c000000004F3575790000000000005990
+t1328903545
+s22928
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/Parallelizer.h
+c000000004F3575790000000000001138
+t1328903545
+s4408
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h
+c000000004F3575790000000000003BC2
+t1328903545
+s15298
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h
+c000000004F3575790000000000002A48
+t1328903545
+s10824
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h
+c000000004F3575790000000000001961
+t1328903545
+s6497
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h
+c000000004F35757900000000000011E4
+t1328903545
+s4580
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h
+c000000004F357579000000000000413D
+t1328903545
+s16701
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h
+c000000004F35757900000000000034F7
+t1328903545
+s13559
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h
+c000000004F357579000000000000344D
+t1328903545
+s13389
+
+N/opt/local/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h
+c000000004F35757900000000000017D2
+t1328903545
+s6098
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/BlasUtil.h
+c000000004F3575790000000000002A2E
+t1328903545
+s10798
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/Constants.h
+c000000004F3575790000000000004344
+t1328903545
+s17220
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h
+c000000004F35757900000000000008ED
+t1328903545
+s2285
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h
+c000000004F3575790000000000003762
+t1328903545
+s14178
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/Macros.h
+c000000004F35757900000000000044AA
+t1328903545
+s17578
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/Memory.h
+c000000004F3575790000000000008CF0
+t1328903545
+s36080
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/Meta.h
+c000000004F3575790000000000002861
+t1328903545
+s10337
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
+c000000004F3575790000000000000145
+t1328903545
+s325
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/StaticAssert.h
+c000000004F35757900000000000022C6
+t1328903545
+s8902
+
+N/opt/local/include/eigen3/Eigen/src/Core/util/XprHelper.h
+c000000004F3575790000000000004258
+t1328903545
+s16984
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies83f99bc5e705b641^e21d9cc5e705b641^---0#1#0#--18"Check dependencies36"5A4822CE-5B6A-4C27-89BB-AB9CB0E7690B-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/nonfree_init.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s369485715.301112
+e369485717.053034
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/nonfree_init.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: argument unused during compilation: '-headerpad_max_install_names'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/nonfree_init.cppbd344d93e705b641^4f930d95e705b641^-83"clang: warning: argument unused during compilation: '-headerpad_max_install_names'-0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/nonfree_init.cpp0000000000000000^3873"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.o modules/nonfree/src/nonfree_init.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/opt/local/include/eigen3 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -DNDEBUG -fomit-frame-pointer -ffast-math -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/nonfree_init.cpp -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/nonfree_init.o36"24A92EBA-1370-4BBA-A7C0-D5AF954BBB2C-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s369485715.301136
+e369485716.921120
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: argument unused during compilation: '-headerpad_max_install_names'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.cpp9c344d93e705b641^21ceeb94e705b641^-83"clang: warning: argument unused during compilation: '-headerpad_max_install_names'-0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.cpp0000000000000000^3843"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o modules/nonfree/src/precomp.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/opt/local/include/eigen3 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -DNDEBUG -fomit-frame-pointer -ffast-math -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/precomp.cpp -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o36"F76D3382-C8DC-4F9B-8B9C-155054059C7B-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/sift.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s369485715.829938
+e369485718.183889
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/sift.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: argument unused during compilation: '-headerpad_max_install_names'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/sift.cppee96d493e705b641^7b132f96e705b641^-83"clang: warning: argument unused during compilation: '-headerpad_max_install_names'-0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/sift.cpp0000000000000000^3825"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.o modules/nonfree/src/sift.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/opt/local/include/eigen3 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -DNDEBUG -fomit-frame-pointer -ffast-math -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/sift.cpp -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/sift.o36"30F893D9-47AD-4EBF-B32B-E3DE0BB0FA01-
+
+CCompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.o /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/surf.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s369485716.005898
+e369485718.972890
+r1
+xCompileC
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.o
+x/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/surf.cpp
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oclang: warning: argument unused during compilation: '-headerpad_max_install_names'
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/surf.cpp2ba30194e705b641^d751f996e705b641^-83"clang: warning: argument unused during compilation: '-headerpad_max_install_names'-0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/surf.cpp0000000000000000^3825"CompileC /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.o modules/nonfree/src/surf.cpp normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O3 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-sign-compare -Wno-shorten-64-to-32 -Wno-newline-eof -Wc++11-extensions "-DCMAKE_INTDIR=\"Release-iphonesimulator\"" -DHAVE_CVCONFIG_H -DHAVE_ALLOCA -DHAVE_ALLOCA_H -DHAVE_LIBPTHREAD -DHAVE_UNISTD_H -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -fexceptions -fasm-blocks -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.6 -Wno-sign-conversion -D__IPHONE_OS_VERSION_MIN_REQUIRED=50100 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/features2d/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/highgui/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/flann/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/imgproc/include -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/core/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src -I/Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/include -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -I/opt/local/include/eigen3 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources/i386 -I/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release -headerpad_max_install_names -fvisibility=hidden -fvisibility-inlines-hidden -DNDEBUG -fomit-frame-pointer -ffast-math -MMD -MT dependencies -MF /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.d --serialize-diagnostics /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.dia -c /Users/ginrou799/Development/iphone/BlendingCamera/opencv/modules/nonfree/src/surf.cpp -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/surf.o36"9B79DFB2-BD6C-4DDD-A5AB-6CE0F5FCB639-
+
+CLibtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a normal i386
+s369485719.334291
+e369485719.359539
+r1
+xLibtool
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a
+xnormal
+xi386
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o has no symbols
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a normal i38622a95597e705b641^b1155c97e705b641^-298"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o has no symbols-0#0#0#--1139"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a normal i386    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -L/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release -filelist /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/opencv_nonfree.LinkFileList -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a36"CD675602-1E54-4B1D-9983-C3BE47617A50-
+
+CLibtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a normal i386
+s369485765.634382
+e369485765.661485
+r1
+xLibtool
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+xnormal
+xi386
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o has no symbols
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection152"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a normal i386af78a2c5e705b641^0058a9c5e705b641^-298"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool: file: /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/precomp.o has no symbols-0#0#0#--1187"Libtool /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a normal i386    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk -L/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release -filelist /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Objects-normal/i386/opencv_nonfree.LinkFileList -o /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a36"F28BD94D-AADB-4715-A53B-50DAA9C5A15E-
+
+CPhaseScriptExecution "CMake PostBuild Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Script-11CC7D3CE2F44DF8A9F0693C.sh
+s369485765.669835
+e369485765.700485
+r1
+xPhaseScriptExecution
+xCMake PostBuild Rules
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Script-11CC7D3CE2F44DF8A9F0693C.sh
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.opencv_nonfree.Release
+omake[1]: Nothing to be done for `PostBuild.opencv_nonfree.Release'.
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.opencv_nonfree.Release
+omake[1]: Nothing to be done for `PostBuild.opencv_nonfree.Release'.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Run custom shell script 'CMake PostBuild Rules'c3d3abc5e705b641^1e53b3c5e705b641^-928"echo "Depend check for xcode"Depend check for xcodecd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.opencv_nonfree.Releasemake[1]: Nothing to be done for `PostBuild.opencv_nonfree.Release'.echo "Depend check for xcode"Depend check for xcodecd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.opencv_nonfree.Releasemake[1]: Nothing to be done for `PostBuild.opencv_nonfree.Release'.8(21%IDEActivityLogMessage2@30"echo "Depend check for xcode"-369485765#0#30#-0#-----2@23"Depend check for xcode-369485765#30#23#-0#-----2@319"cd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.opencv_nonfree.Release-369485765#53#319#-0#-----2@68"make[1]: Nothing to be done for `PostBuild.opencv_nonfree.Release'.-369485765#372#68#-0#-----2@30"echo "Depend check for xcode"-369485765#440#30#-0#-----2@23"Depend check for xcode-369485765#470#23#-0#-----2@367"cd /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree && make -C /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree -f /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.opencv_nonfree.Release-369485765#493#367#-0#-----2@68"make[1]: Nothing to be done for `PostBuild.opencv_nonfree.Release'.-369485765#860#68#-0#-----0#0#0#--497"PhaseScriptExecution "CMake PostBuild Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Script-11CC7D3CE2F44DF8A9F0693C.sh    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    /bin/sh -c /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/OpenCV.build/Release-iphonesimulator/opencv_nonfree.build/Script-11CC7D3CE2F44DF8A9F0693C.sh36"D260EDF2-CEBD-43F2-BD10-D786F1E84A8C-
+
+CSetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+s369485765.753094
+e369485765.756852
+r1
+xSetMode
+xu+w,go-w,a+rX
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection154"SetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.aecdcc0c5e705b641^94c1c1c5e705b641^---0#0#0#-19%DVTDocumentLocation2@148"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a0000000000000000^627"SetMode u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /bin/chmod -RH u+w,go-w,a+rX /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a36"C3F06EDC-4735-4093-A963-012DD6D940FB-
+
+CSetOwnerAndGroup ginrou799:staff /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+s369485765.735392
+e369485765.743907
+r1
+xSetOwnerAndGroup
+xginrou799:staff
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection165"SetOwnerAndGroup ginrou799:staff /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a7e57bcc5e705b641^6971bec5e705b641^---0#0#0#-19%DVTDocumentLocation2@148"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a0000000000000000^649"SetOwnerAndGroup "ginrou799:staff" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/sbin/chown -RH "ginrou799:staff" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a36"39D30A64-BD75-486E-B3CB-6F5AD9B78ABB-
+
+CStrip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+s369485765.708491
+e369485765.715425
+r1
+xStrip
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+o/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip: input object file stripped: /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a(precomp.o)
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection138"Strip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a4c71b5c5e705b641^d026b7c5e705b641^-266"/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip: input object file stripped: /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a(precomp.o)-0#0#0#-19%DVTDocumentLocation2@148"file://localhost/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a0000000000000000^678"Strip /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -S /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a36"3343D75D-F66A-4A53-8ACC-217CA3614B6A-
+
+CSymLink /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+s369485765.613616
+e369485765.617730
+r1
+xSymLink
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"Process /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a80279dc5e705b641^f2239ec5e705b641^---0#0#0#--814"SymLink /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/opt/local/bin:/opt/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /bin/ln -sf /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/modules/nonfree/UninstalledProducts/libopencv_nonfree.a /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/lib/Release/libopencv_nonfree.a36"E866B67B-E995-40F7-9ABC-45CB2F3E7784-
+

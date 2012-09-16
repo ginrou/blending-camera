@@ -1,0 +1,13 @@
+# Package Information for pkg-config
+
+prefix=/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/install
+exec_prefix=${prefix}
+libdir=
+includedir_old=${prefix}/include/opencv
+includedir_new=${prefix}/include
+
+Name: OpenCV
+Description: Open Source Computer Vision Library
+Version: 2.4.9
+Libs:  ${exec_prefix}/lib/libopencv_contrib.a ${exec_prefix}/lib/libopencv_legacy.a ${exec_prefix}/lib/libopencv_ml.a ${exec_prefix}/lib/libopencv_stitching.a ${exec_prefix}/lib/libopencv_nonfree.a ${exec_prefix}/lib/libopencv_objdetect.a ${exec_prefix}/lib/libopencv_videostab.a ${exec_prefix}/lib/libopencv_calib3d.a ${exec_prefix}/lib/libopencv_photo.a ${exec_prefix}/lib/libopencv_video.a ${exec_prefix}/lib/libopencv_features2d.a ${exec_prefix}/lib/libopencv_highgui.a ${exec_prefix}/lib/libopencv_flann.a ${exec_prefix}/lib/libopencv_imgproc.a ${exec_prefix}/lib/libopencv_core.a ${exec_prefix}/lib/libopencv_world.a ${exec_prefix}/share/OpenCV/3rdparty/lib/libzlib.a -framework AssetsLibrary -framework CoreVideo -framework CoreMedia -framework CoreImage -framework CoreGraphics -framework Accelerate -framework QuartzCore -framework AVFoundation
+Cflags: -I${includedir_old} -I${includedir_new}

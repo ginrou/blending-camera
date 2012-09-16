@@ -1,0 +1,28 @@
+TALL_BUILD
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ALL_BUILD.build/Script-E7551B4A49F04C668AAFD2DE.sh
+
+N/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ALL_BUILD.build/Script-E7551B4A49F04C668AAFD2DE.sh
+c000000005055B04200000000000000F2
+t1347792962
+s242
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciescf868cc2e705b641^d9cd8cc2e705b641^---0#1#0#--18"Check dependencies36"09A3D807-3102-4EF8-8769-5AEEC79054AC-
+
+CPhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ALL_BUILD.build/Script-E7551B4A49F04C668AAFD2DE.sh
+s369485762.551466
+e369485762.566050
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ALL_BUILD.build/Script-E7551B4A49F04C668AAFD2DE.sh
+oecho ""
+o
+oecho Build\ all\ projects
+oBuild all projects
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'd4808dc2e705b641^b8e890c2e705b641^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-369485762#0#8#-0#-----2@26"echo Build\ all\ projects-369485762#9#26#-0#-----2@19"Build all projects-369485762#35#19#-0#-----0#0#0#--445"PhaseScriptExecution "CMake Rules" /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ALL_BUILD.build/Script-E7551B4A49F04C668AAFD2DE.sh    cd /Users/ginrou799/Development/iphone/BlendingCamera/opencv    /bin/sh -c /Users/ginrou799/Development/iphone/BlendingCamera/ios/build/iPhoneSimulator/OpenCV.build/Release-iphonesimulator/ALL_BUILD.build/Script-E7551B4A49F04C668AAFD2DE.sh36"7DFEA581-C45E-4C5B-9AB6-B3FE9BF5E4CE-
+
