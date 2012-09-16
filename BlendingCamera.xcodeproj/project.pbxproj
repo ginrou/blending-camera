@@ -1,0 +1,450 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A8E2F391605E25400391C57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F381605E25400391C57 /* UIKit.framework */; };
+		9A8E2F3B1605E25400391C57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3A1605E25400391C57 /* Foundation.framework */; };
+		9A8E2F3D1605E25400391C57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3C1605E25400391C57 /* CoreGraphics.framework */; };
+		9A8E2F431605E25400391C57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8E2F411605E25400391C57 /* InfoPlist.strings */; };
+		9A8E2F451605E25400391C57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F441605E25400391C57 /* main.m */; };
+		9A8E2F491605E25400391C57 /* BCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F481605E25400391C57 /* BCAppDelegate.m */; };
+		9A8E2F4C1605E25400391C57 /* BCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F4B1605E25400391C57 /* BCViewController.m */; };
+		9A8E2F4F1605E25400391C57 /* BCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8E2F4D1605E25400391C57 /* BCViewController.xib */; };
+		9A8E2F571605E25400391C57 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F561605E25400391C57 /* SenTestingKit.framework */; };
+		9A8E2F581605E25400391C57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F381605E25400391C57 /* UIKit.framework */; };
+		9A8E2F591605E25400391C57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3A1605E25400391C57 /* Foundation.framework */; };
+		9A8E2F611605E25400391C57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8E2F5F1605E25400391C57 /* InfoPlist.strings */; };
+		9A8E2F641605E25400391C57 /* BlendingCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F631605E25400391C57 /* BlendingCameraTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A8E2F5A1605E25400391C57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A8E2F2B1605E25400391C57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8E2F331605E25400391C57;
+			remoteInfo = BlendingCamera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9A8E2F341605E25400391C57 /* BlendingCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlendingCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8E2F381605E25400391C57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9A8E2F3A1605E25400391C57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9A8E2F3C1605E25400391C57 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9A8E2F401605E25400391C57 /* BlendingCamera-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlendingCamera-Info.plist"; sourceTree = "<group>"; };
+		9A8E2F421605E25400391C57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A8E2F441605E25400391C57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A8E2F461605E25400391C57 /* BlendingCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BlendingCamera-Prefix.pch"; sourceTree = "<group>"; };
+		9A8E2F471605E25400391C57 /* BCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCAppDelegate.h; sourceTree = "<group>"; };
+		9A8E2F481605E25400391C57 /* BCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCAppDelegate.m; sourceTree = "<group>"; };
+		9A8E2F4A1605E25400391C57 /* BCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCViewController.h; sourceTree = "<group>"; };
+		9A8E2F4B1605E25400391C57 /* BCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCViewController.m; sourceTree = "<group>"; };
+		9A8E2F4E1605E25400391C57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BCViewController.xib; sourceTree = "<group>"; };
+		9A8E2F551605E25400391C57 /* BlendingCameraTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlendingCameraTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A8E2F561605E25400391C57 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9A8E2F5E1605E25400391C57 /* BlendingCameraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlendingCameraTests-Info.plist"; sourceTree = "<group>"; };
+		9A8E2F601605E25400391C57 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A8E2F621605E25400391C57 /* BlendingCameraTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlendingCameraTests.h; sourceTree = "<group>"; };
+		9A8E2F631605E25400391C57 /* BlendingCameraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlendingCameraTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A8E2F311605E25400391C57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8E2F391605E25400391C57 /* UIKit.framework in Frameworks */,
+				9A8E2F3B1605E25400391C57 /* Foundation.framework in Frameworks */,
+				9A8E2F3D1605E25400391C57 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8E2F511605E25400391C57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8E2F571605E25400391C57 /* SenTestingKit.framework in Frameworks */,
+				9A8E2F581605E25400391C57 /* UIKit.framework in Frameworks */,
+				9A8E2F591605E25400391C57 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A8E2F291605E25400391C57 = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F3E1605E25400391C57 /* BlendingCamera */,
+				9A8E2F5C1605E25400391C57 /* BlendingCameraTests */,
+				9A8E2F371605E25400391C57 /* Frameworks */,
+				9A8E2F351605E25400391C57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A8E2F351605E25400391C57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F341605E25400391C57 /* BlendingCamera.app */,
+				9A8E2F551605E25400391C57 /* BlendingCameraTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A8E2F371605E25400391C57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F381605E25400391C57 /* UIKit.framework */,
+				9A8E2F3A1605E25400391C57 /* Foundation.framework */,
+				9A8E2F3C1605E25400391C57 /* CoreGraphics.framework */,
+				9A8E2F561605E25400391C57 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A8E2F3E1605E25400391C57 /* BlendingCamera */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F471605E25400391C57 /* BCAppDelegate.h */,
+				9A8E2F481605E25400391C57 /* BCAppDelegate.m */,
+				9A8E2F4A1605E25400391C57 /* BCViewController.h */,
+				9A8E2F4B1605E25400391C57 /* BCViewController.m */,
+				9A8E2F4D1605E25400391C57 /* BCViewController.xib */,
+				9A8E2F3F1605E25400391C57 /* Supporting Files */,
+			);
+			path = BlendingCamera;
+			sourceTree = "<group>";
+		};
+		9A8E2F3F1605E25400391C57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F401605E25400391C57 /* BlendingCamera-Info.plist */,
+				9A8E2F411605E25400391C57 /* InfoPlist.strings */,
+				9A8E2F441605E25400391C57 /* main.m */,
+				9A8E2F461605E25400391C57 /* BlendingCamera-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9A8E2F5C1605E25400391C57 /* BlendingCameraTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F621605E25400391C57 /* BlendingCameraTests.h */,
+				9A8E2F631605E25400391C57 /* BlendingCameraTests.m */,
+				9A8E2F5D1605E25400391C57 /* Supporting Files */,
+			);
+			path = BlendingCameraTests;
+			sourceTree = "<group>";
+		};
+		9A8E2F5D1605E25400391C57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F5E1605E25400391C57 /* BlendingCameraTests-Info.plist */,
+				9A8E2F5F1605E25400391C57 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A8E2F331605E25400391C57 /* BlendingCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A8E2F671605E25400391C57 /* Build configuration list for PBXNativeTarget "BlendingCamera" */;
+			buildPhases = (
+				9A8E2F301605E25400391C57 /* Sources */,
+				9A8E2F311605E25400391C57 /* Frameworks */,
+				9A8E2F321605E25400391C57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlendingCamera;
+			productName = BlendingCamera;
+			productReference = 9A8E2F341605E25400391C57 /* BlendingCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A8E2F541605E25400391C57 /* BlendingCameraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A8E2F6A1605E25400391C57 /* Build configuration list for PBXNativeTarget "BlendingCameraTests" */;
+			buildPhases = (
+				9A8E2F501605E25400391C57 /* Sources */,
+				9A8E2F511605E25400391C57 /* Frameworks */,
+				9A8E2F521605E25400391C57 /* Resources */,
+				9A8E2F531605E25400391C57 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A8E2F5B1605E25400391C57 /* PBXTargetDependency */,
+			);
+			name = BlendingCameraTests;
+			productName = BlendingCameraTests;
+			productReference = 9A8E2F551605E25400391C57 /* BlendingCameraTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A8E2F2B1605E25400391C57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BC;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "武田 祐一";
+			};
+			buildConfigurationList = 9A8E2F2E1605E25400391C57 /* Build configuration list for PBXProject "BlendingCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9A8E2F291605E25400391C57;
+			productRefGroup = 9A8E2F351605E25400391C57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A8E2F331605E25400391C57 /* BlendingCamera */,
+				9A8E2F541605E25400391C57 /* BlendingCameraTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A8E2F321605E25400391C57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8E2F431605E25400391C57 /* InfoPlist.strings in Resources */,
+				9A8E2F4F1605E25400391C57 /* BCViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8E2F521605E25400391C57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8E2F611605E25400391C57 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9A8E2F531605E25400391C57 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A8E2F301605E25400391C57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8E2F451605E25400391C57 /* main.m in Sources */,
+				9A8E2F491605E25400391C57 /* BCAppDelegate.m in Sources */,
+				9A8E2F4C1605E25400391C57 /* BCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A8E2F501605E25400391C57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A8E2F641605E25400391C57 /* BlendingCameraTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A8E2F5B1605E25400391C57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A8E2F331605E25400391C57 /* BlendingCamera */;
+			targetProxy = 9A8E2F5A1605E25400391C57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A8E2F411605E25400391C57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A8E2F421605E25400391C57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A8E2F4D1605E25400391C57 /* BCViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A8E2F4E1605E25400391C57 /* en */,
+			);
+			name = BCViewController.xib;
+			sourceTree = "<group>";
+		};
+		9A8E2F5F1605E25400391C57 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A8E2F601605E25400391C57 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A8E2F651605E25400391C57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9A8E2F661605E25400391C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A8E2F681605E25400391C57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlendingCamera/BlendingCamera-Prefix.pch";
+				INFOPLIST_FILE = "BlendingCamera/BlendingCamera-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9A8E2F691605E25400391C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlendingCamera/BlendingCamera-Prefix.pch";
+				INFOPLIST_FILE = "BlendingCamera/BlendingCamera-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9A8E2F6B1605E25400391C57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlendingCamera.app/BlendingCamera";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlendingCamera/BlendingCamera-Prefix.pch";
+				INFOPLIST_FILE = "BlendingCameraTests/BlendingCameraTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9A8E2F6C1605E25400391C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BlendingCamera.app/BlendingCamera";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BlendingCamera/BlendingCamera-Prefix.pch";
+				INFOPLIST_FILE = "BlendingCameraTests/BlendingCameraTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A8E2F2E1605E25400391C57 /* Build configuration list for PBXProject "BlendingCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8E2F651605E25400391C57 /* Debug */,
+				9A8E2F661605E25400391C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A8E2F671605E25400391C57 /* Build configuration list for PBXNativeTarget "BlendingCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8E2F681605E25400391C57 /* Debug */,
+				9A8E2F691605E25400391C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9A8E2F6A1605E25400391C57 /* Build configuration list for PBXNativeTarget "BlendingCameraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A8E2F6B1605E25400391C57 /* Debug */,
+				9A8E2F6C1605E25400391C57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A8E2F2B1605E25400391C57 /* Project object */;
+}
