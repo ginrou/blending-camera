@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096969C51607298D00DEB522 /* BCRealTimeProcessingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */; };
+		096969C61607298D00DEB522 /* BCRealTimeProcessingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */; };
+		096969C816072CE100DEB522 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969C716072CE100DEB522 /* Accelerate.framework */; };
+		096969CA16072CE900DEB522 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969C916072CE900DEB522 /* AssetsLibrary.framework */; };
+		096969CC16072CF000DEB522 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969CB16072CF000DEB522 /* AVFoundation.framework */; };
+		096969CE16072CFB00DEB522 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969CD16072CFB00DEB522 /* CoreImage.framework */; };
+		096969D016072D0300DEB522 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969CF16072D0300DEB522 /* CoreMedia.framework */; };
+		096969D216072D0D00DEB522 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969D116072D0D00DEB522 /* CoreVideo.framework */; };
+		096969D416072D1500DEB522 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969D316072D1500DEB522 /* QuartzCore.framework */; };
 		9A8E2F391605E25400391C57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F381605E25400391C57 /* UIKit.framework */; };
 		9A8E2F3B1605E25400391C57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3A1605E25400391C57 /* Foundation.framework */; };
 		9A8E2F3D1605E25400391C57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3C1605E25400391C57 /* CoreGraphics.framework */; };
@@ -35,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		096969C21607298D00DEB522 /* BCRealTimeProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRealTimeProcessingViewController.h; sourceTree = "<group>"; };
+		096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCRealTimeProcessingViewController.mm; sourceTree = "<group>"; };
+		096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCRealTimeProcessingViewController.xib; sourceTree = "<group>"; };
+		096969C716072CE100DEB522 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		096969C916072CE900DEB522 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		096969CB16072CF000DEB522 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		096969CD16072CFB00DEB522 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		096969CF16072D0300DEB522 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		096969D116072D0D00DEB522 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		096969D316072D1500DEB522 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9A8E2F341605E25400391C57 /* BlendingCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlendingCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8E2F381605E25400391C57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A8E2F3A1605E25400391C57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -64,6 +83,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096969D416072D1500DEB522 /* QuartzCore.framework in Frameworks */,
+				096969D216072D0D00DEB522 /* CoreVideo.framework in Frameworks */,
+				096969D016072D0300DEB522 /* CoreMedia.framework in Frameworks */,
+				096969CE16072CFB00DEB522 /* CoreImage.framework in Frameworks */,
+				096969CC16072CF000DEB522 /* AVFoundation.framework in Frameworks */,
+				096969CA16072CE900DEB522 /* AssetsLibrary.framework in Frameworks */,
+				096969C816072CE100DEB522 /* Accelerate.framework in Frameworks */,
 				9A8E2F391605E25400391C57 /* UIKit.framework in Frameworks */,
 				9A8E2F3B1605E25400391C57 /* Foundation.framework in Frameworks */,
 				9A8E2F3D1605E25400391C57 /* CoreGraphics.framework in Frameworks */,
@@ -107,6 +133,13 @@
 		9A8E2F371605E25400391C57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				096969D316072D1500DEB522 /* QuartzCore.framework */,
+				096969D116072D0D00DEB522 /* CoreVideo.framework */,
+				096969CF16072D0300DEB522 /* CoreMedia.framework */,
+				096969CD16072CFB00DEB522 /* CoreImage.framework */,
+				096969CB16072CF000DEB522 /* AVFoundation.framework */,
+				096969C916072CE900DEB522 /* AssetsLibrary.framework */,
+				096969C716072CE100DEB522 /* Accelerate.framework */,
 				9A8E2F381605E25400391C57 /* UIKit.framework */,
 				9A8E2F3A1605E25400391C57 /* Foundation.framework */,
 				9A8E2F3C1605E25400391C57 /* CoreGraphics.framework */,
@@ -118,10 +151,10 @@
 		9A8E2F3E1605E25400391C57 /* BlendingCamera */ = {
 			isa = PBXGroup;
 			children = (
-				9A8E2F761605EB4400391C57 /* ViewController */,
-				9A8E2F751605EB3700391C57 /* ImageProcessings */,
 				9A8E2F471605E25400391C57 /* BCAppDelegate.h */,
 				9A8E2F481605E25400391C57 /* BCAppDelegate.m */,
+				9A8E2F761605EB4400391C57 /* ViewController */,
+				9A8E2F751605EB3700391C57 /* ImageProcessings */,
 				9A8E2F3F1605E25400391C57 /* Supporting Files */,
 			);
 			path = BlendingCamera;
@@ -172,6 +205,9 @@
 				9A8E2F4A1605E25400391C57 /* BCViewController.h */,
 				9A8E2F4B1605E25400391C57 /* BCViewController.m */,
 				9A8E2F4D1605E25400391C57 /* BCViewController.xib */,
+				096969C21607298D00DEB522 /* BCRealTimeProcessingViewController.h */,
+				096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */,
+				096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -250,6 +286,7 @@
 			files = (
 				9A8E2F431605E25400391C57 /* InfoPlist.strings in Resources */,
 				9A8E2F4F1605E25400391C57 /* BCViewController.xib in Resources */,
+				096969C61607298D00DEB522 /* BCRealTimeProcessingViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +325,7 @@
 				9A8E2F491605E25400391C57 /* BCAppDelegate.m in Sources */,
 				9A8E2F4C1605E25400391C57 /* BCViewController.m in Sources */,
 				9A8E2F79160620F700391C57 /* BCImageConverter.m in Sources */,
+				096969C51607298D00DEB522 /* BCRealTimeProcessingViewController.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +515,7 @@
 				9A8E2F691605E25400391C57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9A8E2F6A1605E25400391C57 /* Build configuration list for PBXNativeTarget "BlendingCameraTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +524,7 @@
 				9A8E2F6C1605E25400391C57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

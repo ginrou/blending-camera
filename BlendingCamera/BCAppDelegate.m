@@ -9,15 +9,20 @@
 #import "BCAppDelegate.h"
 
 #import "BCViewController.h"
+#import "BCRealTimeProcessingViewController.h"
 
 @implementation BCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.viewController = [[BCViewController alloc] initWithNibName:@"BCViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+
+	BCViewController *singleImageProcessingViewController = [[BCViewController alloc] initWithNibName:@"BCViewController" bundle:nil];
+	BCRealTimeProcessingViewController *realTimeViewController = [[BCRealTimeProcessingViewController alloc] init];
+	_tabBarController = [[UITabBarController alloc] init];
+	[_tabBarController setViewControllers:@[ singleImageProcessingViewController, realTimeViewController ]];
+		
+    self.window.rootViewController = _tabBarController;
     [self.window makeKeyAndVisible];
     return YES;
 }

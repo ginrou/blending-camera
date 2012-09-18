@@ -10,10 +10,11 @@
 
 @class BCViewController;
 
-@interface BCAppDelegate : UIResponder <UIApplicationDelegate>
+@interface BCAppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
 @property (strong, nonatomic) BCViewController *viewController;
+@property (strong, nonatomic) UITabBarController *tabBarController;
+@property (strong, nonatomic) NSMutableArray *viewControllers;
 
 @end
