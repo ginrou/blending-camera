@@ -6,7 +6,11 @@
 //  Copyright (c) 2012年 武田 祐一. All rights reserved.
 //
 
+#ifndef __BC_VIEW_CONTROLLER__
+#define __BC_VIEW_CONTROLLER__
+
 #import <UIKit/UIKit.h>
+#import "BCBlenderRapper.h"
 
 @interface BCViewController : UIViewController
 <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
@@ -16,3 +20,5 @@
 -(IBAction)loadButtonTapped:(id)sender;
 
 @end
+
+#endif
