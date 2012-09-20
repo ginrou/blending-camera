@@ -61,11 +61,12 @@
 - (void)imageProcessing
 {
 	BCBlenderRapper *bld = [[BCBlenderRapper alloc] init];
-//	bld.sourceImage = [UIImage imageNamed:@"vinci_src"];
-//	bld.targetImage = [UIImage imageNamed:@"vinci_target"];
-//	bld.mask        = [UIImage imageNamed:@"vinci_mask"];
-//	bld.offset      = CGPointMake(-10.0, 10.0);
-    [bld WrappedSeamlessClone:false];
+	bld.sourceImage = [UIImage imageNamed:@"vinci_src"];
+	bld.targetImage = [UIImage imageNamed:@"vinci_target"];
+	bld.mask        = [UIImage imageNamed:@"vinci_mask"];
+	bld.offset      = CGPointMake(-31.0, 31.0);
+	UIImage *img = [bld WrappedSeamlessClone:true];
+    _imageView.image = img;
     
 }
 

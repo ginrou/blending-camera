@@ -12,19 +12,19 @@
 
 - (UIImage *)WrappedSeamlessClone:(bool)mixture
 {
-//	cv::Mat sourceMat = [BCImageConverter cvMatFromUIImage:_sourceImage];
-//	cv::Mat targetMat = [BCImageConverter cvMatFromUIImage:_targetImage];
-//	cv::Mat maskMat   = [BCImageConverter cvMatFromUIImage:_mask];
-//	blender = Blend::PoissonBlender(sourceMat, targetMat, maskMat);
-//
-//	cv::Mat dstMat;
-//	blender.seamlessClone(dstMat, _offset.x, _offset.y, mixture);
-//	return [BCImageConverter UIImageFromCVMat:dstMat];
+	cv::Mat sourceMat = [BCImageConverter cvMatFromUIImage:_sourceImage];
+	NSLog(@"source converted");
+	cv::Mat targetMat = [BCImageConverter cvMatFromUIImage:_targetImage];
+	NSLog(@"target converted");
+	cv::Mat maskMat   = [BCImageConverter cvMatFromUIImage:_mask];
+	NSLog(@"mask converted");
 	
-
-	Blend::PoissonBlender bld = Blend::PoissonBlender();
-	
-	return nil;
+	Blend::PoissonBlender bld = Blend::PoissonBlender(sourceMat, targetMat, maskMat);
+	cv::Mat dst;
+	NSLog(@"blending start");
+	bld.seamlessClone(dst, _offset.x, _offset.y, false);
+	NSLog(@"blending done");
+	return [BCImageConverter UIImageFromCVMat:dst];
 }
 
 @end

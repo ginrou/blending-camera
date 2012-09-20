@@ -12,18 +12,40 @@
 
 + (cv::Mat)cvMatFromUIImage:(UIImage *)image
 {
-    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
-    CGBitmapInfo bitmapInfo = kCGImageAlphaNoneSkipLast | kCGBitmapByteOrderDefault;
     CGFloat cols = image.size.width;
     CGFloat rows = image.size.height;
-    
-    cv::Mat mat(rows, cols, CV_8UC4);
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
+	
+	CGBitmapInfo bitmapInfo;
+	int matType;
+	int channels = CGColorSpaceGetNumberOfComponents(colorSpace);
+	if (channels == 1) {
+		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNone;
+		matType = CV_8UC1;
+	} else if (channels == 3) {
+		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNoneSkipLast;
+		matType = CV_8UC4;
+	} else if (channels == 4) {
+		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaLast;
+		matType = CV_8UC4;
+	}
+	
+	cv::Mat dst(rows, cols, matType);
 
-    CGContextRef contextRef = CGBitmapContextCreate(mat.data, cols, rows, 8, mat.step[0], colorSpace, bitmapInfo);
-    CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
-    CGContextRelease(contextRef);
-    CGColorSpaceRelease(colorSpace);
-    return mat;
+	CGContextRef contextRef = CGBitmapContextCreate(dst.data, cols, rows, 8, dst.step[0], colorSpace, bitmapInfo);
+	CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
+
+	CGContextRelease(contextRef);
+	CGColorSpaceRelease(colorSpace);
+	
+	if (channels == 3) {
+		cv::Mat dst3ch(rows, cols, CV_8UC3);
+		cv::cvtColor(dst, dst3ch, CV_RGBA2RGB);
+		return dst3ch;
+	}else {
+		return dst;
+	}
+
 }
 
 + (UIImage *)UIImageFromCVMat:(cv::Mat)mat
