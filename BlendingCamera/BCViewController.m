@@ -65,8 +65,7 @@
 	bld.targetImage = [UIImage imageNamed:@"vinci_target"];
 	bld.mask        = [UIImage imageNamed:@"vinci_mask"];
 	bld.offset      = CGPointMake(-31.0, 31.0);
-	UIImage *img = [bld WrappedSeamlessClone:true];
-    _imageView.image = img;
+    _imageView.image = [bld WrappedSeamlessClone:true];
     
 }
 

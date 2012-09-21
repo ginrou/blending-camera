@@ -10,19 +10,17 @@
 
 #import "BCViewController.h"
 #import "BCRealTimeProcessingViewController.h"
+#import "BCCaptureViewController.h"
+#import "BCImageSelectionViewController.h"
 
 @implementation BCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-
-	BCViewController *singleImageProcessingViewController = [[BCViewController alloc] initWithNibName:@"BCViewController" bundle:nil];
-	BCRealTimeProcessingViewController *realTimeViewController = [[BCRealTimeProcessingViewController alloc] init];
-	_tabBarController = [[UITabBarController alloc] init];
-	[_tabBarController setViewControllers:@[ singleImageProcessingViewController, realTimeViewController ]];
-		
-    self.window.rootViewController = _tabBarController;
+	BCImageSelectionViewController *selectionViewController = [[BCImageSelectionViewController alloc] init];
+	
+	self.window.rootViewController = selectionViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

@@ -16,6 +16,13 @@
 		0924360716093A260024F731 /* BCBlenderRapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0924360616093A260024F731 /* BCBlenderRapper.mm */; };
 		092436501609AD450024F731 /* Eigen in Resources */ = {isa = PBXBuildFile; fileRef = 0924364F1609AD450024F731 /* Eigen */; };
 		092436531609AF110024F731 /* Blender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 092436511609AF110024F731 /* Blender.cpp */; };
+		09243657160B73470024F731 /* BCCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09243655160B73450024F731 /* BCCaptureViewController.m */; };
+		09243658160B73470024F731 /* BCCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09243656160B73460024F731 /* BCCaptureViewController.xib */; };
+		0924365F160BEEE70024F731 /* BCConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0924365D160BEEE70024F731 /* BCConfirmViewController.m */; };
+		09243660160BEEE70024F731 /* BCConfirmViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0924365E160BEEE70024F731 /* BCConfirmViewController.xib */; };
+		09243669160C162D0024F731 /* BCImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09243667160C162D0024F731 /* BCImageSelectionViewController.m */; };
+		0924366A160C162D0024F731 /* BCImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09243668160C162D0024F731 /* BCImageSelectionViewController.xib */; };
+		0924366C160C226B0024F731 /* red-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0924366B160C226B0024F731 /* red-arrow.png */; };
 		096969C51607298D00DEB522 /* BCRealTimeProcessingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */; };
 		096969C61607298D00DEB522 /* BCRealTimeProcessingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */; };
 		096969C816072CE100DEB522 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969C716072CE100DEB522 /* Accelerate.framework */; };
@@ -31,7 +38,7 @@
 		9A8E2F431605E25400391C57 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A8E2F411605E25400391C57 /* InfoPlist.strings */; };
 		9A8E2F451605E25400391C57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F441605E25400391C57 /* main.m */; };
 		9A8E2F491605E25400391C57 /* BCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F481605E25400391C57 /* BCAppDelegate.m */; };
-		9A8E2F4C1605E25400391C57 /* BCViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F4B1605E25400391C57 /* BCViewController.mm */; };
+		9A8E2F4C1605E25400391C57 /* BCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8E2F4B1605E25400391C57 /* BCViewController.m */; };
 		9A8E2F4F1605E25400391C57 /* BCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A8E2F4D1605E25400391C57 /* BCViewController.xib */; };
 		9A8E2F571605E25400391C57 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F561605E25400391C57 /* SenTestingKit.framework */; };
 		9A8E2F581605E25400391C57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F381605E25400391C57 /* UIKit.framework */; };
@@ -61,6 +68,16 @@
 		0924364F1609AD450024F731 /* Eigen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Eigen; sourceTree = "<group>"; };
 		092436511609AF110024F731 /* Blender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Blender.cpp; sourceTree = "<group>"; };
 		092436521609AF110024F731 /* Blender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Blender.h; sourceTree = "<group>"; };
+		09243654160B73440024F731 /* BCCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCaptureViewController.h; sourceTree = "<group>"; };
+		09243655160B73450024F731 /* BCCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCaptureViewController.m; sourceTree = "<group>"; };
+		09243656160B73460024F731 /* BCCaptureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCCaptureViewController.xib; sourceTree = "<group>"; };
+		0924365C160BEEE70024F731 /* BCConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCConfirmViewController.h; sourceTree = "<group>"; };
+		0924365D160BEEE70024F731 /* BCConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCConfirmViewController.m; sourceTree = "<group>"; };
+		0924365E160BEEE70024F731 /* BCConfirmViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCConfirmViewController.xib; sourceTree = "<group>"; };
+		09243666160C162D0024F731 /* BCImageSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCImageSelectionViewController.h; sourceTree = "<group>"; };
+		09243667160C162D0024F731 /* BCImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCImageSelectionViewController.m; sourceTree = "<group>"; };
+		09243668160C162D0024F731 /* BCImageSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCImageSelectionViewController.xib; sourceTree = "<group>"; };
+		0924366B160C226B0024F731 /* red-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-arrow.png"; sourceTree = "<group>"; };
 		096969C21607298D00DEB522 /* BCRealTimeProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRealTimeProcessingViewController.h; sourceTree = "<group>"; };
 		096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCRealTimeProcessingViewController.mm; sourceTree = "<group>"; };
 		096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCRealTimeProcessingViewController.xib; sourceTree = "<group>"; };
@@ -82,7 +99,7 @@
 		9A8E2F471605E25400391C57 /* BCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCAppDelegate.h; sourceTree = "<group>"; };
 		9A8E2F481605E25400391C57 /* BCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCAppDelegate.m; sourceTree = "<group>"; };
 		9A8E2F4A1605E25400391C57 /* BCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BCViewController.h; sourceTree = "<group>"; };
-		9A8E2F4B1605E25400391C57 /* BCViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = BCViewController.mm; sourceTree = "<group>"; };
+		9A8E2F4B1605E25400391C57 /* BCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BCViewController.m; sourceTree = "<group>"; };
 		9A8E2F4E1605E25400391C57 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/BCViewController.xib; sourceTree = "<group>"; };
 		9A8E2F551605E25400391C57 /* BlendingCameraTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlendingCameraTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8E2F561605E25400391C57 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -130,11 +147,55 @@
 		092435FB160939A30024F731 /* Resources - Images */ = {
 			isa = PBXGroup;
 			children = (
+				0924366B160C226B0024F731 /* red-arrow.png */,
 				092435FC160939E10024F731 /* vinci_mask.png */,
 				092435FD160939E10024F731 /* vinci_src.png */,
 				092435FE160939E10024F731 /* vinci_target.png */,
 			);
 			name = "Resources - Images";
+			sourceTree = "<group>";
+		};
+		09243659160BEE900024F731 /* Caputre */ = {
+			isa = PBXGroup;
+			children = (
+				09243654160B73440024F731 /* BCCaptureViewController.h */,
+				09243655160B73450024F731 /* BCCaptureViewController.m */,
+				09243656160B73460024F731 /* BCCaptureViewController.xib */,
+			);
+			name = Caputre;
+			sourceTree = "<group>";
+		};
+		0924365A160BEEA30024F731 /* Not in use */ = {
+			isa = PBXGroup;
+			children = (
+				9A8E2F4A1605E25400391C57 /* BCViewController.h */,
+				9A8E2F4B1605E25400391C57 /* BCViewController.m */,
+				9A8E2F4D1605E25400391C57 /* BCViewController.xib */,
+				096969C21607298D00DEB522 /* BCRealTimeProcessingViewController.h */,
+				096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */,
+				096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */,
+			);
+			name = "Not in use";
+			sourceTree = "<group>";
+		};
+		0924365B160BEEBE0024F731 /* Confirm */ = {
+			isa = PBXGroup;
+			children = (
+				0924365C160BEEE70024F731 /* BCConfirmViewController.h */,
+				0924365D160BEEE70024F731 /* BCConfirmViewController.m */,
+				0924365E160BEEE70024F731 /* BCConfirmViewController.xib */,
+			);
+			name = Confirm;
+			sourceTree = "<group>";
+		};
+		09243665160C16010024F731 /* ImageSelection */ = {
+			isa = PBXGroup;
+			children = (
+				09243666160C162D0024F731 /* BCImageSelectionViewController.h */,
+				09243667160C162D0024F731 /* BCImageSelectionViewController.m */,
+				09243668160C162D0024F731 /* BCImageSelectionViewController.xib */,
+			);
+			name = ImageSelection;
 			sourceTree = "<group>";
 		};
 		9A8E2F291605E25400391C57 = {
@@ -235,12 +296,10 @@
 		9A8E2F761605EB4400391C57 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9A8E2F4A1605E25400391C57 /* BCViewController.h */,
-				9A8E2F4B1605E25400391C57 /* BCViewController.mm */,
-				9A8E2F4D1605E25400391C57 /* BCViewController.xib */,
-				096969C21607298D00DEB522 /* BCRealTimeProcessingViewController.h */,
-				096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */,
-				096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */,
+				09243665160C16010024F731 /* ImageSelection */,
+				09243659160BEE900024F731 /* Caputre */,
+				0924365B160BEEBE0024F731 /* Confirm */,
+				0924365A160BEEA30024F731 /* Not in use */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -324,6 +383,10 @@
 				09243601160939E10024F731 /* vinci_src.png in Resources */,
 				09243603160939E10024F731 /* vinci_target.png in Resources */,
 				092436501609AD450024F731 /* Eigen in Resources */,
+				09243658160B73470024F731 /* BCCaptureViewController.xib in Resources */,
+				09243660160BEEE70024F731 /* BCConfirmViewController.xib in Resources */,
+				0924366A160C162D0024F731 /* BCImageSelectionViewController.xib in Resources */,
+				0924366C160C226B0024F731 /* red-arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,11 +426,14 @@
 			files = (
 				9A8E2F451605E25400391C57 /* main.m in Sources */,
 				9A8E2F491605E25400391C57 /* BCAppDelegate.m in Sources */,
-				9A8E2F4C1605E25400391C57 /* BCViewController.mm in Sources */,
+				9A8E2F4C1605E25400391C57 /* BCViewController.m in Sources */,
 				9A8E2F79160620F700391C57 /* BCImageConverter.m in Sources */,
 				096969C51607298D00DEB522 /* BCRealTimeProcessingViewController.mm in Sources */,
 				0924360716093A260024F731 /* BCBlenderRapper.mm in Sources */,
 				092436531609AF110024F731 /* Blender.cpp in Sources */,
+				09243657160B73470024F731 /* BCCaptureViewController.m in Sources */,
+				0924365F160BEEE70024F731 /* BCConfirmViewController.m in Sources */,
+				09243669160C162D0024F731 /* BCImageSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
