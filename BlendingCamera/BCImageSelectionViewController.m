@@ -9,9 +9,6 @@
 #import "BCImageSelectionViewController.h"
 
 @interface BCImageSelectionViewController ()
-@property (nonatomic, assign) UIImagePickerController *baseImagePicker;
-@property (nonatomic, assign) UIImagePickerController *partsPicker;
-
 @end
 
 @implementation BCImageSelectionViewController
@@ -26,8 +23,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
 		_baseImage = nil;
-		_baseImagePicker = nil;
-		_partsPicker = nil;
+		_partsImage = nil;
     }
     return self;
 }
@@ -36,6 +32,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+	
+	
+	[self enableLoadingParts];
+	
 }
 
 - (void)viewDidUnload
@@ -58,59 +58,65 @@
 #pragma mark -- image loaders
 - (IBAction)loadBaseImageFromCamera:(id)sender
 {
-	UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-	imagePicker.delegate = self;
-	imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-	[self presentModalViewController:imagePicker animated:YES];
-	self.baseImagePicker = imagePicker;
+	[self showBaseImagePickerWithType:UIImagePickerControllerSourceTypeCamera];
 }
 
 - (IBAction)loadBaseImageFromLibrary:(id)sender
 {
-	UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-	imagePicker.delegate = self;
-	imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-	[self presentModalViewController:imagePicker animated:YES];
-	self.baseImagePicker = imagePicker;
+	[self showBaseImagePickerWithType:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
-- (IBAction)loadPartsImageFromCamera:(id)sender
+- (void)showBaseImagePickerWithType:(UIImagePickerControllerSourceType)type
 {
 	UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
 	imagePicker.delegate = self;
-	imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+	imagePicker.sourceType = type;
 	[self presentModalViewController:imagePicker animated:YES];
-	self.partsPicker = imagePicker;
-	
+}
+
+
+- (IBAction)loadPartsImageFromCamera:(id)sender
+{
+	[self showPartsImagePickerWithType:UIImagePickerControllerSourceTypeCamera];
 }
 
 - (IBAction)loadPartsImageFromLibrary:(id)sender
 {
-	UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-	imagePicker.delegate = self;
-	imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-	[self presentModalViewController:imagePicker animated:YES];
-	self.partsPicker = imagePicker;
+	[self showPartsImagePickerWithType:UIImagePickerControllerSourceTypePhotoLibrary];
 }
 
-#pragma --mark image picker delegate
+- (void)showPartsImagePickerWithType:(UIImagePickerControllerSourceType)type
+{
+	BCPartsPickerController *partsPicker = [[BCPartsPickerController alloc] initWithPickerType:type];
+	partsPicker.delegate = self;
+	[self presentModalViewController:partsPicker animated:YES];
+}
+
+#pragma -- mark image picker delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	UIImage *loadedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
 	[self dismissModalViewControllerAnimated:YES];
-	if (picker == _baseImagePicker) {
-		self.baseImageView.image = loadedImage;
-		self.baseImage = loadedImage;
-		_baseImagePicker = nil;
-		[self enableLoadingParts];
-	} else if (picker == _partsPicker) {
-		self.partsImageView.image = loadedImage;
-		self.partsImage = loadedImage;
-		_partsPicker = nil;
-	}
+	self.baseImageView.image = loadedImage;
+	self.baseImage = loadedImage;
+	[self enableLoadingParts];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
+{
+	[self dismissModalViewControllerAnimated:YES];
+}
+
+#pragma -- mark parts picker delegate
+- (void)BCPartsPickerControllerPickDone:(BCPartsPickerController *)partsPicker partsImage:(UIImage *)image andMask:(UIImage *)mask
+{
+	[self dismissModalViewControllerAnimated:YES];
+	self.partsImage = image;
+	self.maskImage  = mask;
+	
+}
+
+- (void)BCPartsPickerControllerCanceld:(BCPartsPickerController *)partsPicker
 {
 	[self dismissModalViewControllerAnimated:YES];
 }

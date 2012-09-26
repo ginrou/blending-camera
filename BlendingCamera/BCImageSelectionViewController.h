@@ -7,21 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCPartsPickerController.h"
 
 @interface BCImageSelectionViewController : UIViewController
-<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+<
+UIImagePickerControllerDelegate,
+UINavigationControllerDelegate,
+BCPartsPickerControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIImageView *firstRedArrow;
-
-@property (weak, nonatomic) IBOutlet UIImageView *baseImageView;
+// for image processing
 @property (strong, nonatomic) UIImage *baseImage;
-
-@property (weak, nonatomic) IBOutlet UIImageView *partsImageView;
 @property (strong, nonatomic) UIImage *partsImage;
+@property (strong, nonatomic) UIImage *maskImage;
 
+// just for view
+@property (weak, nonatomic) IBOutlet UIImageView *baseImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *firstRedArrow;
 @property (weak, nonatomic) IBOutlet UILabel *choosePartsLabel;
 @property (weak, nonatomic) IBOutlet UIButton *partsFromCameraButton;
 @property (weak, nonatomic) IBOutlet UIButton *partsFromLibraryButton;
+@property (weak, nonatomic) IBOutlet UIImageView *partsImageView;
 
 - (IBAction)loadBaseImageFromCamera:(id)sender;
 - (IBAction)loadBaseImageFromLibrary:(id)sender;

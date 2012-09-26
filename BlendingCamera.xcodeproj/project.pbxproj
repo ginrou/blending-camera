@@ -23,6 +23,9 @@
 		09243669160C162D0024F731 /* BCImageSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09243667160C162D0024F731 /* BCImageSelectionViewController.m */; };
 		0924366A160C162D0024F731 /* BCImageSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09243668160C162D0024F731 /* BCImageSelectionViewController.xib */; };
 		0924366C160C226B0024F731 /* red-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0924366B160C226B0024F731 /* red-arrow.png */; };
+		09243670160C319D0024F731 /* BCPartsPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0924366E160C319D0024F731 /* BCPartsPickerController.m */; };
+		09243671160C319D0024F731 /* BCPartsPickerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0924366F160C319D0024F731 /* BCPartsPickerController.xib */; };
+		09243675160C37680024F731 /* BCPathView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09243674160C37680024F731 /* BCPathView.m */; };
 		096969C51607298D00DEB522 /* BCRealTimeProcessingViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */; };
 		096969C61607298D00DEB522 /* BCRealTimeProcessingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */; };
 		096969C816072CE100DEB522 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969C716072CE100DEB522 /* Accelerate.framework */; };
@@ -78,6 +81,11 @@
 		09243667160C162D0024F731 /* BCImageSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCImageSelectionViewController.m; sourceTree = "<group>"; };
 		09243668160C162D0024F731 /* BCImageSelectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCImageSelectionViewController.xib; sourceTree = "<group>"; };
 		0924366B160C226B0024F731 /* red-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-arrow.png"; sourceTree = "<group>"; };
+		0924366D160C319D0024F731 /* BCPartsPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPartsPickerController.h; sourceTree = "<group>"; };
+		0924366E160C319D0024F731 /* BCPartsPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPartsPickerController.m; sourceTree = "<group>"; };
+		0924366F160C319D0024F731 /* BCPartsPickerController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCPartsPickerController.xib; sourceTree = "<group>"; };
+		09243673160C37680024F731 /* BCPathView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPathView.h; sourceTree = "<group>"; };
+		09243674160C37680024F731 /* BCPathView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPathView.m; sourceTree = "<group>"; };
 		096969C21607298D00DEB522 /* BCRealTimeProcessingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCRealTimeProcessingViewController.h; sourceTree = "<group>"; };
 		096969C31607298D00DEB522 /* BCRealTimeProcessingViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCRealTimeProcessingViewController.mm; sourceTree = "<group>"; };
 		096969C41607298D00DEB522 /* BCRealTimeProcessingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCRealTimeProcessingViewController.xib; sourceTree = "<group>"; };
@@ -198,6 +206,18 @@
 			name = ImageSelection;
 			sourceTree = "<group>";
 		};
+		09243672160C31A40024F731 /* PartsPicker */ = {
+			isa = PBXGroup;
+			children = (
+				0924366D160C319D0024F731 /* BCPartsPickerController.h */,
+				0924366E160C319D0024F731 /* BCPartsPickerController.m */,
+				0924366F160C319D0024F731 /* BCPartsPickerController.xib */,
+				09243673160C37680024F731 /* BCPathView.h */,
+				09243674160C37680024F731 /* BCPathView.m */,
+			);
+			name = PartsPicker;
+			sourceTree = "<group>";
+		};
 		9A8E2F291605E25400391C57 = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				09243665160C16010024F731 /* ImageSelection */,
+				09243672160C31A40024F731 /* PartsPicker */,
 				09243659160BEE900024F731 /* Caputre */,
 				0924365B160BEEBE0024F731 /* Confirm */,
 				0924365A160BEEA30024F731 /* Not in use */,
@@ -387,6 +408,7 @@
 				09243660160BEEE70024F731 /* BCConfirmViewController.xib in Resources */,
 				0924366A160C162D0024F731 /* BCImageSelectionViewController.xib in Resources */,
 				0924366C160C226B0024F731 /* red-arrow.png in Resources */,
+				09243671160C319D0024F731 /* BCPartsPickerController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +456,8 @@
 				09243657160B73470024F731 /* BCCaptureViewController.m in Sources */,
 				0924365F160BEEE70024F731 /* BCConfirmViewController.m in Sources */,
 				09243669160C162D0024F731 /* BCImageSelectionViewController.m in Sources */,
+				09243670160C319D0024F731 /* BCPartsPickerController.m in Sources */,
+				09243675160C37680024F731 /* BCPathView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
