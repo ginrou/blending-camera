@@ -35,6 +35,7 @@
 		096969D016072D0300DEB522 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969CF16072D0300DEB522 /* CoreMedia.framework */; };
 		096969D216072D0D00DEB522 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969D116072D0D00DEB522 /* CoreVideo.framework */; };
 		096969D416072D1500DEB522 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969D316072D1500DEB522 /* QuartzCore.framework */; };
+		9A5B03111618171100D3268F /* BCImageUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B03101618171100D3268F /* BCImageUtil.mm */; };
 		9A8E2F391605E25400391C57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F381605E25400391C57 /* UIKit.framework */; };
 		9A8E2F3B1605E25400391C57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3A1605E25400391C57 /* Foundation.framework */; };
 		9A8E2F3D1605E25400391C57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3C1605E25400391C57 /* CoreGraphics.framework */; };
@@ -96,6 +97,8 @@
 		096969CF16072D0300DEB522 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		096969D116072D0D00DEB522 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		096969D316072D1500DEB522 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9A5B030F1618171100D3268F /* BCImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCImageUtil.h; sourceTree = "<group>"; };
+		9A5B03101618171100D3268F /* BCImageUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCImageUtil.mm; sourceTree = "<group>"; };
 		9A8E2F341605E25400391C57 /* BlendingCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlendingCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8E2F381605E25400391C57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A8E2F3A1605E25400391C57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -309,6 +312,8 @@
 				0924360616093A260024F731 /* BCBlenderRapper.mm */,
 				092436511609AF110024F731 /* Blender.cpp */,
 				092436521609AF110024F731 /* Blender.h */,
+				9A5B030F1618171100D3268F /* BCImageUtil.h */,
+				9A5B03101618171100D3268F /* BCImageUtil.mm */,
 			);
 			name = ImageProcessings;
 			sourceTree = "<group>";
@@ -458,6 +463,7 @@
 				09243669160C162D0024F731 /* BCImageSelectionViewController.m in Sources */,
 				09243670160C319D0024F731 /* BCPartsPickerController.m in Sources */,
 				09243675160C37680024F731 /* BCPathView.m in Sources */,
+				9A5B03111618171100D3268F /* BCImageUtil.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +539,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -557,6 +564,7 @@
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};

@@ -7,19 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCPathView.h"
 
 @protocol BCPartsPickerControllerDelegate;
 
 @interface BCPartsPickerController : UIViewController
-<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+<UIImagePickerControllerDelegate, UINavigationControllerDelegate, BCPathViewDelegate>
 
 @property (nonatomic, assign) id<BCPartsPickerControllerDelegate> delegate;
 @property (nonatomic, strong) UIImage *originalImage;
-
 @property (weak, nonatomic) IBOutlet UIView *previewView;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 
 - (id)initWithPickerType:(UIImagePickerControllerSourceType)pickerType;
+- (IBAction)cancelButtonTapped:(id)sender;
+- (IBAction)doneButtonTapped:(id)sender;
+- (IBAction)clearButtonTapped:(id)sender;
 
 @end
 

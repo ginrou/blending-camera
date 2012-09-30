@@ -8,16 +8,26 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol BCPathViewDelegate;
+
 @interface BCPathView : UIView
 
-
+@property (nonatomic, assign) id<BCPathViewDelegate> delegate;
 @property (nonatomic, assign) CGMutablePathRef currentPath;
 @property (nonatomic, strong) CALayer *pathLayer;
 @property (nonatomic, assign) CGContextRef bitmapCopntext;
 
-- (CGImage)cgImage;
+- (void)clearPath;
+
+//- (CGImage)cgImage;
 
 + (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size;
 + (CGContextRef)newTransparentBitmapContextOfSize:(CGSize)size;
+
+@end
+
+@protocol BCPathViewDelegate <NSObject>
+
+- (void)didPartsSelected:(BCPathView *)pathView andSelectedParts:(UIImage *)selectedParts;
 
 @end

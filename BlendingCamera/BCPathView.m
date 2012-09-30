@@ -8,6 +8,9 @@
 
 #import "BCPathView.h"
 #import <QuartzCore/QuartzCore.h>
+#import "BCImageUtil.h"
+
+#define PATH_TH 50.0
 
 @interface BCPathView ()
 @property (nonatomic, assign) CGPoint previousPoint;
@@ -22,16 +25,11 @@ static const CGFloat penWidth = 5.0;
 {
     self = [super initWithFrame:frame];
     if (self) {
-		self.backgroundColor = [UIColor clearColor];
-		self.bitmapCopntext = [BCPathView newTransparentBitmapContextOfSize:frame.size];
-		CGContextRetain(self.bitmapCopntext);
-		
+        self.backgroundColor = [UIColor clearColor];
 		self.pathLayer = [CALayer layer];
 		self.pathLayer.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 		[self.layer addSublayer:self.pathLayer];
-
-		self.currentPath = CGPathCreateMutable();
-
+        [self initPath];
     }
     return self;
 }
@@ -59,8 +57,6 @@ static const CGFloat penWidth = 5.0;
 	return context;
 }
 
-
-
 #pragma mark -- touches
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -82,6 +78,10 @@ static const CGFloat penWidth = 5.0;
 	self.pathLayer.delegate = self;
 	[_pathLayer setNeedsDisplay];
 	[self closedCurve:point];
+    
+    if ([self isCurveClosed])
+        [self didPathSelected];
+
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -89,10 +89,11 @@ static const CGFloat penWidth = 5.0;
 	CGPoint point = [((UITouch *)[touches anyObject]) locationInView:self];
 	CGPathAddLineToPoint(self.currentPath, nil, point.x, point.y);
 	[self drawCurrentPath:self.bitmapCopntext];
-	
 	[self closedCurve:point];
-	
-	
+    
+    if ([self isCurveClosed])
+        [self didPathSelected];
+    
 }
 
 #pragma mark -- calcuration
@@ -100,7 +101,7 @@ static const CGFloat penWidth = 5.0;
 {
 	_pointDif.x += currentPoint.x - _previousPoint.x;
 	_pointDif.y += currentPoint.y - _previousPoint.y;
-	NSLog(@"previous = %.3f, .%.3f, current = %.3f, %.3f, diff= %.3f, %.3f", _previousPoint.x, _previousPoint.y, currentPoint.x, currentPoint.y, _pointDif.x, _pointDif.y);
+	//NSLog(@"previous = %.3f, .%.3f, current = %.3f, %.3f, diff= %.3f, %.3f", _previousPoint.x, _previousPoint.y, currentPoint.x, currentPoint.y, _pointDif.x, _pointDif.y);
 	self.previousPoint = currentPoint;
 }
 
@@ -112,8 +113,8 @@ static const CGFloat penWidth = 5.0;
 - (BOOL)isCurveClosed
 {
 	CGFloat distance = _pointDif.x * _pointDif.x +_pointDif.y * _pointDif.y;
-	NSLog(@"distance = %f", distance);
-	return (distance < 10.0) ? YES : NO;
+	//NSLog(@"distance = %f", distance);
+	return (distance < PATH_TH ) ? YES : NO;
 }
 
 
@@ -142,5 +143,36 @@ static const CGFloat penWidth = 5.0;
 {
 	[self drawCurrentPath:ctx];
 }
+
+- (void)clearPath
+{
+    CGPathRelease(self.currentPath);
+    CGContextRelease(self.bitmapCopntext);
+    [self initPath];
+    [_pathLayer setNeedsDisplay];
+}
+
+- (void)initPath
+{
+
+    self.bitmapCopntext = [BCPathView newTransparentBitmapContextOfSize:self.frame.size];
+    CGContextRetain(self.bitmapCopntext);
+    self.currentPath = CGPathCreateMutable();
+    _pointDif.x = 0.0;
+    _pointDif.y = 0.0;
+}
+
+#pragma mark controlles
+- (void)didPathSelected
+{
+    if ([self.delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
+        CGImageRef cgImage = CGBitmapContextCreateImage(self.bitmapCopntext);
+        UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
+        UIImageWriteToSavedPhotosAlbum(parts, nil, nil, nil);
+        [self.delegate didPartsSelected:self andSelectedParts:parts];
+    }
+}
+
+
 
 @end
