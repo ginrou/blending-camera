@@ -168,7 +168,6 @@ static const CGFloat penWidth = 5.0;
     if ([self.delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
         CGImageRef cgImage = CGBitmapContextCreateImage(self.bitmapCopntext);
         UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
-        UIImageWriteToSavedPhotosAlbum(parts, nil, nil, nil);
         [self.delegate didPartsSelected:self andSelectedParts:parts];
     }
 }

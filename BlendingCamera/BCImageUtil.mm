@@ -14,7 +14,11 @@
 + (UIImage *)cutoffPartsRegion:(UIImage *)image
 {
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
+    NSLog(@"size of input %@", NSStringFromCGSize(image.size));
     cv::Mat lineSrc = [BCImageConverter cvMatFromUIImage:image];
+    
+    NSLog(@"size = %d, %d, channels = %d", lineSrc.rows, lineSrc.cols, lineSrc.channels());
+    
     cv::Rect boundigBox = getBoundigBox(lineSrc);
     NSLog(@"offset = %d, %d", boundigBox.x, boundigBox.y);
     NSLog(@"size = %d, %d", boundigBox.width, boundigBox.height);
@@ -27,7 +31,7 @@
 cv::Rect getBoundigBox(cv::Mat src)
 {
     cv::Point offset(src.rows, src.cols), cutoff(0, 0);
-    int chanels = 4;
+    int chanels = src.channels();
     for (int h = 0; h < src.rows; ++h) {
         unsigned char *buf = src.ptr<unsigned char>(h);
         for (int w = 0; w < src.cols; ++w) {
@@ -35,7 +39,14 @@ cv::Rect getBoundigBox(cv::Mat src)
             unsigned char g = buf[w*chanels + 1];
             unsigned char b = buf[w*chanels + 2];
 
+            if (h%10 == 0 && w%10 == 0) {
+                NSLog(@"%d, %d -> %u, %u, %u",h,w,r,g,b);
+            }
+
+            
             if (r+g+b > 0) {
+                
+                NSLog(@"found %d, %d", h, w);
                 
                 if (h < offset.y ) offset.y = h;
                 if (w < offset.x ) offset.x = w;
@@ -66,15 +77,13 @@ cv::Mat fillInside(cv::Mat img, cv::Rect boundingBox)
     for (int h = 0; h < boundingBox.height; ++h) {
         unsigned char *dst_buf = dst.ptr<unsigned char>(h);
         unsigned char *src_buf = img.ptr<unsigned char>(h+boundingBox.y);
-        
+
+        isInside = false;
+
         for (int w = 0; w < boundingBox.width; ++w) {
 
-            isInside = false;
-
-            if (isInside) {
-                dst_buf[w] = 255.0;
-            }
-
+            dst_buf[w] = isInside ? 255.0 : 0.0;
+            
             int src_w_idx = (w+boundingBox.x)*4;
             unsigned char srcSum = src_buf[src_w_idx+0] + src_buf[src_w_idx+1] + src_buf[src_w_idx+2];
             if (srcSum > 0) isInside = !isInside;
