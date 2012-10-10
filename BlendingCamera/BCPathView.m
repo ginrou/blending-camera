@@ -18,7 +18,7 @@
 @end
 
 @implementation BCPathView
-static const CGFloat penColor[] = {1.0, 1.0, 1.0, 1.0}; // white
+static const CGFloat penColor[] = {1.0, 0.0, 0.0, 1.0}; // ARGB
 static const CGFloat penWidth = 5.0;
 
 - (id)initWithFrame:(CGRect)frame
@@ -32,6 +32,15 @@ static const CGFloat penWidth = 5.0;
         [self initPath];
     }
     return self;
+}
+
+- (void)initPath
+{
+    self.bitmapCopntext = [BCPathView newTransparentBitmapContextOfSize:self.frame.size];
+    CGContextRetain(self.bitmapCopntext);
+    self.currentPath = CGPathCreateMutable();
+    _pointDif.x = 0.0;
+    _pointDif.y = 0.0;
 }
 
 
@@ -129,7 +138,10 @@ static const CGFloat penWidth = 5.0;
 - (void)drawCurrentPath:(CGContextRef)context
 {
 	if (self.currentPath != nil) {
-		CGContextSetStrokeColor(context, penColor);
+		//CGContextSetStrokeColor(context, penColor);
+		//CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
+		const CGFloat* cols = CGColorGetComponents([[UIColor redColor] CGColor]);
+		CGContextSetStrokeColor(context, cols);
 		CGContextBeginPath(context);
 		CGContextAddPath(context, self.currentPath);
 		CGContextSetLineWidth(context, penWidth);
@@ -152,21 +164,25 @@ static const CGFloat penWidth = 5.0;
     [_pathLayer setNeedsDisplay];
 }
 
-- (void)initPath
-{
-
-    self.bitmapCopntext = [BCPathView newTransparentBitmapContextOfSize:self.frame.size];
-    CGContextRetain(self.bitmapCopntext);
-    self.currentPath = CGPathCreateMutable();
-    _pointDif.x = 0.0;
-    _pointDif.y = 0.0;
-}
 
 #pragma mark controlles
 - (void)didPathSelected
 {
     if ([self.delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
         CGImageRef cgImage = CGBitmapContextCreateImage(self.bitmapCopntext);
+		
+		CGColorSpaceRef colorSpace = CGBitmapContextGetColorSpace(self.bitmapCopntext);
+		size_t bitsPerPixel = CGColorSpaceGetNumberOfComponents(colorSpace);
+		size_t channels = CGBitmapContextGetBitsPerPixel(self.bitmapCopntext);
+		NSLog(@"%@, bits_per_pixel : %lu, channels : %lu", colorSpace, bitsPerPixel, channels);
+		
+		UIImage *image = [UIImage imageWithCGImage:cgImage];
+		CGColorSpaceRef imageColor = CGImageGetColorSpace(image.CGImage);
+		NSLog(@"%@, bits_per_pixel : %lu, alpha_info : %d", imageColor, CGColorSpaceGetNumberOfComponents(imageColor), CGImageGetAlphaInfo(image.CGImage));
+
+		const CGFloat* cols = CGColorGetComponents([[UIColor redColor] CGColor]);
+		NSLog(@"%f, %f, %f, %f", cols[0],cols[1],cols[2],cols[3]);
+		
         UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
         [self.delegate didPartsSelected:self andSelectedParts:parts];
     }

@@ -9,12 +9,12 @@
 #import "BCImageUtil.h"
 #import "BCImageConverter.h"
 
+
 @implementation BCImageUtil
 
 + (UIImage *)cutoffPartsRegion:(UIImage *)image
 {
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
-    NSLog(@"size of input %@", NSStringFromCGSize(image.size));
     cv::Mat lineSrc = [BCImageConverter cvMatFromUIImage:image];
     
     NSLog(@"size = %d, %d, channels = %d", lineSrc.rows, lineSrc.cols, lineSrc.channels());
