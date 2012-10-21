@@ -14,7 +14,6 @@
 
 + (UIImage *)cutoffPartsRegion:(UIImage *)image
 {
-    UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     cv::Mat lineSrc = [BCImageConverter cvMatFromUIImage:image];
     
     NSLog(@"size = %d, %d, channels = %d", lineSrc.rows, lineSrc.cols, lineSrc.channels());
@@ -27,6 +26,7 @@
     
     return [BCImageConverter UIImageFromCVMat:dst];
 }
+
 
 cv::Rect getBoundigBox(cv::Mat src)
 {
@@ -46,7 +46,7 @@ cv::Rect getBoundigBox(cv::Mat src)
             
             if (r+g+b > 0) {
                 
-                NSLog(@"found %d, %d", h, w);
+                //NSLog(@"found %d, %d, %u, %u, %u", h, w,r,g,b);
                 
                 if (h < offset.y ) offset.y = h;
                 if (w < offset.x ) offset.x = w;

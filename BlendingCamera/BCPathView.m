@@ -15,10 +15,11 @@
 @interface BCPathView ()
 @property (nonatomic, assign) CGPoint previousPoint;
 @property (nonatomic, assign) CGPoint pointDif;
+@property (nonatomic, assign) void *bitmapData;
 @end
 
 @implementation BCPathView
-static const CGFloat penColor[] = {1.0, 0.0, 0.0, 1.0}; // ARGB
+static const CGFloat penColor[] = {1.0, 1.0, 1.0, 1.0}; // RGBA
 static const CGFloat penWidth = 5.0;
 
 - (id)initWithFrame:(CGRect)frame
@@ -36,7 +37,7 @@ static const CGFloat penWidth = 5.0;
 
 - (void)initPath
 {
-    self.bitmapCopntext = [BCPathView newTransparentBitmapContextOfSize:self.frame.size];
+    self.bitmapCopntext = [self newTransparentBitmapContextOfSize:self.frame.size];
     CGContextRetain(self.bitmapCopntext);
     self.currentPath = CGPathCreateMutable();
     _pointDif.x = 0.0;
@@ -45,21 +46,21 @@ static const CGFloat penWidth = 5.0;
 
 
 #pragma mark utility methods
-+ (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size
+- (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size
 {
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	int bytesPerRow = (int)size.width * 4; // 4 means channel
-	void *bitmapData = malloc(bytesPerRow * (int)size.height);
+	_bitmapData = malloc(bytesPerRow * (int)size.height);
 	
-	CGContextRef context = CGBitmapContextCreate(bitmapData, size.width, size.height, 8, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedFirst);
+	CGContextRef context = CGBitmapContextCreate(_bitmapData, size.width, size.height, 8, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedFirst);
 	CGColorSpaceRelease(colorSpace);
 	return context;
 }
 
-+ (CGContextRef)newTransparentBitmapContextOfSize:(CGSize)size
+- (CGContextRef)newTransparentBitmapContextOfSize:(CGSize)size
 {
-	CGContextRef context = [BCPathView newBlankBitmapContextOfSize:size];
-	CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 0.0);
+	CGContextRef context = [self newBlankBitmapContextOfSize:size];
+	CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
 	CGContextFillRect(context, CGRectMake(0, 0, size.width, size.height));
 	CGContextTranslateCTM(context, 0, size.height);
 	CGContextScaleCTM(context, 1.0, -1.0);
@@ -138,10 +139,7 @@ static const CGFloat penWidth = 5.0;
 - (void)drawCurrentPath:(CGContextRef)context
 {
 	if (self.currentPath != nil) {
-		//CGContextSetStrokeColor(context, penColor);
-		//CGContextSetStrokeColorWithColor(context, [[UIColor redColor] CGColor]);
-		const CGFloat* cols = CGColorGetComponents([[UIColor redColor] CGColor]);
-		CGContextSetStrokeColor(context, cols);
+		CGContextSetStrokeColor(context, penColor);
 		CGContextBeginPath(context);
 		CGContextAddPath(context, self.currentPath);
 		CGContextSetLineWidth(context, penWidth);
@@ -169,25 +167,43 @@ static const CGFloat penWidth = 5.0;
 - (void)didPathSelected
 {
     if ([self.delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
+		
         CGImageRef cgImage = CGBitmapContextCreateImage(self.bitmapCopntext);
 		
 		CGColorSpaceRef colorSpace = CGBitmapContextGetColorSpace(self.bitmapCopntext);
-		size_t bitsPerPixel = CGColorSpaceGetNumberOfComponents(colorSpace);
-		size_t channels = CGBitmapContextGetBitsPerPixel(self.bitmapCopntext);
+		size_t bitsPerPixel = CGBitmapContextGetBitsPerPixel(self.bitmapCopntext);
+		size_t channels = CGColorSpaceGetNumberOfComponents(colorSpace);
 		NSLog(@"%@, bits_per_pixel : %lu, channels : %lu", colorSpace, bitsPerPixel, channels);
 		
-		UIImage *image = [UIImage imageWithCGImage:cgImage];
-		CGColorSpaceRef imageColor = CGImageGetColorSpace(image.CGImage);
-		NSLog(@"%@, bits_per_pixel : %lu, alpha_info : %d", imageColor, CGColorSpaceGetNumberOfComponents(imageColor), CGImageGetAlphaInfo(image.CGImage));
+//		UIImage *image = [UIImage imageWithCGImage:cgImage];
 
-		const CGFloat* cols = CGColorGetComponents([[UIColor redColor] CGColor]);
-		NSLog(@"%f, %f, %f, %f", cols[0],cols[1],cols[2],cols[3]);
-		
+//		CGColorSpaceRef imageColor = CGImageGetColorSpace(image.CGImage);
+//		NSLog(@"%d, numberofcomponents : %lu, alpha_info : %d channels = %lu", CGColorSpaceGetModel(imageColor), CGColorSpaceGetNumberOfComponents(imageColor), CGImageGetAlphaInfo(image.CGImage), CGColorSpaceGetNumberOfComponents(CGImageGetColorSpace(image.CGImage)));
+//
         UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
         [self.delegate didPartsSelected:self andSelectedParts:parts];
     }
 }
 
+- (void)cutOffParts {
+	
+	for (int h = 0; h < self.frame.size.height; ++h) {
+		unsigned char *row_buf = (unsigned char *)(_bitmapData );
+		int offset = self.frame.size.width * h;
+		for (int w = 0; w < self.frame.size.width; ++w) {
+			
+			unsigned char r = row_buf[offset + w*4+0];
+			unsigned char g = row_buf[offset + w*4+1];
+			unsigned char b = row_buf[offset + w*4+2];
+			unsigned char a = row_buf[offset + w*4+3];
+
+			NSLog(@"%u, %u, %u, %u", r,g,b,a);
+
+		}
+	}
+	
+	
+}
 
 
 @end

@@ -23,7 +23,7 @@
 		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNone;
 		matType = CV_8UC1;
 	} else if (channels == 3) {
-		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNoneSkipLast;
+		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNoneSkipFirst;
 		matType = CV_8UC4;
 	} else if (channels == 4) {
 		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaLast;
@@ -41,6 +41,7 @@
 	if (channels == 3) {
 		cv::Mat dst3ch(rows, cols, CV_8UC3);
 		cv::cvtColor(dst, dst3ch, CV_RGBA2RGB);
+
 		return dst3ch;
 	}else {
 		return dst;

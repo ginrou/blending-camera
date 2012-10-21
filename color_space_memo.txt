@@ -1,0 +1,58 @@
+bitmapContextから作ったCGImageで作ったUIImageのCGImageGetAlphaInfoの戻り値は2 
+
+それぞれの値の定義は以下
+0 : kCGImageAlphaNone
+1 : kCGImageAlphaPremultipliedLast
+2 : kCGImageAlphaPremultipliedFirst
+3 : kCGImageAlphaLast
+4 : kCGImageAlphaFirst
+5 : kCGImageAlphaNoneSkipLast
+6 : kCGImageAlphaNoneSkipFirst
+
+なので、kCGImageAlphaPremultipliedFirstの値を持っていることが分かる．
+
+CGImageGetColorSpaceの戻り値は3，
+CGColorSpaceGetModelの戻り値は1 -> kCGColorSpaceModelRGBなのでRGB色空間
+
+CGColorSpaceGetNumberOfComponentsの戻り値は3
+
+以上のことをまとめると、
+kCGImageAlphaPremultipliedFirstでかつ、RGB色空間．
+channel自体は3channel
+どこかでAlphaInfoが消えてしまっているような気がする
+
+そもそも，bitmapContextに保存ができていなかった
+CGContextSetRGBFillColor(context, 1.0, 0.0, 1.0, 1.0);
+とすると紫色の一枚絵が描かれる
+
+penColor[] = {1.0, 1.0, 1.0, 1.0}; // RGBA
+としたとき
+
+紫背景の白線が保存される
+
+penColor[] = {1.0,0.0,0.0,0.0};
+CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
+としたときの結果は黒いものが残るだけ
+描いてるときに何も表示されない(多分)
+
+
+penColor[] = {1.0,0.0,0.0,1.0};
+CGContextSetRGBFillColor(context, 0.0, 0.0, 1.0, 1.0);
+青背景のみ
+
+
+penColor[] = {1.0, 1.0, 1.0, 1.0}; // RGBA
+CGContextSetRGBFillColor(context, 1.0, 0.0, 1.0, 1.0);
+で紫背景に白い輪郭
+
+penColor[] = {1.0, 1.0, 1.0, 1.0}; // RGBA
+CGContextSetRGBFillColor(context, 0.0, 0.0, 0.0, 1.0);
+で黒背景に白輪郭で行ける．
+けど，cv::Matに変換したときに輝度値が255,0,0になってしまう
+
+
+
+
+
+
+

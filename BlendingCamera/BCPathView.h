@@ -21,8 +21,8 @@
 
 //- (CGImage)cgImage;
 
-+ (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size;
-+ (CGContextRef)newTransparentBitmapContextOfSize:(CGSize)size;
+//+ (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size;
+//+ (CGContextRef)newTransparentBitmapContextOfSize:(CGSize)size;
 
 @end
 
