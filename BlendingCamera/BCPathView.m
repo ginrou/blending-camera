@@ -31,6 +31,7 @@ static const CGFloat penWidth = 5.0;
 		self.pathLayer.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
 		[self.layer addSublayer:self.pathLayer];
         [self initPath];
+		self.isAlreadyPicked = NO;
     }
     return self;
 }
@@ -45,14 +46,15 @@ static const CGFloat penWidth = 5.0;
 }
 
 
+
 #pragma mark utility methods
 - (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size
 {
 	CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
 	int bytesPerRow = (int)size.width * 4; // 4 means channel
-	_bitmapData = malloc(bytesPerRow * (int)size.height);
+	void *buf = malloc(bytesPerRow * (int)size.height);
 	
-	CGContextRef context = CGBitmapContextCreate(_bitmapData, size.width, size.height, 8, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedFirst);
+	CGContextRef context = CGBitmapContextCreate(buf, size.width, size.height, 8, bytesPerRow, colorSpace, kCGImageAlphaPremultipliedFirst);
 	CGColorSpaceRelease(colorSpace);
 	return context;
 }
@@ -86,6 +88,7 @@ static const CGFloat penWidth = 5.0;
 	CGPoint point = [((UITouch *)[touches anyObject]) locationInView:self];
 	CGPathAddLineToPoint(self.currentPath, nil, point.x, point.y);
 	self.pathLayer.delegate = self;
+	[self drawCurrentPath:self.bitmapCopntext];
 	[_pathLayer setNeedsDisplay];
 	[self closedCurve:point];
     
@@ -170,18 +173,12 @@ static const CGFloat penWidth = 5.0;
 		
         CGImageRef cgImage = CGBitmapContextCreateImage(self.bitmapCopntext);
 		
-		CGColorSpaceRef colorSpace = CGBitmapContextGetColorSpace(self.bitmapCopntext);
-		size_t bitsPerPixel = CGBitmapContextGetBitsPerPixel(self.bitmapCopntext);
-		size_t channels = CGColorSpaceGetNumberOfComponents(colorSpace);
-		NSLog(@"%@, bits_per_pixel : %lu, channels : %lu", colorSpace, bitsPerPixel, channels);
-		
-//		UIImage *image = [UIImage imageWithCGImage:cgImage];
+		if (_isAlreadyPicked == NO && [_delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
+			self.isAlreadyPicked = YES;
+			UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
+			[self.delegate didPartsSelected:self andSelectedParts:parts];
+		}
 
-//		CGColorSpaceRef imageColor = CGImageGetColorSpace(image.CGImage);
-//		NSLog(@"%d, numberofcomponents : %lu, alpha_info : %d channels = %lu", CGColorSpaceGetModel(imageColor), CGColorSpaceGetNumberOfComponents(imageColor), CGImageGetAlphaInfo(image.CGImage), CGColorSpaceGetNumberOfComponents(CGImageGetColorSpace(image.CGImage)));
-//
-        UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
-        [self.delegate didPartsSelected:self andSelectedParts:parts];
     }
 }
 

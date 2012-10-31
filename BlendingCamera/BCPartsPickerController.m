@@ -12,6 +12,7 @@
 @property (strong, nonatomic) BCPathView *pathView;
 @property (assign, nonatomic) UIImagePickerControllerSourceType sourceType;
 @property (nonatomic, assign) BOOL showImagePicker;
+@property (strong, nonatomic) UIImage *selectedParts;
 @end
 
 @implementation BCPartsPickerController
@@ -50,14 +51,15 @@
 		UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
 		imagePicker.delegate = self;
 		imagePicker.sourceType = self.sourceType;
-		[self presentModalViewController:imagePicker animated:YES];
+		[self presentModalViewController:imagePicker animated:NO];
 		self.showImagePicker = NO;
 	}
 }
 
 - (void)viewDidUnload
 {
-	[self setPreviewView:nil];
+	//[self setPreviewView:nil];
+	[_pathView removeFromSuperview];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -92,6 +94,7 @@
 - (void)didPartsSelected:(BCPathView *)pathView andSelectedParts:(UIImage *)selectedParts
 {
     self.doneButton.enabled = YES;
+	self.selectedParts = selectedParts;
 }
 
 #pragma mark actions
@@ -104,7 +107,9 @@
 
 - (void)doneButtonTapped:(id)sender
 {
-#warning needs implement
+	if ([self.delegate respondsToSelector:@selector(BCPartsPickerControllerPickDone:partsImage:andMask:)]) {
+		[self.delegate BCPartsPickerControllerPickDone:self partsImage:_selectedParts andMask:nil];
+	}
 }
 
 - (void)clearButtonTapped:(id)sender

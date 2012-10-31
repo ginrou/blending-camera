@@ -110,10 +110,10 @@
 #pragma -- mark parts picker delegate
 - (void)BCPartsPickerControllerPickDone:(BCPartsPickerController *)partsPicker partsImage:(UIImage *)image andMask:(UIImage *)mask
 {
-	[self dismissModalViewControllerAnimated:YES];
 	self.partsImage = image;
-	self.maskImage  = mask;
-	
+	//self.maskImage  = mask;
+	[self dismissModalViewControllerAnimated:YES];
+
 }
 
 - (void)BCPartsPickerControllerCanceld:(BCPartsPickerController *)partsPicker

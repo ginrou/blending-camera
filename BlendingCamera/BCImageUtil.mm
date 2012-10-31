@@ -39,14 +39,13 @@ cv::Rect getBoundigBox(cv::Mat src)
             unsigned char g = buf[w*chanels + 1];
             unsigned char b = buf[w*chanels + 2];
 
-            if (h%10 == 0 && w%10 == 0) {
-                NSLog(@"%d, %d -> %u, %u, %u",h,w,r,g,b);
-            }
+//            if (h%10 == 0 && w%10 == 0) {
+//                NSLog(@"%d, %d -> %u, %u, %u",h,w,r,g,b);
+//            }
 
-            
-            if (r+g+b > 0) {
+            if (g+b > 0) {
                 
-                //NSLog(@"found %d, %d, %u, %u, %u", h, w,r,g,b);
+//                NSLog(@"found %d, %d, %u, %u, %u", h, w,r,g,b);
                 
                 if (h < offset.y ) offset.y = h;
                 if (w < offset.x ) offset.x = w;

@@ -12,10 +12,11 @@
 
 @interface BCPathView : UIView
 
-@property (nonatomic, assign) id<BCPathViewDelegate> delegate;
+@property (nonatomic, weak) id<BCPathViewDelegate> delegate;
 @property (nonatomic, assign) CGMutablePathRef currentPath;
 @property (nonatomic, strong) CALayer *pathLayer;
 @property (nonatomic, assign) CGContextRef bitmapCopntext;
+@property (nonatomic, assign) BOOL isAlreadyPicked;
 
 - (void)clearPath;
 
