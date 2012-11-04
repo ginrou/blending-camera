@@ -13,6 +13,7 @@
 @property (assign, nonatomic) UIImagePickerControllerSourceType sourceType;
 @property (nonatomic, assign) BOOL showImagePicker;
 @property (strong, nonatomic) UIImage *selectedParts;
+@property (strong, nonatomic) UIImageView *imageView;
 @end
 
 @implementation BCPartsPickerController
@@ -46,8 +47,8 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
 	if (self.showImagePicker) {
-		[super viewDidAppear:animated];
 		UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
 		imagePicker.delegate = self;
 		imagePicker.sourceType = self.sourceType;
@@ -58,8 +59,11 @@
 
 - (void)viewDidUnload
 {
-	//[self setPreviewView:nil];
+ //   [_previewView removeFromSuperview];
 	[_pathView removeFromSuperview];
+    [_imageView removeFromSuperview];
+ //   self.previewView = nil;
+    self.pathView    = nil;
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -76,10 +80,10 @@
 	[self dismissModalViewControllerAnimated:YES];
 	UIImage *loadImage = [info objectForKey:UIImagePickerControllerOriginalImage];
 	self.originalImage = loadImage;
-	UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.pathView.frame];
-	imageView.contentMode = UIViewContentModeScaleAspectFill;
-	imageView.image = loadImage;
-	[self.previewView insertSubview:imageView belowSubview:self.pathView];
+	self.imageView = [[UIImageView alloc] initWithFrame:self.pathView.frame];
+	_imageView.contentMode = UIViewContentModeScaleAspectFill;
+	_imageView.image = loadImage;
+	[self.previewView insertSubview:_imageView belowSubview:self.pathView];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker

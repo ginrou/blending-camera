@@ -23,8 +23,12 @@
     NSLog(@"size = %d, %d", boundigBox.width, boundigBox.height);
 
     cv::Mat dst = fillInside(lineSrc, boundigBox);
+    UIImage *ret = [BCImageConverter UIImageFromCVMat:dst];
+
+    lineSrc.release();
+    dst.release();
     
-    return [BCImageConverter UIImageFromCVMat:dst];
+    return ret;
 }
 
 

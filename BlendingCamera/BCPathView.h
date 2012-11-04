@@ -10,7 +10,7 @@
 
 @protocol BCPathViewDelegate;
 
-@interface BCPathView : UIView
+@interface BCPathView : UIView 
 
 @property (nonatomic, weak) id<BCPathViewDelegate> delegate;
 @property (nonatomic, assign) CGMutablePathRef currentPath;

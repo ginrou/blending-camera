@@ -45,7 +45,13 @@ static const CGFloat penWidth = 5.0;
     _pointDif.y = 0.0;
 }
 
-
+- (void) dealloc
+{
+    [_pathLayer removeFromSuperlayer];
+    self.pathLayer = nil;
+    CGContextRelease(self.bitmapCopntext);
+    CGPathRelease(self.currentPath);
+}
 
 #pragma mark utility methods
 - (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size
@@ -87,9 +93,11 @@ static const CGFloat penWidth = 5.0;
 {
 	CGPoint point = [((UITouch *)[touches anyObject]) locationInView:self];
 	CGPathAddLineToPoint(self.currentPath, nil, point.x, point.y);
-	self.pathLayer.delegate = self;
-	[self drawCurrentPath:self.bitmapCopntext];
+    _pathLayer.delegate = self;
 	[_pathLayer setNeedsDisplay];
+
+	[self drawCurrentPath:self.bitmapCopntext];
+
 	[self closedCurve:point];
     
     if ([self isCurveClosed])
@@ -132,12 +140,13 @@ static const CGFloat penWidth = 5.0;
 
 
 #pragma mark -- drawings
-/*
-- (void)drawRect:(CGRect)rect
-{
-    // Drawing code
-}
-*/
+
+//- (void)drawRect:(CGRect)rect
+//{
+//    // Drawing code
+//
+//}
+//
 
 - (void)drawCurrentPath:(CGContextRef)context
 {
@@ -155,6 +164,9 @@ static const CGFloat penWidth = 5.0;
 - (void)drawLayer:(CALayer *)layer inContext:(CGContextRef)ctx
 {
 	[self drawCurrentPath:ctx];
+    if (layer == _pathLayer) {
+        _pathLayer.delegate = nil;
+    }
 }
 
 - (void)clearPath
@@ -172,7 +184,7 @@ static const CGFloat penWidth = 5.0;
     if ([self.delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
 		
         CGImageRef cgImage = CGBitmapContextCreateImage(self.bitmapCopntext);
-		
+        
 		if (_isAlreadyPicked == NO && [_delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
 			self.isAlreadyPicked = YES;
 			UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
@@ -181,26 +193,5 @@ static const CGFloat penWidth = 5.0;
 
     }
 }
-
-- (void)cutOffParts {
-	
-	for (int h = 0; h < self.frame.size.height; ++h) {
-		unsigned char *row_buf = (unsigned char *)(_bitmapData );
-		int offset = self.frame.size.width * h;
-		for (int w = 0; w < self.frame.size.width; ++w) {
-			
-			unsigned char r = row_buf[offset + w*4+0];
-			unsigned char g = row_buf[offset + w*4+1];
-			unsigned char b = row_buf[offset + w*4+2];
-			unsigned char a = row_buf[offset + w*4+3];
-
-			NSLog(@"%u, %u, %u, %u", r,g,b,a);
-
-		}
-	}
-	
-	
-}
-
 
 @end

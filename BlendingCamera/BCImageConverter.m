@@ -23,7 +23,7 @@
 		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNone;
 		matType = CV_8UC1;
 	} else if (channels == 3) {
-		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNoneSkipFirst;
+		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaNoneSkipLast;
 		matType = CV_8UC4;
 	} else if (channels == 4) {
 		bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaLast;
