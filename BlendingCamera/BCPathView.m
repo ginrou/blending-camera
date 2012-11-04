@@ -53,6 +53,17 @@ static const CGFloat penWidth = 5.0;
     CGPathRelease(self.currentPath);
 }
 
+- (void) setOriginalImage:(UIImage *)originalImage
+{
+    if (originalImage) {
+        UIGraphicsBeginImageContext(self.frame.size);
+        [originalImage drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        _originalImage = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+    }
+}
+
+
 #pragma mark utility methods
 - (CGContextRef)newBlankBitmapContextOfSize:(CGSize)size
 {
@@ -187,7 +198,11 @@ static const CGFloat penWidth = 5.0;
         
 		if (_isAlreadyPicked == NO && [_delegate respondsToSelector:@selector(didPartsSelected:andSelectedParts:)]) {
 			self.isAlreadyPicked = YES;
-			UIImage *parts = [BCImageUtil cutoffPartsRegion:[UIImage imageWithCGImage:cgImage]];
+            BCImageUtil *util = [[BCImageUtil alloc] initWithPathImage:[UIImage imageWithCGImage:cgImage]];
+            CGRect boundingBox = [util boundingBoxForImage];
+            UIImage *mask = [util cutoffedMask];
+            UIImage *parts = [util maskedOriginalImage:_originalImage];
+            
 			[self.delegate didPartsSelected:self andSelectedParts:parts];
 		}
 

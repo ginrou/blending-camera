@@ -16,7 +16,6 @@
 @property (nonatomic, strong) UIImage *pathImage;
 
 - (id)initWithPathImage:(UIImage *)image;
-- (UIImage *)cutoffPartsRegion;
 - (CGRect)boundingBoxForImage;
 - (UIImage *)cutoffedMask;
 - (UIImage *)maskedOriginalImage:(UIImage *)originalImage;

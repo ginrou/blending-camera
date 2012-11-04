@@ -52,15 +52,17 @@
 - (UIImage *)maskedOriginalImage:(UIImage *)originalImage
 {
 	cv::Mat orig = [BCImageConverter cvMatFromUIImage:originalImage];
-	cv::Mat dst( _boundingBox.size(), CV_8UC4);
+    
+    std::vector<cv::Mat> tmp;
+    tmp.push_back(orig(_boundingBox));
+    tmp.push_back(_mask);
+    cv::Mat merged;
+    cv::merge(tmp, merged);
+    UIImage *dst = [BCImageConverter UIImageFromCVMat:merged];
 	
-	
-	
-	
-	UIImage *ret = [BCImageConverter UIImageFromCVMat:dst];
-	dst.release();
 	orig.release();
-	return ret;
+    merged.release();
+    return dst;
 }
 
 

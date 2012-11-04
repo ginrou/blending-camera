@@ -83,6 +83,7 @@
 	self.imageView = [[UIImageView alloc] initWithFrame:self.pathView.frame];
 	_imageView.contentMode = UIViewContentModeScaleAspectFill;
 	_imageView.image = loadImage;
+    _pathView.originalImage = loadImage;
 	[self.previewView insertSubview:_imageView belowSubview:self.pathView];
 }
 
@@ -121,5 +122,6 @@
     [self.pathView clearPath];
     self.doneButton.enabled = NO;
 }
+
 
 @end
