@@ -27,7 +27,7 @@
 
     cv::Mat cropped = lineSrc(boundigBox);
     NSLog(@"%d, %d", lineSrc.rows, lineSrc.cols);
-    ret = [BCImageConverter UIImageFromCVMat:cropped];
+    //ret = [BCImageConverter UIImageFromCVMat:cropped];
 
     lineSrc.release();
     dst.release();
@@ -48,13 +48,7 @@ cv::Rect getBoundigBox(cv::Mat src)
             unsigned char g = buf[w*chanels + 1];
             unsigned char b = buf[w*chanels + 2];
 
-//            if (h%10 == 0 && w%10 == 0) {
-//                NSLog(@"%d, %d -> %u, %u, %u",h,w,r,g,b);
-//            }
-
-            if (g+b > 0) {
-                
-//                NSLog(@"found %d, %d, %u, %u, %u", h, w,r,g,b);
+            if (r + g+b > 0) {
                 
                 if (h < offset.y ) offset.y = h;
                 if (w < offset.x ) offset.x = w;
@@ -89,15 +83,23 @@ cv::Mat fillInside(cv::Mat img, cv::Rect boundingBox)
         isInside = false;
 
         for (int w = 0; w < boundingBox.width; ++w) {
-
-            dst_buf[w] = isInside ? 255.0 : 0.0;
             
-            int src_w_idx = (w+boundingBox.x)*4;
+            int src_w_idx = ( w + boundingBox.x) * 3;
+			int src_w_idx_prev = (w - 1 + boundingBox.x ) * 3;
             unsigned char srcSum = src_buf[src_w_idx+0] + src_buf[src_w_idx+1] + src_buf[src_w_idx+2];
-            if (srcSum > 0) isInside = !isInside;
+			unsigned char srcSum_prev = src_buf[src_w_idx_prev+0] + src_buf[src_w_idx_prev+1] + src_buf[src_w_idx_prev+2];
+            if (srcSum > 0  && srcSum_prev == 0) isInside = !isInside;
+
+            dst_buf[w] = isInside ? 255 : 0;
             
         }
         
+		// 一番上と一番下の行のための処理
+		// 最後の列が内側の場合は，その行全体を黒にする
+		if (dst_buf[boundingBox.width-1] != 0) {
+			for (int w = 0; w < boundingBox.width; ++w) dst_buf[w] = 0;
+		}
+		
     }
     
     return dst;

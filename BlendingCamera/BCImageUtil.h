@@ -13,4 +13,6 @@
 
 + (UIImage *)cutoffPartsRegion:(UIImage *)image;
 
+
+
 @end
