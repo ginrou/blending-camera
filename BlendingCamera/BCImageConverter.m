@@ -64,7 +64,7 @@
     CGColorSpaceRef colorSpace = (src.elemSize() == 1) ? CGColorSpaceCreateDeviceGray() : CGColorSpaceCreateDeviceRGB();
     CGDataProviderRef provider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);
     
-    CGImageRef imageRef = CGImageCreate(src.cols, src.rows, 8, 8 * src.elemSize(), src.step[0], colorSpace, kCGImageAlphaNoneSkipLast | kCGBitmapByteOrderDefault, provider, NULL, false, kCGRenderingIntentDefault);
+    CGImageRef imageRef = CGImageCreate(src.cols, src.rows, 8, 8 * src.elemSize(), src.step[0], colorSpace, kCGImageAlphaLast | kCGBitmapByteOrderDefault, provider, NULL, false, kCGRenderingIntentDefault);
     
     UIImage *uiImage = [UIImage imageWithCGImage:imageRef];
     CGDataProviderRelease(provider);
