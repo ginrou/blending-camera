@@ -9,7 +9,17 @@
 #import <Foundation/Foundation.h>
 #include <opencv2/opencv.hpp>
 
-@interface BCImageUtil : NSObject
+@interface BCImageUtil : NSObject {
+	
+}
+
+@property (nonatomic, strong) UIImage *pathImage;
+
+- (id)initWithPathImage:(UIImage *)image;
+- (UIImage *)cutoffPartsRegion;
+- (CGRect)boundingBoxForImage;
+- (UIImage *)cutoffedMask;
+- (UIImage *)maskedOriginalImage:(UIImage *)originalImage;
 
 + (UIImage *)cutoffPartsRegion:(UIImage *)image;
 

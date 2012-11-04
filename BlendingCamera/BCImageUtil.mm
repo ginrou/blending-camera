@@ -9,8 +9,60 @@
 #import "BCImageUtil.h"
 #import "BCImageConverter.h"
 
+@interface BCImageUtil ()
+{
+	cv::Mat _pathMat;
+	cv::Rect _boundingBox;
+	cv::Mat _mask;
+}
+
+@end
 
 @implementation BCImageUtil
+
+- (id)initWithPathImage:(UIImage *)image
+{
+	self = [super init];
+	if (self) {
+		self.pathImage = image;
+		_pathMat = [BCImageConverter cvMatFromUIImage:_pathImage];
+		
+	}
+	return self;
+}
+
+- (void)dealloc
+{
+	_pathMat.release();
+	self.pathImage = nil;
+}
+
+- (CGRect)boundingBoxForImage
+{
+	_boundingBox = getBoundingBox(_pathMat);
+	return CGRectMake(_boundingBox.x, _boundingBox.y, _boundingBox.width, _boundingBox.height);
+}
+
+- (UIImage *)cutoffedMask
+{
+	_mask = fillInside(_pathMat, _boundingBox);
+	return [BCImageConverter UIImageFromCVMat:_mask];
+}
+
+- (UIImage *)maskedOriginalImage:(UIImage *)originalImage
+{
+	cv::Mat orig = [BCImageConverter cvMatFromUIImage:originalImage];
+	cv::Mat dst( _boundingBox.size(), CV_8UC4);
+	
+	
+	
+	
+	UIImage *ret = [BCImageConverter UIImageFromCVMat:dst];
+	dst.release();
+	orig.release();
+	return ret;
+}
+
 
 + (UIImage *)cutoffPartsRegion:(UIImage *)image
 {
@@ -18,7 +70,7 @@
     
     NSLog(@"size = %d, %d, channels = %d", lineSrc.rows, lineSrc.cols, lineSrc.channels());
     
-    cv::Rect boundigBox = getBoundigBox(lineSrc);
+    cv::Rect boundigBox = getBoundingBox(lineSrc);
     NSLog(@"offset = %d, %d", boundigBox.x, boundigBox.y);
     NSLog(@"size = %d, %d", boundigBox.width, boundigBox.height);
 
@@ -37,7 +89,7 @@
 }
 
 
-cv::Rect getBoundigBox(cv::Mat src)
+cv::Rect getBoundingBox(cv::Mat src)
 {
     cv::Point offset(src.rows, src.cols), cutoff(0, 0);
     int chanels = src.channels();
