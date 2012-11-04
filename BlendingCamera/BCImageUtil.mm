@@ -25,8 +25,13 @@
     cv::Mat dst = fillInside(lineSrc, boundigBox);
     UIImage *ret = [BCImageConverter UIImageFromCVMat:dst];
 
+    cv::Mat cropped = lineSrc(boundigBox);
+    NSLog(@"%d, %d", lineSrc.rows, lineSrc.cols);
+    ret = [BCImageConverter UIImageFromCVMat:cropped];
+
     lineSrc.release();
     dst.release();
+
     
     return ret;
 }
