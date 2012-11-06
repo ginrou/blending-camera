@@ -12,24 +12,19 @@
 @end
 
 @implementation BCImageSelectionViewController
-@synthesize choosePartsLabel;
-@synthesize partsFromCameraButton;
-@synthesize partsFromLibraryButton;
-@synthesize firstRedArrow;
-@synthesize baseImageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-		_baseImage = nil;
-		_partsImage = nil;
+
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    _baseImageView.contentMode = UIViewContentModeScaleAspectFit;
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 	
@@ -37,14 +32,7 @@
 
 - (void)viewDidUnload
 {
-    [self setBaseImageView:nil];
-	[self setFirstRedArrow:nil];
-	[self setChoosePartsLabel:nil];
-	[self setPartsFromCameraButton:nil];
-	[self setPartsFromLibraryButton:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -52,35 +40,25 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-#pragma mark -- image loaders
-- (IBAction)loadBaseImageFromCamera:(id)sender
-{
-	[self showBaseImagePickerWithType:UIImagePickerControllerSourceTypeCamera];
-}
-
-- (IBAction)loadBaseImageFromLibrary:(id)sender
-{
-	[self showBaseImagePickerWithType:UIImagePickerControllerSourceTypePhotoLibrary];
-}
-
-- (void)showBaseImagePickerWithType:(UIImagePickerControllerSourceType)type
-{
-	UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-	imagePicker.delegate = self;
-	imagePicker.sourceType = type;
-	[self presentModalViewController:imagePicker animated:YES];
-}
 
 
-- (IBAction)loadPartsImageFromCamera:(id)sender
+
+#pragma mark - ===========image loaders============== -
+#pragma mark load base image
+
+- (IBAction)loadBaseImage:(id)sender { [self showActionSheetWithTag:0]; }
+
+- (void)loadBaseImageFromPicker:(UIImagePickerControllerSourceType)sourceType
 {
-	[self showPartsImagePickerWithType:UIImagePickerControllerSourceTypeCamera];
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    imagePicker.delegate = self;
+    imagePicker.sourceType = sourceType;
+    [self presentModalViewController:imagePicker animated:YES];
 }
 
-- (IBAction)loadPartsImageFromLibrary:(id)sender
-{
-	[self showPartsImagePickerWithType:UIImagePickerControllerSourceTypePhotoLibrary];
-}
+#pragma mark load parts image
+
+- (IBAction)loadPartsImage:(id)sender { [self showActionSheetWithTag:1]; }
 
 - (void)showPartsImagePickerWithType:(UIImagePickerControllerSourceType)type
 {
@@ -89,14 +67,38 @@
 	[self presentModalViewController:partsPicker animated:YES];
 }
 
+#pragma mark - ============ Delegates ============ -
+#pragma mark UIActionSheet Creator and Delegates
+- (void)showActionSheetWithTag:(NSInteger)tag
+{
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@""
+                                                             delegate:self
+                                                    cancelButtonTitle:@"Cancel"
+                                               destructiveButtonTitle:nil
+                                                    otherButtonTitles:@"load from Library", @"take a photo", nil];
+    actionSheet.tag = tag;
+    [actionSheet showInView:self.view.window];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    UIImagePickerControllerSourceType sourceType;
+    if (buttonIndex == 0) sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    else if (buttonIndex == 1) sourceType = UIImagePickerControllerSourceTypeCamera;
+    else return;
+    
+    if (actionSheet.tag == 0) [self loadBaseImageFromPicker:sourceType];
+    else if (actionSheet.tag == 1) [self showPartsImagePickerWithType:sourceType];
+}
+
+
 #pragma -- mark image picker delegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
 	UIImage *loadedImage = [info objectForKey:UIImagePickerControllerOriginalImage];
 	[self dismissModalViewControllerAnimated:YES];
-	self.baseImageView.image = loadedImage;
 	self.baseImage = loadedImage;
-	[self enableLoadingParts];
+    self.baseImageView.image = _baseImage;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -104,14 +106,18 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+
 #pragma -- mark parts picker delegate
 - (void)BCPartsPickerControllerPickDone:(BCPartsPickerController *)partsPicker partsImage:(UIImage *)image andMask:(UIImage *)mask
 {
 	[self dismissModalViewControllerAnimated:YES];
 	
     self.partsImage = image;
-    _partsImageView.image = _partsImage;
-	//self.maskImage  = mask;
+    self.partsImageView = [[BCPartsView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
+    _partsImageView.image = image;
+    [self.view insertSubview:_partsImageView aboveSubview:_baseImageView];
+    
+    //self.maskImage  = mask;
 
 }
 
@@ -120,14 +126,5 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
-
-- (void)enableLoadingParts
-{
-	firstRedArrow.hidden = NO;
-	self.choosePartsLabel.hidden = NO;
-	self.partsFromCameraButton.hidden = NO;
-	self.partsFromLibraryButton.hidden = NO;
-	self.partsImageView.hidden = NO;
-}
 
 @end
