@@ -13,6 +13,7 @@
 @property (assign, nonatomic) UIImagePickerControllerSourceType sourceType;
 @property (nonatomic, assign) BOOL showImagePicker;
 @property (strong, nonatomic) UIImage *selectedParts;
+@property (strong, nonatomic) UIImage *maskImage;
 @property (strong, nonatomic) UIImageView *imageView;
 @end
 
@@ -102,6 +103,13 @@
 	self.selectedParts = selectedParts;
 }
 
+- (void)didPartsSelected:(BCPathView *)pathView andSelectedParts:(UIImage *)selectedParts maskImage:(UIImage *)maskImage
+{
+    self.doneButton.enabled = YES;
+    self.selectedParts = selectedParts;
+    self.maskImage = maskImage;
+}
+
 #pragma mark actions
 - (void)cancelButtonTapped:(id)sender
 {
@@ -113,7 +121,7 @@
 - (void)doneButtonTapped:(id)sender
 {
 	if ([self.delegate respondsToSelector:@selector(BCPartsPickerControllerPickDone:partsImage:andMask:)]) {
-		[self.delegate BCPartsPickerControllerPickDone:self partsImage:_selectedParts andMask:nil];
+		[self.delegate BCPartsPickerControllerPickDone:self partsImage:_selectedParts andMask:_maskImage];
 	}
 }
 

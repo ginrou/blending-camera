@@ -30,6 +30,6 @@
 
 @protocol BCPathViewDelegate <NSObject>
 
-- (void)didPartsSelected:(BCPathView *)pathView andSelectedParts:(UIImage *)selectedParts;
+- (void)didPartsSelected:(BCPathView *)pathView andSelectedParts:(UIImage *)selectedParts maskImage:(UIImage *)maskImage;
 
 @end

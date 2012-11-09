@@ -19,6 +19,12 @@
 	cv::Mat maskMat   = [BCImageConverter cvMatFromUIImage:_mask];
 	NSLog(@"mask converted");
 	
+    if (sourceMat.rows != maskMat.rows || sourceMat.cols != sourceMat.cols) {
+
+        
+    }
+    
+    
 	Blend::PoissonBlender bld = Blend::PoissonBlender(sourceMat, targetMat, maskMat);
 	cv::Mat dst;
 	NSLog(@"blending start");

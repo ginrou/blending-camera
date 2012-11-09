@@ -203,7 +203,7 @@ static const CGFloat penWidth = 5.0;
             UIImage *mask = [util cutoffedMask];
             UIImage *parts = [util maskedOriginalImage:_originalImage];
             
-			[self.delegate didPartsSelected:self andSelectedParts:parts];
+			[self.delegate didPartsSelected:self andSelectedParts:parts maskImage:mask];
 		}
 
     }

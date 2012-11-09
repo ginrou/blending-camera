@@ -8,6 +8,8 @@
 
 #import "BCImageSelectionViewController.h"
 
+#import "BCBlenderRapper.h"
+
 @interface BCImageSelectionViewController ()
 @end
 
@@ -32,6 +34,7 @@
 
 - (void)viewDidUnload
 {
+    [self setProcessingButton:nil];
     [super viewDidUnload];
 }
 
@@ -99,6 +102,7 @@
 	[self dismissModalViewControllerAnimated:YES];
 	self.baseImage = loadedImage;
     self.baseImageView.image = _baseImage;
+    _processingButton.enabled = _baseImage && _partsImage;
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
@@ -113,12 +117,13 @@
 	[self dismissModalViewControllerAnimated:YES];
 	
     self.partsImage = image;
+    self.maskImage  = mask;
     self.partsImageView = [[BCPartsView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.height)];
     _partsImageView.image = image;
     [self.view insertSubview:_partsImageView aboveSubview:_baseImageView];
     
-    //self.maskImage  = mask;
-
+    _processingButton.enabled = _baseImage && _partsImage;
+    
 }
 
 - (void)BCPartsPickerControllerCanceld:(BCPartsPickerController *)partsPicker
@@ -126,5 +131,39 @@
 	[self dismissModalViewControllerAnimated:YES];
 }
 
+#pragma - mark start processing
+- (IBAction)startProcessing:(id)sender
+{
+    dispatch_queue_t queue = dispatch_queue_create("TKDIndustry.bc.blend", NULL);
+    dispatch_async(queue, ^{
+        BCBlenderRapper *blender = [[BCBlenderRapper alloc] init];
+        blender.sourceImage = [BCPartsView resizedImage:_partsImage ForSize:_partsImageView.frame.size];
+        blender.targetImage = _baseImage;
+        blender.mask        = [BCPartsView resizedGrayScaleImage:_maskImage ForSize:_partsImageView.frame.size];
+        blender.offset      = _partsImageView.frame.origin;
+        
+        NSLog(@"%@", NSStringFromCGSize(blender.sourceImage.size));
+        NSLog(@"%@", NSStringFromCGSize(blender.targetImage.size));
+        NSLog(@"%@", NSStringFromCGSize(blender.mask.size));
+        NSLog(@"%@", NSStringFromCGPoint(blender.offset));
+
+        UIImage *dst = [blender WrappedSeamlessClone:true];
+
+        [self blendingFinished:dst];
+        
+    });
+
+    
+}
+
+- (void)blendingFinished:(UIImage *)blendImage;
+{
+    NSLog(@"blending finished");
+    [self.partsImageView removeFromSuperview];
+    self.partsImage = nil;
+    self.maskImage  = nil;
+    self.baseImage  = blendImage;
+    
+}
 
 @end

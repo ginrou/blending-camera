@@ -24,9 +24,11 @@ BCPartsPickerControllerDelegate>
 
 @property (nonatomic, strong) IBOutlet UIImageView *baseImageView;
 @property (nonatomic, strong) BCPartsView *partsImageView;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *processingButton;
 
 
 - (IBAction)loadBaseImage:(id)sender;
 - (IBAction)loadPartsImage:(id)sender;
+- (IBAction)startProcessing:(id)sender;
 
 @end

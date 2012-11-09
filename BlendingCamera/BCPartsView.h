@@ -10,4 +10,7 @@
 
 @interface BCPartsView : UIView
 @property (nonatomic, strong) UIImage *image;
++(UIImage *)resizedImage:(UIImage *)image ForSize:(CGSize)size;
++(UIImage *)resizedGrayScaleImage:(UIImage *)image ForSize:(CGSize)size;
+
 @end
