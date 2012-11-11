@@ -136,12 +136,14 @@
 {
     dispatch_queue_t queue = dispatch_queue_create("TKDIndustry.bc.blend", NULL);
     dispatch_async(queue, ^{
+
+        CGSize imgSize2x = CGSizeMake(_partsImageView.frame.size.width * 2.0, _partsImageView.frame.size.height * 2.0);
         BCBlenderRapper *blender = [[BCBlenderRapper alloc] init];
-        blender.sourceImage = [BCPartsView resizedImage:_partsImage ForSize:_partsImageView.frame.size];
-        blender.targetImage = _baseImage;
-        blender.mask        = [BCPartsView resizedGrayScaleImage:_maskImage ForSize:_partsImageView.frame.size];
-        blender.offset      = _partsImageView.frame.origin;
-        
+        blender.sourceImage = [BCPartsView resizedImage:_partsImage ForSize:imgSize2x];
+        blender.targetImage = [self resizeBaseImageForBlend];
+        blender.mask        = [BCPartsView resizedGrayScaleImage:_maskImage ForSize:imgSize2x];
+        blender.offset      = [self maskOffset];
+
         NSLog(@"%@", NSStringFromCGSize(blender.sourceImage.size));
         NSLog(@"%@", NSStringFromCGSize(blender.targetImage.size));
         NSLog(@"%@", NSStringFromCGSize(blender.mask.size));
@@ -152,9 +154,33 @@
         [self blendingFinished:dst];
         
     });
-
     
 }
+
+- (UIImage *)resizeBaseImageForBlend
+{
+    CGSize imgSize = _baseImage.size;
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    screenSize.height *= 2.0;
+    screenSize.width  *= 2.0;
+    CGSize convertSize;
+    if (imgSize.width > imgSize.height) { // 横長の場合
+        convertSize.width = screenSize.width;
+        convertSize.height = imgSize.height * screenSize.width / imgSize.width;
+    } else { // 縦長の場合
+        convertSize.height = screenSize.height;
+        convertSize.width = imgSize.width * screenSize.height / imgSize.height;
+    }
+    return [BCPartsView resizedImage:_baseImage ForSize:convertSize];
+}
+
+- (CGPoint)maskOffset
+{
+    CGPoint imgOrigin = _baseImageView.frame.origin;
+    CGPoint maskOrigin = _partsImageView.frame.origin;
+    return CGPointMake((maskOrigin.x - imgOrigin.x) * 2.0, (maskOrigin.y - imgOrigin.x) * 2.0);
+}
+
 
 - (void)blendingFinished:(UIImage *)blendImage;
 {
@@ -163,7 +189,9 @@
     self.partsImage = nil;
     self.maskImage  = nil;
     self.baseImage  = blendImage;
-    
+    self.baseImageView.image = blendImage;
+    self.partsImageView = nil;
+    UIImageWriteToSavedPhotosAlbum(blendImage, nil, nil, nil);
 }
 
 @end
