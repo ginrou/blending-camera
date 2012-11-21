@@ -35,6 +35,7 @@
 - (void)viewDidUnload
 {
     [self setProcessingButton:nil];
+    [self setMixtureSwitch:nil];
     [super viewDidUnload];
 }
 
@@ -134,6 +135,7 @@
 #pragma - mark start processing
 - (IBAction)startProcessing:(id)sender
 {
+    BOOL mixture = self.mixtureSwitch.selected;
     dispatch_queue_t queue = dispatch_queue_create("TKDIndustry.bc.blend", NULL);
     dispatch_async(queue, ^{
 
@@ -149,7 +151,7 @@
         NSLog(@"%@", NSStringFromCGSize(blender.mask.size));
         NSLog(@"%@", NSStringFromCGPoint(blender.offset));
 
-        UIImage *dst = [blender WrappedSeamlessClone:true];
+        UIImage *dst = [blender WrappedSeamlessClone:(bool)mixture];
 
         [self blendingFinished:dst];
         
