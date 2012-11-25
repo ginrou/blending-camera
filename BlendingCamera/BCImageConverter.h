@@ -14,7 +14,9 @@
 
 @interface BCImageConverter : NSObject
 + (cv::Mat)cvMatFromUIImage:(UIImage *)image;
++ (cv::Mat)cvMatFromAlphaUIImage:(UIImage *)image;
 + (UIImage *)UIImageFromCVMat:(cv::Mat)mat;
+
 
 
 @end

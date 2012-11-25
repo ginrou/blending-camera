@@ -49,6 +49,26 @@
 
 }
 
++ (cv::Mat)cvMatFromAlphaUIImage:(UIImage *)image
+{
+    CGFloat cols = image.size.width;
+    CGFloat rows = image.size.height;
+    CGColorSpaceRef colorSpace = CGImageGetColorSpace(image.CGImage);
+
+	CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault | kCGImageAlphaPremultipliedLast;
+	int matType = CV_8UC4;
+
+	cv::Mat dst(rows, cols, matType);
+
+	CGContextRef contextRef = CGBitmapContextCreate(dst.data, cols, rows, 8, dst.step[0], colorSpace, bitmapInfo);
+	CGContextDrawImage(contextRef, CGRectMake(0, 0, cols, rows), image.CGImage);
+
+	CGContextRelease(contextRef);
+	CGColorSpaceRelease(colorSpace);
+
+    return dst;
+}
+
 + (UIImage *)UIImageFromCVMat:(cv::Mat)mat
 {
 	cv::Mat src;

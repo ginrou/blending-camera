@@ -68,7 +68,9 @@
 {
 	BCPartsPickerController *partsPicker = [[BCPartsPickerController alloc] initWithPickerType:type];
 	partsPicker.delegate = self;
-	[self presentModalViewController:partsPicker animated:YES];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:partsPicker];
+    navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+	[self presentModalViewController:navigationController animated:YES];
 }
 
 #pragma mark - ============ Delegates ============ -

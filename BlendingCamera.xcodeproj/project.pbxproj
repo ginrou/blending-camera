@@ -37,6 +37,9 @@
 		096969D416072D1500DEB522 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 096969D316072D1500DEB522 /* QuartzCore.framework */; };
 		9A15CCCB16496BF300F957B0 /* BCPartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A15CCCA16496BF300F957B0 /* BCPartsView.m */; };
 		9A5B03111618171100D3268F /* BCImageUtil.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A5B03101618171100D3268F /* BCImageUtil.mm */; };
+		9A867D56165F633300547C18 /* BCPartsBackgroundExtractionViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A867D54165F633300547C18 /* BCPartsBackgroundExtractionViewController.mm */; };
+		9A867D57165F633300547C18 /* BCPartsBackgroundExtractionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A867D55165F633300547C18 /* BCPartsBackgroundExtractionViewController.xib */; };
+		9A867D5B1660FBC100547C18 /* BCBackgroundExtractor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A867D591660FBC000547C18 /* BCBackgroundExtractor.cpp */; };
 		9A8E2F391605E25400391C57 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F381605E25400391C57 /* UIKit.framework */; };
 		9A8E2F3B1605E25400391C57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3A1605E25400391C57 /* Foundation.framework */; };
 		9A8E2F3D1605E25400391C57 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8E2F3C1605E25400391C57 /* CoreGraphics.framework */; };
@@ -102,6 +105,11 @@
 		9A15CCCA16496BF300F957B0 /* BCPartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPartsView.m; sourceTree = "<group>"; };
 		9A5B030F1618171100D3268F /* BCImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCImageUtil.h; sourceTree = "<group>"; };
 		9A5B03101618171100D3268F /* BCImageUtil.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCImageUtil.mm; sourceTree = "<group>"; };
+		9A867D53165F633300547C18 /* BCPartsBackgroundExtractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPartsBackgroundExtractionViewController.h; sourceTree = "<group>"; };
+		9A867D54165F633300547C18 /* BCPartsBackgroundExtractionViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BCPartsBackgroundExtractionViewController.mm; sourceTree = "<group>"; };
+		9A867D55165F633300547C18 /* BCPartsBackgroundExtractionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCPartsBackgroundExtractionViewController.xib; sourceTree = "<group>"; };
+		9A867D591660FBC000547C18 /* BCBackgroundExtractor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BCBackgroundExtractor.cpp; sourceTree = "<group>"; };
+		9A867D5A1660FBC000547C18 /* BCBackgroundExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCBackgroundExtractor.h; sourceTree = "<group>"; };
 		9A8E2F341605E25400391C57 /* BlendingCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlendingCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8E2F381605E25400391C57 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9A8E2F3A1605E25400391C57 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -222,6 +230,9 @@
 				0924366F160C319D0024F731 /* BCPartsPickerController.xib */,
 				09243673160C37680024F731 /* BCPathView.h */,
 				09243674160C37680024F731 /* BCPathView.m */,
+				9A867D53165F633300547C18 /* BCPartsBackgroundExtractionViewController.h */,
+				9A867D54165F633300547C18 /* BCPartsBackgroundExtractionViewController.mm */,
+				9A867D55165F633300547C18 /* BCPartsBackgroundExtractionViewController.xib */,
 			);
 			name = PartsPicker;
 			sourceTree = "<group>";
@@ -319,6 +330,8 @@
 				092436521609AF110024F731 /* Blender.h */,
 				9A5B030F1618171100D3268F /* BCImageUtil.h */,
 				9A5B03101618171100D3268F /* BCImageUtil.mm */,
+				9A867D591660FBC000547C18 /* BCBackgroundExtractor.cpp */,
+				9A867D5A1660FBC000547C18 /* BCBackgroundExtractor.h */,
 			);
 			name = ImageProcessings;
 			sourceTree = "<group>";
@@ -419,6 +432,7 @@
 				0924366A160C162D0024F731 /* BCImageSelectionViewController.xib in Resources */,
 				0924366C160C226B0024F731 /* red-arrow.png in Resources */,
 				09243671160C319D0024F731 /* BCPartsPickerController.xib in Resources */,
+				9A867D57165F633300547C18 /* BCPartsBackgroundExtractionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +484,8 @@
 				09243675160C37680024F731 /* BCPathView.m in Sources */,
 				9A5B03111618171100D3268F /* BCImageUtil.mm in Sources */,
 				9A15CCCB16496BF300F957B0 /* BCPartsView.m in Sources */,
+				9A867D56165F633300547C18 /* BCPartsBackgroundExtractionViewController.mm in Sources */,
+				9A867D5B1660FBC100547C18 /* BCBackgroundExtractor.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

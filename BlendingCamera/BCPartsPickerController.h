@@ -8,20 +8,23 @@
 
 #import <UIKit/UIKit.h>
 #import "BCPathView.h"
+#import "BCPartsBackgroundExtractionViewController.h"
 
 @protocol BCPartsPickerControllerDelegate;
 
 @interface BCPartsPickerController : UIViewController
-<UIImagePickerControllerDelegate, UINavigationControllerDelegate, BCPathViewDelegate>
+<UIImagePickerControllerDelegate,
+UINavigationControllerDelegate,
+BCPathViewDelegate,
+BackgroundExtractionDelegate
+>
 
 @property (nonatomic, assign) id<BCPartsPickerControllerDelegate> delegate;
 @property (nonatomic, strong) UIImage *originalImage;
 @property (weak, nonatomic) IBOutlet UIView *previewView;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
+@property (strong, nonatomic) UIBarButtonItem *doneButton;
 
 - (id)initWithPickerType:(UIImagePickerControllerSourceType)pickerType;
-- (IBAction)cancelButtonTapped:(id)sender;
-- (IBAction)doneButtonTapped:(id)sender;
 - (IBAction)clearButtonTapped:(id)sender;
 
 @end

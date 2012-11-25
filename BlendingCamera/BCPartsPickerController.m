@@ -43,6 +43,19 @@
 	CGRect pathViewFrame = CGRectMake(0, 0, _previewView.frame.size.width, _previewView.frame.size.height);
 	self.pathView = [[BCPathView alloc] initWithFrame:pathViewFrame];
     _pathView.delegate = self;
+
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                          target:self
+                                                                                          action:@selector(cancelButtonTapped:)];
+    self.doneButton = [[UIBarButtonItem alloc] initWithTitle:@"done"
+                                                       style:UIBarButtonItemStyleDone
+                                                      target:self
+                                                      action:@selector(doneButtonTapped:)];
+
+
+    _doneButton.enabled = NO;
+    self.navigationItem.rightBarButtonItem = self.doneButton;
+
 	[self.previewView addSubview:self.pathView];
 }
 
@@ -110,6 +123,15 @@
     self.maskImage = maskImage;
 }
 
+#pragma mark background extraction delegate
+- (void)backgroundExtractionDone:(BCPartsBackgroundExtractionViewController *)extractionViewController
+{
+    if ([self.delegate respondsToSelector:@selector(BCPartsPickerControllerPickDone:partsImage:andMask:)]) {
+        [self.delegate BCPartsPickerControllerPickDone:self partsImage:_selectedParts andMask:_maskImage];
+    }
+}
+
+
 #pragma mark actions
 - (void)cancelButtonTapped:(id)sender
 {
@@ -120,9 +142,12 @@
 
 - (void)doneButtonTapped:(id)sender
 {
-	if ([self.delegate respondsToSelector:@selector(BCPartsPickerControllerPickDone:partsImage:andMask:)]) {
-		[self.delegate BCPartsPickerControllerPickDone:self partsImage:_selectedParts andMask:_maskImage];
-	}
+    NSLog(@"done button tapped");
+
+    BCPartsBackgroundExtractionViewController *extractionVC = [[BCPartsBackgroundExtractionViewController alloc] init];
+    extractionVC.delegate = self;
+    extractionVC.originalImage = _selectedParts;
+    [self.navigationController pushViewController:extractionVC animated:YES];
 }
 
 - (void)clearButtonTapped:(id)sender
