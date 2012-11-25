@@ -19,7 +19,7 @@ namespace backgroundExtractor{
     class BCBackgroundExtractor
     {
     private:
-        cv::Mat _original, _extracted;
+        cv::Mat _original, _extracted, _mask;
         void setBGColor();
 
     public:
@@ -38,6 +38,8 @@ namespace backgroundExtractor{
         };
 
         cv::Mat extract(float norm); // 各画素がnormとどれだけ離れているかを渡して、背景を除去した画像を返す
+		cv::Mat newMaskImage(float norm); // 処理後の新しいマスク
+		cv::Mat newOriginalImage(float norm); // 新しい背景透過をしたマスク画像
     };
 }
 #endif /* defined(__BlendingCamera__BCBackgroundExtractor__) */

@@ -11,6 +11,7 @@
 #import "BCBlenderRapper.h"
 
 @interface BCImageSelectionViewController ()
+@property (strong, nonatomic) UIActivityIndicatorView *indicatorView;
 @end
 
 @implementation BCImageSelectionViewController
@@ -26,16 +27,20 @@
 
 - (void)viewDidLoad
 {
-    _baseImageView.contentMode = UIViewContentModeScaleAspectFit;
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-	
+	_baseImageView.contentMode = UIViewContentModeScaleAspectFit;
+	self.indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+	_indicatorView.frame = CGRectMake(0, 0, 100, 100);
+	_indicatorView.center = CGPointMake(self.view.frame.size.width/2.0, self.view.frame.size.height/2.0);
+	_indicatorView.hidesWhenStopped = YES;
+	[self.view addSubview:_indicatorView];
 }
 
 - (void)viewDidUnload
 {
     [self setProcessingButton:nil];
     [self setMixtureSwitch:nil];
+	[self setIndicatorView:nil];
     [super viewDidUnload];
 }
 
@@ -137,7 +142,11 @@
 #pragma - mark start processing
 - (IBAction)startProcessing:(id)sender
 {
+	if (!_baseImage || !_partsImage || !_maskImage) return;
+	
     BOOL mixture = self.mixtureSwitch.selected;
+	_processingButton.enabled = NO;
+	[_indicatorView startAnimating];
     dispatch_queue_t queue = dispatch_queue_create("TKDIndustry.bc.blend", NULL);
     dispatch_async(queue, ^{
 
@@ -180,22 +189,40 @@
 
 - (CGPoint)maskOffset
 {
-    CGPoint imgOrigin = _baseImageView.frame.origin;
+	CGPoint imgOrigin;
+	CGSize imgSize = _baseImage.size;
+
+	if (imgSize.width > imgSize.height) { // 横長の場合
+		CGFloat imgHeightInView = imgSize.height * _baseImageView.frame.size.width / imgSize.width;
+		imgOrigin.x = 0;
+		imgOrigin.y = (_baseImageView.frame.size.height - imgHeightInView) / 2.0;
+	} else { // 縦長の場合
+		CGFloat imgWidthInView = imgSize.width * _baseImageView.frame.size.height / imgSize.height;
+		imgOrigin.x = (_baseImageView.frame.size.width - imgWidthInView) / 2.0;
+		imgOrigin.y = 0;
+	}
+
     CGPoint maskOrigin = _partsImageView.frame.origin;
-    return CGPointMake((maskOrigin.x - imgOrigin.x) * 2.0, (maskOrigin.y - imgOrigin.x) * 2.0);
+	NSLog(@"mask origin ; %@", NSStringFromCGPoint(maskOrigin));
+    return CGPointMake((maskOrigin.x - imgOrigin.x) * 2.0, (maskOrigin.y - imgOrigin.y) * 2.0);
 }
 
 
 - (void)blendingFinished:(UIImage *)blendImage;
 {
-    NSLog(@"blending finished");
-    [self.partsImageView removeFromSuperview];
-    self.partsImage = nil;
-    self.maskImage  = nil;
-    self.baseImage  = blendImage;
-    self.baseImageView.image = blendImage;
-    self.partsImageView = nil;
-    UIImageWriteToSavedPhotosAlbum(blendImage, nil, nil, nil);
+	dispatch_async(dispatch_get_main_queue(), ^{
+		_processingButton.enabled = YES;
+		[_indicatorView stopAnimating];
+		NSLog(@"blending finished");
+		[self.partsImageView removeFromSuperview];
+		self.partsImage = nil;
+		self.maskImage  = nil;
+		self.baseImage  = blendImage;
+		self.baseImageView.image = blendImage;
+		self.partsImageView = nil;
+		self.processingButton.enabled = NO;
+		UIImageWriteToSavedPhotosAlbum(blendImage, nil, nil, nil);
+	});
 }
 
 @end

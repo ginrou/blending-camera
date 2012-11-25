@@ -55,9 +55,10 @@
 
 - (void)handlePanGesture:(UIPanGestureRecognizer *)sender
 {
-    CGPoint point = [sender translationInView:self];
+    CGPoint point = [sender translationInView:self.superview];
     CGPoint pointMoved = CGPointMake(self.center.x + point.x, self.center.y + point.y);
     self.center = pointMoved;
+	NSLog(@"%@", NSStringFromCGPoint(pointMoved));
     [sender setTranslation:CGPointZero inView:self];
 }
 

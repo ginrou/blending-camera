@@ -63,9 +63,9 @@ cv::Mat BCBackgroundExtractor::extract(float norm)
 
             int idx = 4*w;
 
-            float diff = POW(buf[idx+0] - bgColor[0])
-                        + POW(buf[idx+1] - bgColor[1])
-                        + POW(buf[idx+2] - bgColor[2]);
+            float diff = POW(buf_original[idx+0] - bgColor[0])
+			+ POW(buf_original[idx+1] - bgColor[1])
+            + POW(buf_original[idx+2] - bgColor[2]);
             diff /= 256.0 * 256.0;
 
             if (diff < norm) {
@@ -83,5 +83,41 @@ cv::Mat BCBackgroundExtractor::extract(float norm)
     }
 
     return _extracted;
+}
+
+cv::Mat BCBackgroundExtractor::newMaskImage(float norm)
+{
+	_mask = Mat( _original.size(), CV_8UC1);
+	for (int h = 0; h < _original.rows; ++h) {
+		uchar *original_buf = _original.ptr(h);
+		uchar *mask_buf = _mask.ptr(h);
+		
+		for (int w = 0; w < _original.cols; ++w) {
+			
+			int idx = w*4;
+            float diff = POW(original_buf[idx+0] - bgColor[0])
+			+ POW(original_buf[idx+1] - bgColor[1])
+			+ POW(original_buf[idx+2] - bgColor[2]);
+            diff /= 256.0 * 256.0;
+			
+			bool isBackground = diff < norm || original_buf[idx+3] == 0;
+			mask_buf[w] = isBackground ? 0 : 255;
+			
+		}
+		
+	}
+	return _mask;
+}
+
+
+cv::Mat BCBackgroundExtractor::newOriginalImage(float norm)
+{
+	std::vector<cv::Mat> planes;
+	cv::split(_original, planes);
+	planes.pop_back();
+	planes.push_back(_mask);
+	cv::Mat dst;
+	cv::merge(planes, dst);
+	return dst;
 }
 

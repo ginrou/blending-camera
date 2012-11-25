@@ -73,14 +73,10 @@
 
 - (void)viewDidUnload
 {
- //   [_previewView removeFromSuperview];
 	[_pathView removeFromSuperview];
     [_imageView removeFromSuperview];
- //   self.previewView = nil;
     self.pathView    = nil;
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -126,6 +122,10 @@
 #pragma mark background extraction delegate
 - (void)backgroundExtractionDone:(BCPartsBackgroundExtractionViewController *)extractionViewController
 {
+	self.selectedParts = extractionViewController.extractedImage;
+	self.maskImage = extractionViewController.extractedMaskImage;
+	[self.navigationController popViewControllerAnimated:YES];
+
     if ([self.delegate respondsToSelector:@selector(BCPartsPickerControllerPickDone:partsImage:andMask:)]) {
         [self.delegate BCPartsPickerControllerPickDone:self partsImage:_selectedParts andMask:_maskImage];
     }

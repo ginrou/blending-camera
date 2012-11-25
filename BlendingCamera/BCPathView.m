@@ -186,6 +186,7 @@ static const CGFloat penWidth = 5.0;
     CGContextRelease(self.bitmapCopntext);
     [self initPath];
     [_pathLayer setNeedsDisplay];
+	_isAlreadyPicked = NO;
 }
 
 

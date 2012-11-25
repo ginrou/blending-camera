@@ -156,6 +156,8 @@ bool PoissonBlender::copyResult(Eigen::Matrix<T, Eigen::Dynamic, 1> &u)
 bool
 PoissonBlender::seamlessClone(cv::Mat &_dst, const int offx, const int offy, const bool mix=false)
 {
+	// nead to crop images;
+	
 	//
 	ch = _target.channels();
 	cv::Point offset(offx, offy);

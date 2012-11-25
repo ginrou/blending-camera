@@ -13,10 +13,13 @@
 @interface BCPartsBackgroundExtractionViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-@property (nonatomic, strong) UIImage *originalImage;
-@property (nonatomic, strong) UIImage *processedImage;
-@property (nonatomic, weak) id<BackgroundExtractionDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *bgColorSampler;
+@property (weak, nonatomic) IBOutlet UISlider *slider;
+
+@property (strong, nonatomic) UIImage *originalImage;
+@property (strong, nonatomic) UIImage *extractedImage;
+@property (strong, nonatomic) UIImage *extractedMaskImage;
+@property (nonatomic, weak) id<BackgroundExtractionDelegate> delegate;
 
 - (IBAction)sliderValueChanged:(id)sender;
 
