@@ -156,8 +156,49 @@ bool PoissonBlender::copyResult(Eigen::Matrix<T, Eigen::Dynamic, 1> &u)
 bool
 PoissonBlender::seamlessClone(cv::Mat &_dst, const int offx, const int offy, const bool mix=false)
 {
-	// nead to crop images;
-	
+	// crop images;
+    cv::Scalar scalar(0);
+    if (offx < 0) { // 左過ぎ
+        Range x_range(-offx, _mask.cols-1), y_range(0, _mask.rows-1);
+        Mat maskCropped = _mask( y_range, x_range);
+        Mat srcCropped = _src( y_range, x_range);
+        _mask.release();
+        _src.release();
+        cv::copyMakeBorder(maskCropped, _mask, 0, 0, 1, 0, cv::BORDER_CONSTANT, scalar);
+        cv::copyMakeBorder(srcCropped, _src, 0, 0, 1, 0, cv::BORDER_REPLICATE);
+    }
+
+    if (offy < 0) { // 上過ぎ
+        Range x_range(0, _mask.cols-1), y_range(-offy, _mask.rows-1);
+        Mat maskCropped = _mask( y_range, x_range);
+        Mat srcCropped = _src( y_range, x_range);
+        _mask.release();
+        _src.release();
+        cv::copyMakeBorder(maskCropped, _mask, 1, 0, 0, 0, cv::BORDER_CONSTANT, scalar);
+        cv::copyMakeBorder(srcCropped, _src, 1, 0, 0, 0, cv::BORDER_REPLICATE);
+    }
+
+    if (offx + _mask.cols >= _target.cols) { // 右過ぎ
+        Range x_range(0, _target.cols - offx ), y_range(0, _mask.rows);
+        Mat maskCropped = _mask( y_range, x_range);
+        Mat srcCropped = _src( y_range, x_range);
+        _mask.release();
+        _src.release();
+        cv::copyMakeBorder(maskCropped, _mask, 0, 0, 0, 1, cv::BORDER_CONSTANT, scalar);
+        cv::copyMakeBorder(srcCropped, _src, 0, 0, 0, 1, cv::BORDER_REPLICATE);
+    }
+
+    if (offy + _mask.rows >= _target.rows) { // 下過ぎ
+        Range x_range(0, _mask.cols), y_range(0, _target.rows - offy );
+        Mat maskCropped = _mask( y_range, x_range);
+        Mat srcCropped = _src( y_range, x_range);
+        _mask.release();
+        _src.release();
+        cv::copyMakeBorder(maskCropped, _mask, 0, 1, 0, 0, cv::BORDER_CONSTANT, scalar);
+        cv::copyMakeBorder(srcCropped, _src, 0, 1, 0, 0, cv::BORDER_REPLICATE);
+    }
+
+
 	//
 	ch = _target.channels();
 	cv::Point offset(offx, offy);

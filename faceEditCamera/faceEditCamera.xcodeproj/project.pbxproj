@@ -1,0 +1,335 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9A2C12701663B6E8005DE615 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C126F1663B6E8005DE615 /* UIKit.framework */; };
+		9A2C12721663B6E8005DE615 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C12711663B6E8005DE615 /* Foundation.framework */; };
+		9A2C12741663B6E8005DE615 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C12731663B6E8005DE615 /* CoreGraphics.framework */; };
+		9A2C127A1663B6E8005DE615 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C12781663B6E8005DE615 /* InfoPlist.strings */; };
+		9A2C127C1663B6E8005DE615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C127B1663B6E8005DE615 /* main.m */; };
+		9A2C12801663B6E8005DE615 /* FaceAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C127F1663B6E8005DE615 /* FaceAppDelegate.m */; };
+		9A2C12821663B6E8005DE615 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C12811663B6E8005DE615 /* Default.png */; };
+		9A2C12841663B6E8005DE615 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C12831663B6E8005DE615 /* Default@2x.png */; };
+		9A2C12861663B6E9005DE615 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C12851663B6E8005DE615 /* Default-568h@2x.png */; };
+		9A2C12891663B6E9005DE615 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C12871663B6E9005DE615 /* MainStoryboard.storyboard */; };
+		9A2C128C1663B6E9005DE615 /* FaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A2C128B1663B6E9005DE615 /* FaceViewController.m */; };
+		9A2C12971663C324005DE615 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C12961663C324005DE615 /* ImageIO.framework */; };
+		9A2C12991663C32B005DE615 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C12981663C32B005DE615 /* QuartzCore.framework */; };
+		9A2C129B1663C33C005DE615 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C129A1663C33C005DE615 /* CoreMedia.framework */; };
+		9A2C129D1663C349005DE615 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C129C1663C349005DE615 /* AssetsLibrary.framework */; };
+		9A2C129F1663C351005DE615 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C129E1663C351005DE615 /* CoreImage.framework */; };
+		9A2C12A11663C35A005DE615 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C12A01663C35A005DE615 /* AVFoundation.framework */; };
+		9A2C12A31663C366005DE615 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2C12A21663C366005DE615 /* CoreVideo.framework */; };
+		9A2C12A516642EFA005DE615 /* squarePNG.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A2C12A416642EFA005DE615 /* squarePNG.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9A2C126B1663B6E8005DE615 /* faceEditCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = faceEditCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A2C126F1663B6E8005DE615 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9A2C12711663B6E8005DE615 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9A2C12731663B6E8005DE615 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9A2C12771663B6E8005DE615 /* faceEditCamera-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "faceEditCamera-Info.plist"; sourceTree = "<group>"; };
+		9A2C12791663B6E8005DE615 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9A2C127B1663B6E8005DE615 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9A2C127D1663B6E8005DE615 /* faceEditCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "faceEditCamera-Prefix.pch"; sourceTree = "<group>"; };
+		9A2C127E1663B6E8005DE615 /* FaceAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceAppDelegate.h; sourceTree = "<group>"; };
+		9A2C127F1663B6E8005DE615 /* FaceAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceAppDelegate.m; sourceTree = "<group>"; };
+		9A2C12811663B6E8005DE615 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9A2C12831663B6E8005DE615 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9A2C12851663B6E8005DE615 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9A2C12881663B6E9005DE615 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9A2C128A1663B6E9005DE615 /* FaceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceViewController.h; sourceTree = "<group>"; };
+		9A2C128B1663B6E9005DE615 /* FaceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceViewController.m; sourceTree = "<group>"; };
+		9A2C12961663C324005DE615 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9A2C12981663C32B005DE615 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9A2C129A1663C33C005DE615 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9A2C129C1663C349005DE615 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		9A2C129E1663C351005DE615 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		9A2C12A01663C35A005DE615 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9A2C12A21663C366005DE615 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9A2C12A416642EFA005DE615 /* squarePNG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = squarePNG.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A2C12681663B6E8005DE615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C12A31663C366005DE615 /* CoreVideo.framework in Frameworks */,
+				9A2C12A11663C35A005DE615 /* AVFoundation.framework in Frameworks */,
+				9A2C129F1663C351005DE615 /* CoreImage.framework in Frameworks */,
+				9A2C129D1663C349005DE615 /* AssetsLibrary.framework in Frameworks */,
+				9A2C12741663B6E8005DE615 /* CoreGraphics.framework in Frameworks */,
+				9A2C129B1663C33C005DE615 /* CoreMedia.framework in Frameworks */,
+				9A2C12991663C32B005DE615 /* QuartzCore.framework in Frameworks */,
+				9A2C12971663C324005DE615 /* ImageIO.framework in Frameworks */,
+				9A2C12701663B6E8005DE615 /* UIKit.framework in Frameworks */,
+				9A2C12721663B6E8005DE615 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9A2C12601663B6E8005DE615 = {
+			isa = PBXGroup;
+			children = (
+				9A2C12751663B6E8005DE615 /* faceEditCamera */,
+				9A2C126E1663B6E8005DE615 /* Frameworks */,
+				9A2C126C1663B6E8005DE615 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9A2C126C1663B6E8005DE615 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C126B1663B6E8005DE615 /* faceEditCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A2C126E1663B6E8005DE615 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C12A21663C366005DE615 /* CoreVideo.framework */,
+				9A2C12A01663C35A005DE615 /* AVFoundation.framework */,
+				9A2C129E1663C351005DE615 /* CoreImage.framework */,
+				9A2C129C1663C349005DE615 /* AssetsLibrary.framework */,
+				9A2C129A1663C33C005DE615 /* CoreMedia.framework */,
+				9A2C12981663C32B005DE615 /* QuartzCore.framework */,
+				9A2C12961663C324005DE615 /* ImageIO.framework */,
+				9A2C126F1663B6E8005DE615 /* UIKit.framework */,
+				9A2C12711663B6E8005DE615 /* Foundation.framework */,
+				9A2C12731663B6E8005DE615 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A2C12751663B6E8005DE615 /* faceEditCamera */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C127E1663B6E8005DE615 /* FaceAppDelegate.h */,
+				9A2C127F1663B6E8005DE615 /* FaceAppDelegate.m */,
+				9A2C12871663B6E9005DE615 /* MainStoryboard.storyboard */,
+				9A2C128A1663B6E9005DE615 /* FaceViewController.h */,
+				9A2C128B1663B6E9005DE615 /* FaceViewController.m */,
+				9A2C12A416642EFA005DE615 /* squarePNG.png */,
+				9A2C12761663B6E8005DE615 /* Supporting Files */,
+			);
+			path = faceEditCamera;
+			sourceTree = "<group>";
+		};
+		9A2C12761663B6E8005DE615 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9A2C12771663B6E8005DE615 /* faceEditCamera-Info.plist */,
+				9A2C12781663B6E8005DE615 /* InfoPlist.strings */,
+				9A2C127B1663B6E8005DE615 /* main.m */,
+				9A2C127D1663B6E8005DE615 /* faceEditCamera-Prefix.pch */,
+				9A2C12811663B6E8005DE615 /* Default.png */,
+				9A2C12831663B6E8005DE615 /* Default@2x.png */,
+				9A2C12851663B6E8005DE615 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A2C126A1663B6E8005DE615 /* faceEditCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A2C128F1663B6E9005DE615 /* Build configuration list for PBXNativeTarget "faceEditCamera" */;
+			buildPhases = (
+				9A2C12671663B6E8005DE615 /* Sources */,
+				9A2C12681663B6E8005DE615 /* Frameworks */,
+				9A2C12691663B6E8005DE615 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = faceEditCamera;
+			productName = faceEditCamera;
+			productReference = 9A2C126B1663B6E8005DE615 /* faceEditCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A2C12621663B6E8005DE615 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Face;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "武田 祐一";
+			};
+			buildConfigurationList = 9A2C12651663B6E8005DE615 /* Build configuration list for PBXProject "faceEditCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9A2C12601663B6E8005DE615;
+			productRefGroup = 9A2C126C1663B6E8005DE615 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A2C126A1663B6E8005DE615 /* faceEditCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A2C12691663B6E8005DE615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C127A1663B6E8005DE615 /* InfoPlist.strings in Resources */,
+				9A2C12821663B6E8005DE615 /* Default.png in Resources */,
+				9A2C12841663B6E8005DE615 /* Default@2x.png in Resources */,
+				9A2C12861663B6E9005DE615 /* Default-568h@2x.png in Resources */,
+				9A2C12891663B6E9005DE615 /* MainStoryboard.storyboard in Resources */,
+				9A2C12A516642EFA005DE615 /* squarePNG.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A2C12671663B6E8005DE615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A2C127C1663B6E8005DE615 /* main.m in Sources */,
+				9A2C12801663B6E8005DE615 /* FaceAppDelegate.m in Sources */,
+				9A2C128C1663B6E9005DE615 /* FaceViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9A2C12781663B6E8005DE615 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A2C12791663B6E8005DE615 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9A2C12871663B6E9005DE615 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A2C12881663B6E9005DE615 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A2C128D1663B6E9005DE615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9A2C128E1663B6E9005DE615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A2C12901663B6E9005DE615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "faceEditCamera/faceEditCamera-Prefix.pch";
+				INFOPLIST_FILE = "faceEditCamera/faceEditCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9A2C12911663B6E9005DE615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "faceEditCamera/faceEditCamera-Prefix.pch";
+				INFOPLIST_FILE = "faceEditCamera/faceEditCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A2C12651663B6E8005DE615 /* Build configuration list for PBXProject "faceEditCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A2C128D1663B6E9005DE615 /* Debug */,
+				9A2C128E1663B6E9005DE615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A2C128F1663B6E9005DE615 /* Build configuration list for PBXNativeTarget "faceEditCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A2C12901663B6E9005DE615 /* Debug */,
+				9A2C12911663B6E9005DE615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A2C12621663B6E8005DE615 /* Project object */;
+}
