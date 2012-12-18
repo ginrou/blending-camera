@@ -1,0 +1,329 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9ACD36E0167F674200D6A376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36DF167F674200D6A376 /* UIKit.framework */; };
+		9ACD36E2167F674200D6A376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E1167F674200D6A376 /* Foundation.framework */; };
+		9ACD36E4167F674200D6A376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E3167F674200D6A376 /* CoreGraphics.framework */; };
+		9ACD36EA167F674200D6A376 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9ACD36E8167F674200D6A376 /* InfoPlist.strings */; };
+		9ACD36EC167F674200D6A376 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACD36EB167F674200D6A376 /* main.m */; };
+		9ACD36F0167F674200D6A376 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACD36EF167F674200D6A376 /* AppDelegate.m */; };
+		9ACD36F2167F674200D6A376 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ACD36F1167F674200D6A376 /* Default.png */; };
+		9ACD36F4167F674200D6A376 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ACD36F3167F674200D6A376 /* Default@2x.png */; };
+		9ACD36F6167F674200D6A376 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9ACD36F5167F674200D6A376 /* Default-568h@2x.png */; };
+		9ACD36F9167F674200D6A376 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9ACD36F7167F674200D6A376 /* MainStoryboard.storyboard */; };
+		9ACD36FC167F674200D6A376 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACD36FB167F674200D6A376 /* ViewController.m */; };
+		9ACD3703167F6D5200D6A376 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD3702167F6D5200D6A376 /* CoreVideo.framework */; };
+		9ACD3705167F6D5800D6A376 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD3704167F6D5800D6A376 /* AVFoundation.framework */; };
+		9ACD3707167F6D5F00D6A376 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD3706167F6D5F00D6A376 /* CoreImage.framework */; };
+		9ACD3709167F6D6600D6A376 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD3708167F6D6600D6A376 /* AssetsLibrary.framework */; };
+		9ACD370B167F6D6B00D6A376 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD370A167F6D6B00D6A376 /* CoreMedia.framework */; };
+		9ACD370D167F6D7100D6A376 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD370C167F6D7100D6A376 /* QuartzCore.framework */; };
+		9ACD370F167F6D7700D6A376 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD370E167F6D7700D6A376 /* ImageIO.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9ACD36DB167F674200D6A376 /* distortionCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = distortionCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ACD36DF167F674200D6A376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9ACD36E1167F674200D6A376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9ACD36E3167F674200D6A376 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9ACD36E7167F674200D6A376 /* distortionCamera-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "distortionCamera-Info.plist"; sourceTree = "<group>"; };
+		9ACD36E9167F674200D6A376 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9ACD36EB167F674200D6A376 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9ACD36ED167F674200D6A376 /* distortionCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "distortionCamera-Prefix.pch"; sourceTree = "<group>"; };
+		9ACD36EE167F674200D6A376 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9ACD36EF167F674200D6A376 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9ACD36F1167F674200D6A376 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		9ACD36F3167F674200D6A376 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9ACD36F5167F674200D6A376 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		9ACD36F8167F674200D6A376 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9ACD36FA167F674200D6A376 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9ACD36FB167F674200D6A376 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9ACD3702167F6D5200D6A376 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9ACD3704167F6D5800D6A376 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9ACD3706167F6D5F00D6A376 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		9ACD3708167F6D6600D6A376 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		9ACD370A167F6D6B00D6A376 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9ACD370C167F6D7100D6A376 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9ACD370E167F6D7700D6A376 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9ACD36D8167F674200D6A376 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ACD370F167F6D7700D6A376 /* ImageIO.framework in Frameworks */,
+				9ACD370D167F6D7100D6A376 /* QuartzCore.framework in Frameworks */,
+				9ACD370B167F6D6B00D6A376 /* CoreMedia.framework in Frameworks */,
+				9ACD3709167F6D6600D6A376 /* AssetsLibrary.framework in Frameworks */,
+				9ACD3707167F6D5F00D6A376 /* CoreImage.framework in Frameworks */,
+				9ACD3705167F6D5800D6A376 /* AVFoundation.framework in Frameworks */,
+				9ACD3703167F6D5200D6A376 /* CoreVideo.framework in Frameworks */,
+				9ACD36E0167F674200D6A376 /* UIKit.framework in Frameworks */,
+				9ACD36E2167F674200D6A376 /* Foundation.framework in Frameworks */,
+				9ACD36E4167F674200D6A376 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9ACD36D0167F674200D6A376 = {
+			isa = PBXGroup;
+			children = (
+				9ACD36E5167F674200D6A376 /* distortionCamera */,
+				9ACD36DE167F674200D6A376 /* Frameworks */,
+				9ACD36DC167F674200D6A376 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9ACD36DC167F674200D6A376 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9ACD36DB167F674200D6A376 /* distortionCamera.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9ACD36DE167F674200D6A376 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9ACD370E167F6D7700D6A376 /* ImageIO.framework */,
+				9ACD370C167F6D7100D6A376 /* QuartzCore.framework */,
+				9ACD370A167F6D6B00D6A376 /* CoreMedia.framework */,
+				9ACD3708167F6D6600D6A376 /* AssetsLibrary.framework */,
+				9ACD3706167F6D5F00D6A376 /* CoreImage.framework */,
+				9ACD3704167F6D5800D6A376 /* AVFoundation.framework */,
+				9ACD3702167F6D5200D6A376 /* CoreVideo.framework */,
+				9ACD36DF167F674200D6A376 /* UIKit.framework */,
+				9ACD36E1167F674200D6A376 /* Foundation.framework */,
+				9ACD36E3167F674200D6A376 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9ACD36E5167F674200D6A376 /* distortionCamera */ = {
+			isa = PBXGroup;
+			children = (
+				9ACD36EE167F674200D6A376 /* AppDelegate.h */,
+				9ACD36EF167F674200D6A376 /* AppDelegate.m */,
+				9ACD36F7167F674200D6A376 /* MainStoryboard.storyboard */,
+				9ACD36FA167F674200D6A376 /* ViewController.h */,
+				9ACD36FB167F674200D6A376 /* ViewController.m */,
+				9ACD36E6167F674200D6A376 /* Supporting Files */,
+			);
+			path = distortionCamera;
+			sourceTree = "<group>";
+		};
+		9ACD36E6167F674200D6A376 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9ACD36E7167F674200D6A376 /* distortionCamera-Info.plist */,
+				9ACD36E8167F674200D6A376 /* InfoPlist.strings */,
+				9ACD36EB167F674200D6A376 /* main.m */,
+				9ACD36ED167F674200D6A376 /* distortionCamera-Prefix.pch */,
+				9ACD36F1167F674200D6A376 /* Default.png */,
+				9ACD36F3167F674200D6A376 /* Default@2x.png */,
+				9ACD36F5167F674200D6A376 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9ACD36DA167F674200D6A376 /* distortionCamera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9ACD36FF167F674200D6A376 /* Build configuration list for PBXNativeTarget "distortionCamera" */;
+			buildPhases = (
+				9ACD36D7167F674200D6A376 /* Sources */,
+				9ACD36D8167F674200D6A376 /* Frameworks */,
+				9ACD36D9167F674200D6A376 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = distortionCamera;
+			productName = distortionCamera;
+			productReference = 9ACD36DB167F674200D6A376 /* distortionCamera.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9ACD36D2167F674200D6A376 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "武田 祐一";
+			};
+			buildConfigurationList = 9ACD36D5167F674200D6A376 /* Build configuration list for PBXProject "distortionCamera" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9ACD36D0167F674200D6A376;
+			productRefGroup = 9ACD36DC167F674200D6A376 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9ACD36DA167F674200D6A376 /* distortionCamera */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9ACD36D9167F674200D6A376 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ACD36EA167F674200D6A376 /* InfoPlist.strings in Resources */,
+				9ACD36F2167F674200D6A376 /* Default.png in Resources */,
+				9ACD36F4167F674200D6A376 /* Default@2x.png in Resources */,
+				9ACD36F6167F674200D6A376 /* Default-568h@2x.png in Resources */,
+				9ACD36F9167F674200D6A376 /* MainStoryboard.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9ACD36D7167F674200D6A376 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ACD36EC167F674200D6A376 /* main.m in Sources */,
+				9ACD36F0167F674200D6A376 /* AppDelegate.m in Sources */,
+				9ACD36FC167F674200D6A376 /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9ACD36E8167F674200D6A376 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9ACD36E9167F674200D6A376 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9ACD36F7167F674200D6A376 /* MainStoryboard.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9ACD36F8167F674200D6A376 /* en */,
+			);
+			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9ACD36FD167F674200D6A376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9ACD36FE167F674200D6A376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9ACD3700167F674200D6A376 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "distortionCamera/distortionCamera-Prefix.pch";
+				INFOPLIST_FILE = "distortionCamera/distortionCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9ACD3701167F674200D6A376 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "distortionCamera/distortionCamera-Prefix.pch";
+				INFOPLIST_FILE = "distortionCamera/distortionCamera-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9ACD36D5167F674200D6A376 /* Build configuration list for PBXProject "distortionCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9ACD36FD167F674200D6A376 /* Debug */,
+				9ACD36FE167F674200D6A376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9ACD36FF167F674200D6A376 /* Build configuration list for PBXNativeTarget "distortionCamera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9ACD3700167F674200D6A376 /* Debug */,
+				9ACD3701167F674200D6A376 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9ACD36D2167F674200D6A376 /* Project object */;
+}

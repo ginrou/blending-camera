@@ -7,9 +7,10 @@
 //
 
 #import "FaceViewController.h"
+#import <CoreImage/CoreImage.h>
 
 @interface FaceViewController ()
-
+@property (nonatomic, strong) CIFilter *filter;
 @end
 
 @implementation FaceViewController
@@ -46,13 +47,20 @@
     [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:NO];
 
     self.previewLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:session];
-    [_previewLayer setBackgroundColor:[[UIColor blackColor] CGColor]];
-    [_previewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
-    CALayer *rootLayer = [_previewView layer];
-    [rootLayer setMasksToBounds:YES];
-    [_previewLayer setFrame:[rootLayer bounds]];
-    [rootLayer addSublayer:_previewLayer];
+//    [_previewLayer setBackgroundColor:[[UIColor blackColor] CGColor]];
+//    [_previewLayer setVideoGravity:AVLayerVideoGravityResizeAspect];
+//    CALayer *rootLayer = [_previewView layer];
+//    [rootLayer setMasksToBounds:YES];
+//    [_previewLayer setFrame:[rootLayer bounds]];
+//    [rootLayer addSublayer:_previewLayer];
     [session startRunning];
+
+    // setup filter
+    self.filter = [CIFilter filterWithName:@"CIVignette"];
+    [_filter setValue:@1.0 forKey:@"inputIntensity"];
+    [_filter setValue:@2.0 forKey:@"inputRadius"];
+    //[self.previewView addSubview:_imageView];
+    _imageView.image = [UIImage imageNamed:@"squarePNG.png"];
 }
 
 
@@ -112,6 +120,13 @@
     CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
     CIImage *ciImage = [[CIImage alloc] initWithCVPixelBuffer:pixelBuffer options:(__bridge NSDictionary *)attachments];
 
+    [_filter setValue:ciImage forKey:@"inputImage"];
+    UIImage *img = [UIImage imageWithCIImage:_filter.outputImage];
+    [_filter setValue:nil forKey:@"inputImage"];
+    NSLog(@"%@", img);
+    _imageView.image = img;
+
+
     if (attachments)
         CFRelease(attachments);
 
@@ -154,6 +169,14 @@
     NSDictionary *imageOption = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
     NSArray *features = [_faceDetector featuresInImage:ciImage options:imageOption];
 
+
+    static int hoge = 0;
+    if (hoge == 0) {
+
+        UIImageWriteToSavedPhotosAlbum(img, self, @selector(image:didFinishSavingWithError:contextInfo:), NULL);
+        hoge++;
+    }
+
     CMFormatDescriptionRef fdesc = CMSampleBufferGetFormatDescription(sampleBuffer);
     CGRect clap = CMVideoFormatDescriptionGetCleanAperture(fdesc, false);
 
@@ -163,10 +186,18 @@
 }
 
 
+- (void) image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo
+{
+    NSLog(@"saved %@", error);
+}
 - (void)drawFaceBoxesForFeatures:(NSArray *)features forVideoBox:(CGRect)clap orientation:(UIDeviceOrientation)orientation
 {
     for (CIFaceFeature *faceFeature in features) {
         NSLog(@"%@", NSStringFromCGRect(faceFeature.bounds));
     }
+}
+- (void)viewDidUnload {
+    [self setImageView:nil];
+    [super viewDidUnload];
 }
 @end

@@ -49,6 +49,12 @@
                             </toolbar>
                             <view contentMode="scaleToFill" id="fLz-Sr-bs6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="tyT-Io-uj5">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -57,11 +63,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="cameraSelection" destination="Sgb-KZ-Nf5" id="YNz-iG-zJS"/>
+                        <outlet property="imageView" destination="tyT-Io-uj5" id="n6v-ZN-ha7"/>
                         <outlet property="previewView" destination="fLz-Sr-bs6" id="YuJ-4G-ob6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-27" y="137"/>
         </scene>
     </scenes>
     <classes>
@@ -72,6 +80,7 @@
                 <relationship kind="action" name="takePicture:"/>
                 <relationship kind="action" name="toggleFaceDetection:"/>
                 <relationship kind="outlet" name="cameraSelection" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="previewView" candidateClass="UIView"/>
             </relationships>
         </class>

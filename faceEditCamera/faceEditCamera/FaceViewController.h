@@ -13,14 +13,11 @@
 
 @interface FaceViewController : UIViewController
 <
-    UIGestureRecognizerDelegate,
-    AVCaptureVideoDataOutputSampleBufferDelegate
+UIGestureRecognizerDelegate,
+AVCaptureVideoDataOutputSampleBufferDelegate
 >
-
 {
     dispatch_queue_t _videoDataOutputQueue;
-
-
 }
 
 @property (weak, nonatomic) IBOutlet UIView *previewView;
@@ -33,6 +30,9 @@
 @property (strong, nonatomic) UIImage *square;
 @property (assign, nonatomic) BOOL isUsingFrontFacingCamera;
 @property (strong, nonatomic) CIDetector *faceDetector;
+
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)takePicture:(id)sender;
 - (IBAction)switchCamera:(id)sender;
