@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import <GLKit/GLKit.h>
 
 @class CIDetector;
 
 @interface FaceViewController : UIViewController
 <AVCaptureVideoDataOutputSampleBufferDelegate>
+
 {
     dispatch_queue_t _videoDataOutputQueue;
 }

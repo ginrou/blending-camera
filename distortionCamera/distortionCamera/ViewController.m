@@ -8,13 +8,21 @@
 
 #import "ViewController.h"
 #import <CoreImage/CoreImage.h>
+#import <GLKit/GLKit.h>
 
 @interface FaceViewController ()
+{
+
+}
 @property (nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutput;
 @property (nonatomic, strong) CIDetector *faceDetector;
 @property (nonatomic, strong) CIFilter *filter;
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) CIContext *context;
+@property (nonatomic, strong) EAGLContext *eaglContext;
+@property (nonatomic, strong) GLKView *glkView;
+@property (nonatomic, assign) GLuint defaultFrameBuffer;
+@property (nonatomic, assign) GLuint colorRenderBuffer;
 @end
 
 @implementation FaceViewController
@@ -26,7 +34,10 @@
     [self setupImageProcessings];
     [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
     _imageView.backgroundColor = [UIColor blackColor];
-    self.context = [CIContext contextWithOptions:nil];
+    [self setupGL];
+
+    self.context = [CIContext contextWithEAGLContext:_eaglContext];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,7 +76,7 @@
     // make a video data output
     self.videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
 
-    [_videoDataOutput setVideoSettings:@{(id)kCVPixelBufferPixelFormatTypeKey : [NSNumber numberWithInt:kCMPixelFormat_32BGRA]}];
+    [_videoDataOutput setVideoSettings:@{(id)kCVPixelBufferPixelFormatTypeKey : [NSNumber numberWithInt:kCVPixelFormatType_32BGRA]}];
     [_videoDataOutput setAlwaysDiscardsLateVideoFrames:YES];
 
     // create a serial dispatch queue
@@ -85,19 +96,52 @@
     [self.filter setValue:@2.0 forKey:@"inputRadius"];
 }
 
+- (void)setupGL
+{
+    self.eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+    self.glkView = [[GLKView alloc] initWithFrame:_imageView.frame context:_eaglContext];
+
+    CAEAGLLayer *eaglLayer = (CAEAGLLayer *)_glkView.layer;
+    eaglLayer.opaque = TRUE;
+    eaglLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking : @FALSE, kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8};
+
+    //_glkView.drawableDepthFormat = GLKViewDrawableDepthFormat24;
+    [self.view addSubview:_glkView];
+
+    glGenRenderbuffers(1, &_defaultFrameBuffer);
+    glBindRenderbuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
+
+    glGenRenderbuffers(1, &_colorRenderBuffer);
+    glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
+
+    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _colorRenderBuffer);
+
+    GLint width = _glkView.frame.size.width;
+    GLint hegith = _glkView.frame.size.height;
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &hegith);
+    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &width);
+
+    glBindFramebuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
+    glViewport(0, 0, width, hegith);
+    NSLog(@"%d, %d", width, hegith);
+
+    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+        NSLog(@"Failed To make complete frame buffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
+    }
+
+}
+
 #pragma mark -- processings
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
     // got an image
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-    CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
+
     CIImage *ciImage = [CIImage imageWithCVPixelBuffer:pixelBuffer];
     ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeRotation(-M_PI / 2.0)];
     CGPoint origin = ciImage.extent.origin;
     ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-origin.x, -origin.y)];
 
-    if (attachments)
-        CFRelease(attachments);
 
     UIDeviceOrientation deviceOrientaion = [[UIDevice currentDevice] orientation];
     int exifOrientation;
@@ -137,11 +181,32 @@
 //    CMFormatDescriptionRef fdesc = CMSampleBufferGetFormatDescription(sampleBuffer);
 //    CGRect clap = CMVideoFormatDescriptionGetCleanAperture(fdesc, false);
 
+    [self.filter setValue:ciImage forKey:@"inputImage"];
     dispatch_async(dispatch_get_main_queue(), ^{
         //[self drawFaceBoxesForFeatures:features forVideoBox:clap orientation:deviceOrientaion];
-        [self.filter setValue:ciImage forKey:@"inputImage"];
-        CGImageRef ref = [_context createCGImage:_filter.outputImage fromRect:CGRectMake(0, 0, 480, 640)];
-        self.imageView.image = [UIImage imageWithCGImage:ref];
+
+
+        CIImage *outputCIImage = _filter.outputImage;
+        static CGRect outputRect;
+        static int first = 0;
+        if (first++ == 0) {
+            NSLog(@"mainscreen = %@", NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]));
+            NSLog(@"outputciimage = %@", NSStringFromCGRect(outputCIImage.extent));
+            NSLog(@"glkview = %@", NSStringFromCGRect(_glkView.frame));
+
+            outputRect.origin.x = 0;
+            outputRect.origin.y = 0;
+            outputRect.size.width = [[UIScreen mainScreen] applicationFrame].size.width * 2;
+            outputRect.size.height = [[UIScreen mainScreen] applicationFrame].size.height * 2;
+        }
+
+        [_context drawImage:outputCIImage atPoint:CGPointZero fromRect:outputCIImage.extent];
+
+
+        [EAGLContext setCurrentContext:_eaglContext];
+        glBindFramebuffer(GL_RENDERBUFFER, _colorRenderBuffer);
+        [_eaglContext presentRenderbuffer:GL_RENDERBUFFER];
+
         [self.filter setValue:nil forKey:@"inputImage"];
 
     });
@@ -151,5 +216,7 @@
 {
     NSLog(@"saved %@", error);
 }
+
+
 
 @end

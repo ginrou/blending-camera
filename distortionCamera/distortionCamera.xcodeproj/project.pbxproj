@@ -25,6 +25,9 @@
 		9ACD370B167F6D6B00D6A376 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD370A167F6D6B00D6A376 /* CoreMedia.framework */; };
 		9ACD370D167F6D7100D6A376 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD370C167F6D7100D6A376 /* QuartzCore.framework */; };
 		9ACD370F167F6D7700D6A376 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD370E167F6D7700D6A376 /* ImageIO.framework */; };
+		9ACD37151681F32300D6A376 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD37141681F32300D6A376 /* OpenGLES.framework */; };
+		9ACD37181681F83700D6A376 /* EAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ACD37171681F83700D6A376 /* EAGLView.m */; };
+		9ACD371A168208C700D6A376 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD3719168208C700D6A376 /* GLKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +54,10 @@
 		9ACD370A167F6D6B00D6A376 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		9ACD370C167F6D7100D6A376 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		9ACD370E167F6D7700D6A376 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9ACD37141681F32300D6A376 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		9ACD37161681F83700D6A376 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAGLView.h; sourceTree = "<group>"; };
+		9ACD37171681F83700D6A376 /* EAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAGLView.m; sourceTree = "<group>"; };
+		9ACD3719168208C700D6A376 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACD371A168208C700D6A376 /* GLKit.framework in Frameworks */,
+				9ACD37151681F32300D6A376 /* OpenGLES.framework in Frameworks */,
 				9ACD370F167F6D7700D6A376 /* ImageIO.framework in Frameworks */,
 				9ACD370D167F6D7100D6A376 /* QuartzCore.framework in Frameworks */,
 				9ACD370B167F6D6B00D6A376 /* CoreMedia.framework in Frameworks */,
@@ -94,6 +103,8 @@
 		9ACD36DE167F674200D6A376 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9ACD3719168208C700D6A376 /* GLKit.framework */,
+				9ACD37141681F32300D6A376 /* OpenGLES.framework */,
 				9ACD370E167F6D7700D6A376 /* ImageIO.framework */,
 				9ACD370C167F6D7100D6A376 /* QuartzCore.framework */,
 				9ACD370A167F6D6B00D6A376 /* CoreMedia.framework */,
@@ -116,6 +127,8 @@
 				9ACD36F7167F674200D6A376 /* MainStoryboard.storyboard */,
 				9ACD36FA167F674200D6A376 /* ViewController.h */,
 				9ACD36FB167F674200D6A376 /* ViewController.m */,
+				9ACD37161681F83700D6A376 /* EAGLView.h */,
+				9ACD37171681F83700D6A376 /* EAGLView.m */,
 				9ACD36E6167F674200D6A376 /* Supporting Files */,
 			);
 			path = distortionCamera;
@@ -204,6 +217,7 @@
 				9ACD36EC167F674200D6A376 /* main.m in Sources */,
 				9ACD36F0167F674200D6A376 /* AppDelegate.m in Sources */,
 				9ACD36FC167F674200D6A376 /* ViewController.m in Sources */,
+				9ACD37181681F83700D6A376 /* EAGLView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
