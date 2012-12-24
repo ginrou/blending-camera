@@ -20,6 +20,5 @@
 }
 
 @property (weak, nonatomic) IBOutlet UIView *previewView;
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

@@ -23,6 +23,8 @@
 @property (nonatomic, strong) GLKView *glkView;
 @property (nonatomic, assign) GLuint defaultFrameBuffer;
 @property (nonatomic, assign) GLuint colorRenderBuffer;
+@property (nonatomic, assign) CGSize captureSize;
+@property (nonatomic, assign) CGSize outputSize;
 @end
 
 @implementation FaceViewController
@@ -33,11 +35,10 @@
     [self setupAVCaputre];
     [self setupImageProcessings];
     [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
-    _imageView.backgroundColor = [UIColor blackColor];
     [self setupGL];
 
     self.context = [CIContext contextWithEAGLContext:_eaglContext];
-
+    [self setupOutputSize];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,6 +54,8 @@
     self.session = [AVCaptureSession new];
     [_session beginConfiguration];
     [_session setSessionPreset:AVCaptureSessionPreset640x480];
+    self.captureSize = CGSizeMake(480, 640);
+
 
     //AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
@@ -81,25 +84,30 @@
 
     // create a serial dispatch queue
     _videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
-    [_videoDataOutput setSampleBufferDelegate:self queue:dispatch_get_main_queue()];
+    [_videoDataOutput setSampleBufferDelegate:self queue:_videoDataOutputQueue];
 
     [_session addOutput:_videoDataOutput];
-    [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:NO];
+    [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
     [_session commitConfiguration];
     [_session startRunning];
 }
 
 - (void)setupImageProcessings
 {
-    self.filter = [CIFilter filterWithName:@"CIVignette"];
-    [self.filter setValue:@1.0 forKey:@"inputIntensity"];
-    [self.filter setValue:@2.0 forKey:@"inputRadius"];
+    self.filter = [CIFilter filterWithName:@"CIHoleDistortion"];
+    [_filter setDefaults];
+    [_filter setValue:@20 forKey:@"inputRadius"];
+//    [_filter setValue:@0.5 forKey:@"inputScale"];
+//    [_filter setValue:@(-3.140/4.0) forKey:@"inputAngle"];
+
+    NSDictionary *detectorOption = @{CIDetectorAccuracy : CIDetectorAccuracyLow, CIDetectorTracking : @YES};
+    self.faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:_context options:detectorOption];
 }
 
 - (void)setupGL
 {
     self.eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    self.glkView = [[GLKView alloc] initWithFrame:_imageView.frame context:_eaglContext];
+    self.glkView = [[GLKView alloc] initWithFrame:_previewView.frame context:_eaglContext];
 
     CAEAGLLayer *eaglLayer = (CAEAGLLayer *)_glkView.layer;
     eaglLayer.opaque = TRUE;
@@ -136,11 +144,8 @@
 {
     // got an image
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-
-    CIImage *ciImage = [CIImage imageWithCVPixelBuffer:pixelBuffer];
-    ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeRotation(-M_PI / 2.0)];
-    CGPoint origin = ciImage.extent.origin;
-    ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-origin.x, -origin.y)];
+    CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
+    CIImage *ciImage = [CIImage imageWithCVPixelBuffer:pixelBuffer options:(NSDictionary *)CFBridgingRelease(attachments)];
 
 
     UIDeviceOrientation deviceOrientaion = [[UIDevice currentDevice] orientation];
@@ -173,20 +178,32 @@
 			break;
 	}
 
-    //NSDictionary *imageOption = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
-    //NSArray *features = [_faceDetector featuresInImage:ciImage options:imageOption];
+    NSDictionary *imageOption = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
+    NSArray *features = [_faceDetector featuresInImage:ciImage options:imageOption];
 
-
+    for (CIFaceFeature *f in features) {
+//        NSLog(@"%f, %f", f.bounds.size.width, f.bounds.size.height);
+        [_filter setValue:[CIVector vectorWithCGPoint:[self center:f.bounds]] forKey:@"inputCenter"];
+    }
 
 //    CMFormatDescriptionRef fdesc = CMSampleBufferGetFormatDescription(sampleBuffer);
 //    CGRect clap = CMVideoFormatDescriptionGetCleanAperture(fdesc, false);
 
     [self.filter setValue:ciImage forKey:@"inputImage"];
+    CIImage *outputCIImage = _filter.outputImage;
+    outputCIImage = [outputCIImage imageByApplyingTransform:CGAffineTransformMakeRotation(-M_PI / 2.0)];
+    CGPoint origin = outputCIImage.extent.origin;
+    outputCIImage = [outputCIImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-origin.x, -origin.y)];
+
+    [_context drawImage:outputCIImage inRect:CGRectMake(0, 0, _outputSize.width, _outputSize.height) fromRect:CGRectMake(0, 0, 480, 640)];
+
+    [EAGLContext setCurrentContext:_eaglContext];
+    glBindFramebuffer(GL_RENDERBUFFER, _colorRenderBuffer);
+    [_eaglContext presentRenderbuffer:GL_RENDERBUFFER];
+
     dispatch_async(dispatch_get_main_queue(), ^{
         //[self drawFaceBoxesForFeatures:features forVideoBox:clap orientation:deviceOrientaion];
 
-
-        CIImage *outputCIImage = _filter.outputImage;
         static CGRect outputRect;
         static int first = 0;
         if (first++ == 0) {
@@ -196,16 +213,9 @@
 
             outputRect.origin.x = 0;
             outputRect.origin.y = 0;
-            outputRect.size.width = [[UIScreen mainScreen] applicationFrame].size.width * 2;
-            outputRect.size.height = [[UIScreen mainScreen] applicationFrame].size.height * 2;
+            outputRect.size.width = 480;
+            outputRect.size.height = 640;
         }
-
-        [_context drawImage:outputCIImage atPoint:CGPointZero fromRect:outputCIImage.extent];
-
-
-        [EAGLContext setCurrentContext:_eaglContext];
-        glBindFramebuffer(GL_RENDERBUFFER, _colorRenderBuffer);
-        [_eaglContext presentRenderbuffer:GL_RENDERBUFFER];
 
         [self.filter setValue:nil forKey:@"inputImage"];
 
@@ -217,6 +227,23 @@
     NSLog(@"saved %@", error);
 }
 
+#pragma mark - view utilities
 
+- (void)setupOutputSize
+{
+    CGFloat maxWitdh = _glkView.frame.size.width * 2;
+    CGFloat maxHeight = _glkView.frame.size.height * 2;
+
+    CGFloat scale = ( maxHeight > maxWitdh) ? maxHeight / _captureSize.height : maxWitdh / _captureSize.width;
+
+    _outputSize.height = scale * _captureSize.height;
+    _outputSize.width = scale * _captureSize.width;
+
+}
+
+- (CGPoint)center:(CGRect)rect
+{
+    return CGPointMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2);
+}
 
 @end
