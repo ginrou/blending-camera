@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "DistOptionTableViewController.h"
 #import <CoreImage/CoreImage.h>
 #import <GLKit/GLKit.h>
 
@@ -20,7 +21,6 @@
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) CIContext *context;
 @property (nonatomic, strong) EAGLContext *eaglContext;
-@property (nonatomic, strong) GLKView *glkView;
 @property (nonatomic, assign) GLuint defaultFrameBuffer;
 @property (nonatomic, assign) GLuint colorRenderBuffer;
 @property (nonatomic, assign) CGSize captureSize;
@@ -39,6 +39,10 @@
 
     self.context = [CIContext contextWithEAGLContext:_eaglContext];
     [self setupOutputSize];
+    
+    _toolbar.height = 60.0;
+    _toolbar.bottom = self.view.height;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,14 +111,15 @@
 - (void)setupGL
 {
     self.eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-    self.glkView = [[GLKView alloc] initWithFrame:_previewView.frame context:_eaglContext];
-
-    CAEAGLLayer *eaglLayer = (CAEAGLLayer *)_glkView.layer;
+//    self.glkView = [[GLKView alloc] initWithFrame:_previewView.frame context:_eaglContext];
+    _previewView.context = _eaglContext;
+    
+    CAEAGLLayer *eaglLayer = (CAEAGLLayer *)_previewView.layer;
     eaglLayer.opaque = TRUE;
     eaglLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking : @FALSE, kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8};
 
     //_glkView.drawableDepthFormat = GLKViewDrawableDepthFormat24;
-    [self.view addSubview:_glkView];
+//    [self.view addSubview:_glkView];
 
     glGenRenderbuffers(1, &_defaultFrameBuffer);
     glBindRenderbuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
@@ -124,8 +129,8 @@
 
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _colorRenderBuffer);
 
-    GLint width = _glkView.frame.size.width;
-    GLint hegith = _glkView.frame.size.height;
+    GLint width = _previewView.frame.size.width;
+    GLint hegith = _previewView.frame.size.height;
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &hegith);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &width);
 
@@ -209,7 +214,7 @@
         if (first++ == 0) {
             NSLog(@"mainscreen = %@", NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]));
             NSLog(@"outputciimage = %@", NSStringFromCGRect(outputCIImage.extent));
-            NSLog(@"glkview = %@", NSStringFromCGRect(_glkView.frame));
+            NSLog(@"glkview = %@", NSStringFromCGRect(_previewView.frame));
 
             outputRect.origin.x = 0;
             outputRect.origin.y = 0;
@@ -231,8 +236,8 @@
 
 - (void)setupOutputSize
 {
-    CGFloat maxWitdh = _glkView.frame.size.width * 2;
-    CGFloat maxHeight = _glkView.frame.size.height * 2;
+    CGFloat maxWitdh = _previewView.frame.size.width * 2;
+    CGFloat maxHeight = _previewView.frame.size.height * 2;
 
     CGFloat scale = ( maxHeight > maxWitdh) ? maxHeight / _captureSize.height : maxWitdh / _captureSize.width;
 
@@ -246,4 +251,19 @@
     return CGPointMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2);
 }
 
+
+
+#pragma mark actions
+- (IBAction)expandBottomBar:(id)sender
+{
+    NSLog(@"hogefuag");
+    DistOptionTableViewController *optionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DistOptionTableViewController"];
+    [self.view addSubview:optionViewController.view];
+    
+}
+
+- (void)viewDidUnload {
+    [self setToolbar:nil];
+    [super viewDidUnload];
+}
 @end

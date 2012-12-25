@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54A6D8CE1689217A008F15A6 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8CD1689217A008F15A6 /* UIView+frame.m */; };
+		54A6D8D116892661008F15A6 /* DistOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */; };
 		9ACD36E0167F674200D6A376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36DF167F674200D6A376 /* UIKit.framework */; };
 		9ACD36E2167F674200D6A376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E1167F674200D6A376 /* Foundation.framework */; };
 		9ACD36E4167F674200D6A376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E3167F674200D6A376 /* CoreGraphics.framework */; };
@@ -31,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		54A6D8CC1689217A008F15A6 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
+		54A6D8CD1689217A008F15A6 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
+		54A6D8CF16892661008F15A6 /* DistOptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistOptionTableViewController.h; sourceTree = "<group>"; };
+		54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistOptionTableViewController.m; sourceTree = "<group>"; };
 		9ACD36DB167F674200D6A376 /* distortionCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = distortionCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACD36DF167F674200D6A376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9ACD36E1167F674200D6A376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54A6D8CA1689214A008F15A6 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				54A6D8CC1689217A008F15A6 /* UIView+frame.h */,
+				54A6D8CD1689217A008F15A6 /* UIView+frame.m */,
+			);
+			name = extensions;
+			sourceTree = "<group>";
+		};
 		9ACD36D0167F674200D6A376 = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +137,7 @@
 		9ACD36E5167F674200D6A376 /* distortionCamera */ = {
 			isa = PBXGroup;
 			children = (
+				54A6D8CA1689214A008F15A6 /* extensions */,
 				9ACD36EE167F674200D6A376 /* AppDelegate.h */,
 				9ACD36EF167F674200D6A376 /* AppDelegate.m */,
 				9ACD36F7167F674200D6A376 /* MainStoryboard.storyboard */,
@@ -129,6 +145,8 @@
 				9ACD36FB167F674200D6A376 /* ViewController.m */,
 				9ACD37161681F83700D6A376 /* EAGLView.h */,
 				9ACD37171681F83700D6A376 /* EAGLView.m */,
+				54A6D8CF16892661008F15A6 /* DistOptionTableViewController.h */,
+				54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */,
 				9ACD36E6167F674200D6A376 /* Supporting Files */,
 			);
 			path = distortionCamera;
@@ -218,6 +236,8 @@
 				9ACD36F0167F674200D6A376 /* AppDelegate.m in Sources */,
 				9ACD36FC167F674200D6A376 /* ViewController.m in Sources */,
 				9ACD37181681F83700D6A376 /* EAGLView.m in Sources */,
+				54A6D8CE1689217A008F15A6 /* UIView+frame.m in Sources */,
+				54A6D8D116892661008F15A6 /* DistOptionTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +356,7 @@
 				9ACD3701167F674200D6A376 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

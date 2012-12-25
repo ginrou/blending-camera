@@ -19,6 +19,9 @@
     dispatch_queue_t _videoDataOutputQueue;
 }
 
-@property (weak, nonatomic) IBOutlet UIView *previewView;
+@property (weak, nonatomic) IBOutlet GLKView *previewView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+
+- (IBAction)expandBottomBar:(id)sender;
 
 @end
