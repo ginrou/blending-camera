@@ -106,4 +106,18 @@
     frame.size.height = height;
     self.frame = frame;
 }
+
+- (CGPoint)center
+{
+    return CGPointMake(self.left + self.width/2.0, self.top + self.height / 2.0 );
+}
+
+- (void)setCenter:(CGPoint)center
+{
+    CGRect frame = self.frame;
+    frame.origin.x = center.x - frame.size.width / 2.0;
+    frame.origin.y = center.y - frame.size.height / 2.0;
+    self.frame = frame;
+}
+
 @end

@@ -6,25 +6,25 @@
 //  Copyright (c) 2012年 武田 祐一. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "DistOptionTableViewController.h"
 #import <CoreImage/CoreImage.h>
 #import <GLKit/GLKit.h>
+
+#import "ViewController.h"
+#import "DistOptionTableViewController.h"
+#import "DistImageProcessor.h"
 
 @interface FaceViewController ()
 {
 
 }
 @property (nonatomic, strong) AVCaptureVideoDataOutput *videoDataOutput;
-@property (nonatomic, strong) CIDetector *faceDetector;
-@property (nonatomic, strong) CIFilter *filter;
 @property (nonatomic, strong) AVCaptureSession *session;
-@property (nonatomic, strong) CIContext *context;
-@property (nonatomic, strong) EAGLContext *eaglContext;
-@property (nonatomic, assign) GLuint defaultFrameBuffer;
-@property (nonatomic, assign) GLuint colorRenderBuffer;
 @property (nonatomic, assign) CGSize captureSize;
 @property (nonatomic, assign) CGSize outputSize;
+
+@property (nonatomic, strong) DistOptionTableViewController *optionViewController;
+@property (nonatomic, strong) DistImageProcessor *processor;
+
 @end
 
 @implementation FaceViewController
@@ -33,16 +33,21 @@
 {
     [super viewDidLoad];
     [self setupAVCaputre];
-    [self setupImageProcessings];
-    [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
-    [self setupGL];
+    [_previewView setupWithFrame:CGRectZero error:nil];
 
-    self.context = [CIContext contextWithEAGLContext:_eaglContext];
+    self.processor = [[DistImageProcessor alloc] initWithEAGLContext:_previewView.context]; // depends on _previewView
+    
     [self setupOutputSize];
     
     _toolbar.height = 60.0;
     _toolbar.bottom = self.view.height;
     
+}
+
+- (void)viewDidUnload {
+    self.toolbar = nil;
+    self.optionViewController = nil;
+    [super viewDidUnload];
 }
 
 - (void)didReceiveMemoryWarning
@@ -76,7 +81,6 @@
     [_session addInput:input];
 
 
-
     // make a still image output
 
 
@@ -96,53 +100,7 @@
     [_session startRunning];
 }
 
-- (void)setupImageProcessings
-{
-    self.filter = [CIFilter filterWithName:@"CIHoleDistortion"];
-    [_filter setDefaults];
-    [_filter setValue:@20 forKey:@"inputRadius"];
-//    [_filter setValue:@0.5 forKey:@"inputScale"];
-//    [_filter setValue:@(-3.140/4.0) forKey:@"inputAngle"];
 
-    NSDictionary *detectorOption = @{CIDetectorAccuracy : CIDetectorAccuracyLow, CIDetectorTracking : @YES};
-    self.faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:_context options:detectorOption];
-}
-
-- (void)setupGL
-{
-    self.eaglContext = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-//    self.glkView = [[GLKView alloc] initWithFrame:_previewView.frame context:_eaglContext];
-    _previewView.context = _eaglContext;
-    
-    CAEAGLLayer *eaglLayer = (CAEAGLLayer *)_previewView.layer;
-    eaglLayer.opaque = TRUE;
-    eaglLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking : @FALSE, kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8};
-
-    //_glkView.drawableDepthFormat = GLKViewDrawableDepthFormat24;
-//    [self.view addSubview:_glkView];
-
-    glGenRenderbuffers(1, &_defaultFrameBuffer);
-    glBindRenderbuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
-
-    glGenRenderbuffers(1, &_colorRenderBuffer);
-    glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
-
-    glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _colorRenderBuffer);
-
-    GLint width = _previewView.frame.size.width;
-    GLint hegith = _previewView.frame.size.height;
-    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &hegith);
-    glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &width);
-
-    glBindFramebuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
-    glViewport(0, 0, width, hegith);
-    NSLog(@"%d, %d", width, hegith);
-
-    if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-        NSLog(@"Failed To make complete frame buffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
-    }
-
-}
 
 #pragma mark -- processings
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
@@ -184,46 +142,18 @@
 	}
 
     NSDictionary *imageOption = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
-    NSArray *features = [_faceDetector featuresInImage:ciImage options:imageOption];
+    CIImage *outputImage = [_processor applyEffect:ciImage options:imageOption];
 
-    for (CIFaceFeature *f in features) {
-//        NSLog(@"%f, %f", f.bounds.size.width, f.bounds.size.height);
-        [_filter setValue:[CIVector vectorWithCGPoint:[self center:f.bounds]] forKey:@"inputCenter"];
-    }
+    outputImage = [outputImage imageByApplyingTransform:CGAffineTransformMakeRotation(-M_PI / 2.0)];
+    CGPoint origin = outputImage.extent.origin;
+    outputImage = [outputImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-origin.x, -origin.y)];
 
-//    CMFormatDescriptionRef fdesc = CMSampleBufferGetFormatDescription(sampleBuffer);
-//    CGRect clap = CMVideoFormatDescriptionGetCleanAperture(fdesc, false);
-
-    [self.filter setValue:ciImage forKey:@"inputImage"];
-    CIImage *outputCIImage = _filter.outputImage;
-    outputCIImage = [outputCIImage imageByApplyingTransform:CGAffineTransformMakeRotation(-M_PI / 2.0)];
-    CGPoint origin = outputCIImage.extent.origin;
-    outputCIImage = [outputCIImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-origin.x, -origin.y)];
-
-    [_context drawImage:outputCIImage inRect:CGRectMake(0, 0, _outputSize.width, _outputSize.height) fromRect:CGRectMake(0, 0, 480, 640)];
-
-    [EAGLContext setCurrentContext:_eaglContext];
-    glBindFramebuffer(GL_RENDERBUFFER, _colorRenderBuffer);
-    [_eaglContext presentRenderbuffer:GL_RENDERBUFFER];
+    CGRect inRect = CGRectMake(0, 0, _outputSize.width, _outputSize.height);
+    CGRect fromRect = CGRectMake(0, 0, 480, 640);
+    [_processor.ciContext drawImage:outputImage inRect:inRect fromRect:fromRect];
 
     dispatch_async(dispatch_get_main_queue(), ^{
-        //[self drawFaceBoxesForFeatures:features forVideoBox:clap orientation:deviceOrientaion];
-
-        static CGRect outputRect;
-        static int first = 0;
-        if (first++ == 0) {
-            NSLog(@"mainscreen = %@", NSStringFromCGRect([[UIScreen mainScreen] applicationFrame]));
-            NSLog(@"outputciimage = %@", NSStringFromCGRect(outputCIImage.extent));
-            NSLog(@"glkview = %@", NSStringFromCGRect(_previewView.frame));
-
-            outputRect.origin.x = 0;
-            outputRect.origin.y = 0;
-            outputRect.size.width = 480;
-            outputRect.size.height = 640;
-        }
-
-        [self.filter setValue:nil forKey:@"inputImage"];
-
+        [_previewView updateView];
     });
 }
 
@@ -246,24 +176,39 @@
 
 }
 
-- (CGPoint)center:(CGRect)rect
-{
-    return CGPointMake(rect.origin.x + rect.size.width/2, rect.origin.y + rect.size.height/2);
-}
-
-
 
 #pragma mark actions
 - (IBAction)expandBottomBar:(id)sender
 {
-    NSLog(@"hogefuag");
-    DistOptionTableViewController *optionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DistOptionTableViewController"];
-    [self.view addSubview:optionViewController.view];
-    
+    if (_optionViewController) {
+        [self hideOptionViewController];
+    } else {
+        [self showOptionViewController];
+    }
 }
 
-- (void)viewDidUnload {
-    [self setToolbar:nil];
-    [super viewDidUnload];
+- (void)hideOptionViewController
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        _optionViewController.view.alpha = 0.f;
+    } completion:^(BOOL finished) {
+        [_optionViewController.view removeFromSuperview];
+        self.optionViewController = nil;
+    }];
 }
+
+- (void)showOptionViewController
+{
+    self.optionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DistOptionTableViewController"];
+
+    _optionViewController.view.alpha = 0.f;
+    [self.view addSubview:_optionViewController.view];
+    _optionViewController.view.bottom = _toolbar.top - 5.0;
+
+    [UIView animateWithDuration:0.25 animations:^{
+        _optionViewController.view.alpha = 1.0;
+    } completion:nil];
+
+}
+
 @end

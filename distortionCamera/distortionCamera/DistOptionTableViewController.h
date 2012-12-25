@@ -10,4 +10,13 @@
 
 @interface DistOptionTableViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UISegmentedControl *detectionAccuracyControl;
+@property (weak, nonatomic) IBOutlet UISwitch *colorAdjustmentSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *flashSwitch;
+
+
+- (IBAction)detectionAccuracyChanged:(UISegmentedControl *)sender;
+- (IBAction)autoIntensityCollectionChanged:(UISwitch *)sender;
+- (IBAction)FlashChanged:(UISwitch *)sender;
+
 @end

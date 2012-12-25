@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <GLKit/GLKit.h>
+#import "DistPreviewView.h"
 
 @class CIDetector;
 
@@ -19,7 +20,7 @@
     dispatch_queue_t _videoDataOutputQueue;
 }
 
-@property (weak, nonatomic) IBOutlet GLKView *previewView;
+@property (weak, nonatomic) IBOutlet DistPreviewView *previewView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 - (IBAction)expandBottomBar:(id)sender;
