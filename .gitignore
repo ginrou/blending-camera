@@ -1,3 +1,5 @@
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
 **/*.xcodeproj/*
 !**/*.xcodeproj/project.pbxproj
 *.DS_Store
