@@ -8,6 +8,8 @@
 
 #import <CoreImage/CoreImage.h>
 #import <GLKit/GLKit.h>
+#import <ImageIO/ImageIO.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 #import "ViewController.h"
 #import "DistOptionTableViewController.h"
@@ -66,7 +68,6 @@
     self.captureSize = CGSizeMake(480, 640);
 
 
-    //AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
     AVCaptureDevice *frontCamera;
     for (AVCaptureDevice *device in devices) {
@@ -157,11 +158,43 @@
     });
 }
 
-- (void) image: (UIImage *) image didFinishSavingWithError: (NSError *) error contextInfo: (void *) contextInfo
+// utility routine used after taking a still image to write the resulting image to the camera roll
++ (void)writeCGImageToCameraRoll:(CGImageRef)cgImage withMetadata:(NSDictionary *)metadata
 {
-    NSLog(@"saved %@", error);
-}
+	CFMutableDataRef destinationData = CFDataCreateMutable(kCFAllocatorDefault, 0);
+	CGImageDestinationRef destination = CGImageDestinationCreateWithData(destinationData,
+																		 CFSTR("public.jpeg"),
+																		 1,
+																		 NULL);
+	BOOL success = (destination != NULL);
 
+	const float JPEGCompQuality = 0.85f; // JPEGHigherQuality
+	CFMutableDictionaryRef optionsDict = NULL;
+	CFNumberRef qualityNum = NULL;
+
+	qualityNum = CFNumberCreate(0, kCFNumberFloatType, &JPEGCompQuality);
+	if ( qualityNum ) {
+		optionsDict = CFDictionaryCreateMutable(0, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+		if ( optionsDict )
+			CFDictionarySetValue(optionsDict, kCGImageDestinationLossyCompressionQuality, qualityNum);
+		CFRelease( qualityNum );
+	}
+
+	CGImageDestinationAddImage( destination, cgImage, optionsDict );
+	success = CGImageDestinationFinalize( destination );
+
+	if ( optionsDict )
+		CFRelease(optionsDict);
+
+
+	CFRetain(destinationData);
+	ALAssetsLibrary *library = [ALAssetsLibrary new];
+	[library writeImageDataToSavedPhotosAlbum:(id)CFBridgingRelease(destinationData) metadata:metadata completionBlock:^(NSURL *assetURL, NSError *error) {
+		if (destinationData)
+			CFRelease(destinationData);
+	}];
+
+}
 #pragma mark - view utilities
 
 - (void)setupOutputSize

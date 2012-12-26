@@ -21,7 +21,11 @@
                                 <rect key="frame" x="0.0" y="419" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
-                                    <barButtonItem title="Item" id="Plz-LR-sB4">
+                                    <barButtonItem title="filter" id="T53-WM-889"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="kmq-zI-lh3"/>
+                                    <barButtonItem systemItem="camera" id="u4P-re-xGS"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Izq-ta-W8g"/>
+                                    <barButtonItem title="settings" id="Plz-LR-sB4">
                                         <connections>
                                             <action selector="expandBottomBar:" destination="2" id="LfX-Ab-ujW"/>
                                         </connections>
@@ -175,7 +179,7 @@
                 <relationship kind="action" name="detectionAccuracyChanged:" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="colorAdjustmentSwitch" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="detectionAccuracyControl" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="flashSwitch" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="flashSwitch" candidateClass="UISwitch"/>
             </relationships>
         </class>
         <class className="DistPreviewView" superclassName="GLKView">
