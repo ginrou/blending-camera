@@ -7,8 +7,9 @@
 //
 
 #import "DistImageProcessor.h"
-
 #import "DistOptions.h"
+#import <ImageIO/ImageIO.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @implementation DistImageProcessor
 
@@ -37,6 +38,7 @@
     NSString *accuracy = [DistOptions loadDetectorAccuray];
     NSDictionary *option = @{CIDetectorAccuracy : accuracy, CIDetectorTracking : @YES};
     self.faceDetector = [CIDetector detectorOfType:CIDetectorTypeFace context:_ciContext options:option];
+    NSLog(@"face detection option changed");
 }
 
 
@@ -52,10 +54,15 @@
         self.colorAdjustmentFilter = nil;
     }
 
+    [self setupFaceDetection];
 }
 
 - (CIImage *)applyEffect:(CIImage *)srcImage options:(NSDictionary *)options
 {
+    if (![options[CIDetectorImageOrientation] isKindOfClass:[NSNumber class]]) {
+        return [srcImage copy];
+    }
+
     NSArray *faceFeatures = [_faceDetector featuresInImage:srcImage options:options];
     CIImage *bufferImage = [srcImage copy];
     for (CIFaceFeature *f in faceFeatures) {
@@ -69,7 +76,7 @@
         CGPoint center = CGPointMake(f.bounds.origin.x + f.bounds.size.width / 2.0,
                                      f.bounds.origin.y + f.bounds.size.height / 2.0);
         [_filter setValue:[CIVector vectorWithCGPoint:center] forKey:@"inputCenter"];
-        [_filter setValue:@(1.2) forKey:@"inputScale"];
+        [_filter setValue:@(-0.8) forKey:@"inputScale"];
         bufferImage = _filter.outputImage;
 
     }
@@ -82,6 +89,44 @@
     [_filter setValue:nil forKey:@"inputImage"];
     return [bufferImage copy];
 
+}
+
+// utility routine used after taking a still image to write the resulting image to the camera roll
++ (void)writeCGImageToCameraRoll:(CGImageRef)cgImage withMetadata:(NSDictionary *)metadata
+{
+	CFMutableDataRef destinationData = CFDataCreateMutable(kCFAllocatorDefault, 0);
+	CGImageDestinationRef destination = CGImageDestinationCreateWithData(destinationData,
+																		 CFSTR("public.jpeg"),
+																		 1,
+																		 NULL);
+	BOOL success = (destination != NULL);
+    
+	const float JPEGCompQuality = 0.85f; // JPEGHigherQuality
+	CFMutableDictionaryRef optionsDict = NULL;
+	CFNumberRef qualityNum = NULL;
+    
+	qualityNum = CFNumberCreate(0, kCFNumberFloatType, &JPEGCompQuality);
+	if ( qualityNum ) {
+		optionsDict = CFDictionaryCreateMutable(0, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+		if ( optionsDict )
+			CFDictionarySetValue(optionsDict, kCGImageDestinationLossyCompressionQuality, qualityNum);
+		CFRelease( qualityNum );
+	}
+    
+	CGImageDestinationAddImage( destination, cgImage, optionsDict );
+	success = CGImageDestinationFinalize( destination );
+    
+	if ( optionsDict )
+		CFRelease(optionsDict);
+    
+    
+	CFRetain(destinationData);
+	ALAssetsLibrary *library = [ALAssetsLibrary new];
+	[library writeImageDataToSavedPhotosAlbum:(id)CFBridgingRelease(destinationData) metadata:metadata completionBlock:^(NSURL *assetURL, NSError *error) {
+		if (destinationData)
+			CFRelease(destinationData);
+	}];
+    
 }
 
 @end

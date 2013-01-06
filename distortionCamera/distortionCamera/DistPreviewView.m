@@ -52,7 +52,7 @@
     NSLog(@"%d, %d", width, hegith);
 
     if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
-        NSLog(@"Failed To make complete frame buffer object %x", glCheckFramebufferStatus(GL_FRAMEBUFFER));
+        NSLog(@"Failed To make complete frame buffer object %d", glCheckFramebufferStatus(GL_FRAMEBUFFER));
     }
 
 }
