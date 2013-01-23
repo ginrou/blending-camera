@@ -58,7 +58,8 @@
 #pragma mark action handlers
 
 - (IBAction)filterButtonTapped:(id)sender {
-    [_delegate changeFilter:self];
+    //[_delegate changeFilter:self];
+    [_delegate cancelSavePhoto:self];
 }
 
 - (IBAction)takePictureButtonTapped:(id)sender {

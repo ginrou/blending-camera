@@ -38,7 +38,8 @@
 
 @property (nonatomic, strong) UIImageView *stillImageView;
 
-//@property (nonatomic, strong) UILabel *label;
+@property (nonatomic, assign) dispatch_queue_t videoDataOutputQueue;
+
 
 @end
 
@@ -112,7 +113,11 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     // make a still image output
     self.stillImageOutput = [AVCaptureStillImageOutput new];
     [_stillImageOutput addObserver:self forKeyPath:@"capturingStillImage" options:NSKeyValueObservingOptionNew context:(__bridge void *)(AVCaptureStillImageIsCapturingStillImageContext)];
+    [_stillImageOutput setOutputSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCMPixelFormat_32BGRA]
+                                                                     forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
     [_session addOutput:_stillImageOutput];
+    
+    
     
     // make a video data output
     self.videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
@@ -121,8 +126,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     [_videoDataOutput setAlwaysDiscardsLateVideoFrames:YES];
     
     // create a serial dispatch queue
-    _videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
+    self.videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
     [_videoDataOutput setSampleBufferDelegate:self queue:_videoDataOutputQueue];
+    dispatch_release(_videoDataOutputQueue);
     
     [_session addOutput:_videoDataOutput];
     [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
@@ -141,7 +147,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 			// do flash bulb like animation
 			_flashView = [[UIView alloc] initWithFrame:[_previewView frame]];
 			[_flashView setBackgroundColor:[UIColor whiteColor]];
-			[_flashView setAlpha:0.f];
+			[_flashView setAlpha:1.f];
 			[self.view.window addSubview:_flashView];
 			
 			[UIView animateWithDuration:.4f animations:^{
@@ -169,7 +175,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     
     UIDeviceOrientation deviceOrientaion = [[UIDevice currentDevice] orientation];
-    int exifOrientation;
+    static int exifOrientation = 1;
     
 	enum {
 		PHOTOS_EXIF_0ROW_TOP_0COL_LEFT			= 1, //   1  =  0th row is at the top, and 0th column is on the left (THE DEFAULT).
@@ -223,16 +229,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 	AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
 	[stillImageConnection setVideoOrientation:avcaptureOrientation];
 	
-    
-    // set the appropriate pixel format / image type output setting depending on if we'll need an uncompressed image for
-    // the possiblity of drawing the red square over top or if we're just writing a jpeg to the camera roll which is the trival case
-    
-    [_stillImageOutput setOutputSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCMPixelFormat_32BGRA]
-                                                                     forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
-    
 	
 	[_stillImageOutput captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-
+        [_session stopRunning];
         if (error) {
             NSLog(@"failed to take picture");
             return ;
@@ -313,8 +312,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)takePictureDone:(UIImage *)uiImage;
 {
-    _stillImageView.image = uiImage;
-    [_controllTabBar moveControllToolbar:savePhotoToolBar];
+    self.stillImageView.image = uiImage;
+    //[_controllTabBar moveControllToolbar:savePhotoToolBar];
 }
 
 #pragma mark - view utilities
@@ -397,14 +396,16 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)cancelSavePhoto:(DistControllToolBar *)toolBar
 {
-    [_controllTabBar moveControllToolbar:mainToolBar];
+    //[_controllTabBar moveControllToolbar:mainToolBar];
+    [_session startRunning];
     _stillImageView.image = nil;
 
 }
 
 - (void)savePhoto:(DistControllToolBar *)toolBar
 {
-    [_controllTabBar moveControllToolbar:mainToolBar];
+    //[_controllTabBar moveControllToolbar:mainToolBar];
+    [_session startRunning];
     _stillImageView.image = nil;
 }
 

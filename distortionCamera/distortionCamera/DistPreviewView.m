@@ -29,7 +29,8 @@
 - (void)setupWithFrame:(CGRect)frame error:(NSError *__autoreleasing *)error
 {
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
-
+    self.drawableDepthFormat = GLKViewDrawableDepthFormatNone;
+    
     CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
     eaglLayer.opaque = TRUE;
     eaglLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking : @FALSE, kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8};

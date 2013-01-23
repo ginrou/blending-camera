@@ -18,7 +18,7 @@
 DistControllToolBarDelegate>
 
 {
-    dispatch_queue_t _videoDataOutputQueue;
+    //dispatch_queue_t _videoDataOutputQueue;
 }
 
 @property (weak, nonatomic) IBOutlet DistPreviewView *previewView;
