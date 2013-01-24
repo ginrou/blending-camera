@@ -145,7 +145,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 		
 		if ( isCapturingStillImage ) {
 			// do flash bulb like animation
-			_flashView = [[UIView alloc] initWithFrame:[_previewView frame]];
+			self.flashView = [[UIView alloc] initWithFrame:[_previewView frame]];
 			[_flashView setBackgroundColor:[UIColor whiteColor]];
 			[_flashView setAlpha:1.f];
 			[self.view.window addSubview:_flashView];
@@ -176,7 +176,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     UIDeviceOrientation deviceOrientaion = [[UIDevice currentDevice] orientation];
     static int exifOrientation = 1;
-    
+
+    //NSDictionary *imageOption = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
+    NSMutableDictionary *imageOption = [NSMutableDictionary dictionary];
 	enum {
 		PHOTOS_EXIF_0ROW_TOP_0COL_LEFT			= 1, //   1  =  0th row is at the top, and 0th column is on the left (THE DEFAULT).
 		PHOTOS_EXIF_0ROW_TOP_0COL_RIGHT			= 2, //   2  =  0th row is at the top, and 0th column is on the right.
@@ -191,12 +193,15 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 	switch (deviceOrientaion) {
 		case UIDeviceOrientationPortraitUpsideDown:  // Device oriented vertically, home button on the top
 			exifOrientation = PHOTOS_EXIF_0ROW_LEFT_0COL_BOTTOM;
+            imageOption[CIDetectorImageOrientation] = @8;
 			break;
 		case UIDeviceOrientationLandscapeLeft:       // Device oriented horizontally, home button on the right
             exifOrientation = PHOTOS_EXIF_0ROW_BOTTOM_0COL_RIGHT;
+            imageOption[CIDetectorImageOrientation] = @3;
 			break;
 		case UIDeviceOrientationLandscapeRight:      // Device oriented horizontally, home button on the left
             exifOrientation = PHOTOS_EXIF_0ROW_TOP_0COL_LEFT;
+            imageOption[CIDetectorImageOrientation] = @1;
 			break;
 		case UIDeviceOrientationPortrait:            // Device oriented vertically, home button on the bottom
 		default:
@@ -204,7 +209,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 			break;
 	}
 
-    NSDictionary *imageOption = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
     CIImage *outputImage = [_processor applyEffect:ciImage options:imageOption];
     outputImage = [self applyRotationForCurrentOrientation:outputImage];
     
@@ -233,7 +237,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 	[_stillImageOutput captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         [_session stopRunning];
         if (error) {
-            NSLog(@"failed to take picture");
+            NSLog(@"failed to take picture, %@", error);
             return ;
         }
         // Got an image.
@@ -313,7 +317,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 - (void)takePictureDone:(UIImage *)uiImage;
 {
     self.stillImageView.image = uiImage;
-    //[_controllTabBar moveControllToolbar:savePhotoToolBar];
+    [_controllTabBar moveControllToolbar:savePhotoToolBar];
 }
 
 #pragma mark - view utilities
@@ -396,7 +400,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)cancelSavePhoto:(DistControllToolBar *)toolBar
 {
-    //[_controllTabBar moveControllToolbar:mainToolBar];
+    [_controllTabBar moveControllToolbar:mainToolBar];
     [_session startRunning];
     _stillImageView.image = nil;
 
@@ -404,7 +408,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)savePhoto:(DistControllToolBar *)toolBar
 {
-    //[_controllTabBar moveControllToolbar:mainToolBar];
+    [_controllTabBar moveControllToolbar:mainToolBar];
     [_session startRunning];
     _stillImageView.image = nil;
 }

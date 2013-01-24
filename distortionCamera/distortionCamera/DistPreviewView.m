@@ -30,16 +30,18 @@
 {
     self.context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
     self.drawableDepthFormat = GLKViewDrawableDepthFormatNone;
-    
+    [EAGLContext setCurrentContext:self.context];
     CAEAGLLayer *eaglLayer = (CAEAGLLayer *)self.layer;
     eaglLayer.opaque = TRUE;
     eaglLayer.drawableProperties = @{kEAGLDrawablePropertyRetainedBacking : @FALSE, kEAGLDrawablePropertyColorFormat : kEAGLColorFormatRGBA8};
 
-    glGenRenderbuffers(1, &_defaultFrameBuffer);
-    glBindRenderbuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
+    glGenFramebuffers(1, &_defaultFrameBuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
 
     glGenRenderbuffers(1, &_colorRenderBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
+
+    [self.context renderbufferStorage:GL_RENDERBUFFER fromDrawable:eaglLayer];
 
     glFramebufferRenderbuffer(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0, GL_RENDERBUFFER, _colorRenderBuffer);
 
@@ -48,7 +50,7 @@
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_HEIGHT, &hegith);
     glGetRenderbufferParameteriv(GL_RENDERBUFFER, GL_RENDERBUFFER_WIDTH, &width);
 
-    glBindFramebuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
+
     glViewport(0, 0, width, hegith);
     NSLog(@"%d, %d", width, hegith);
 
@@ -61,8 +63,12 @@
 - (void)updateView
 {
     [EAGLContext setCurrentContext:self.context];
-    glBindFramebuffer(GL_RENDERBUFFER, _colorRenderBuffer);
+    glViewport(0, 0, self.width, self.height);
+    glBindFramebuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
+    glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
     [self.context presentRenderbuffer:GL_RENDERBUFFER];
 }
+
+
 
 @end
