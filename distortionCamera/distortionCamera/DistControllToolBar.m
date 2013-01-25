@@ -52,7 +52,7 @@
     if (targetToolBar == mainToolBar) offset = CGPointMake(0, 0);
     else if (targetToolBar == savePhotoToolBar) offset = CGPointMake(320, 0);
     
-    [_scrollView setContentOffset:offset animated:YES];
+    [_scrollView setContentOffset:offset animated:NO];
 }
 
 #pragma mark action handlers

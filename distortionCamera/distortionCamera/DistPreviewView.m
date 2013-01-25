@@ -13,15 +13,23 @@
 @interface DistPreviewView ()
 @property (nonatomic, assign) GLuint defaultFrameBuffer;
 @property (nonatomic, assign) GLuint colorRenderBuffer;
+@property (nonatomic, strong) id displayLink;
+@property (atomic, assign) BOOL isAnimating;
 @end
 
 @implementation DistPreviewView
+
++ (Class) layerClass
+{
+	return [CAEAGLLayer class];
+}
+
 
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
+        self.isAnimating = NO;
     }
     return self;
 }
@@ -69,6 +77,21 @@
     [self.context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
+- (void)startAnimating
+{
+    if (_isAnimating)  return;
 
+    self.displayLink = [NSClassFromString(@"CADisplayLink") displayLinkWithTarget:self selector:@selector(updateView)];
+    [_displayLink setFrameInterval:1.0/30.0];
+    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    _isAnimating = YES;
+}
+
+- (void)stopAnimating
+{
+    [_displayLink invalidate];
+    self.displayLink = nil;
+    _isAnimating = NO;
+}
 
 @end

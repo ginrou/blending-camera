@@ -72,6 +72,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     self.stillImageView = [[UIImageView alloc] initWithFrame:_previewView.frame];
     [self.view insertSubview:_stillImageView belowSubview:_controllTabBar];
+    [_previewView startAnimating];
 }
 
 - (void)viewDidUnload {
@@ -217,9 +218,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
     [_processor.ciContext drawImage:outputImage inRect:inRect fromRect:fromRect];
     
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_previewView updateView];
-    });
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [_previewView updateView];
+//    });
 }
 
 
@@ -236,6 +237,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 	
 	[_stillImageOutput captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
         [_session stopRunning];
+        [_previewView stopAnimating];
+
         if (error) {
             NSLog(@"failed to take picture, %@", error);
             return ;
@@ -402,6 +405,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
     [_controllTabBar moveControllToolbar:mainToolBar];
     [_session startRunning];
+    [_previewView startAnimating];
     _stillImageView.image = nil;
 
 }
@@ -410,6 +414,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
     [_controllTabBar moveControllToolbar:mainToolBar];
     [_session startRunning];
+    [_previewView startAnimating];
     _stillImageView.image = nil;
 }
 

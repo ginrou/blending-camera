@@ -11,4 +11,6 @@
 @interface DistPreviewView : GLKView
 - (void)setupWithFrame:(CGRect)frame error:(NSError **)error;
 - (void)updateView;
+- (void)stopAnimating;
+- (void)startAnimating;
 @end
