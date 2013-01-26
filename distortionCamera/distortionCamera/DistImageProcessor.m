@@ -11,13 +11,16 @@
 #import <ImageIO/ImageIO.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
+@interface DistImageProcessor ()
+@end
+
 @implementation DistImageProcessor
 
 - (id)initWithEAGLContext:(EAGLContext *)eaglContext
 {
     self = [super init];
     if (self) {
-        self.ciContext = [CIContext contextWithEAGLContext:eaglContext];
+        self.ciContext = [CIContext contextWithEAGLContext:eaglContext options:@{kCIContextWorkingColorSpace : [NSNull null]}];
         [self initializeFilter];
         [self setupFaceDetection];
         [self applyOptions];
@@ -65,6 +68,7 @@
 
     NSArray *faceFeatures = [_faceDetector featuresInImage:srcImage options:options];
     CIImage *bufferImage = [srcImage copy];
+
     for (CIFaceFeature *f in faceFeatures) {
         [_filter setValue:bufferImage forKey:@"inputImage"];
 

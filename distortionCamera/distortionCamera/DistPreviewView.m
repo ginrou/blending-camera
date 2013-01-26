@@ -71,9 +71,8 @@
 - (void)updateView
 {
     [EAGLContext setCurrentContext:self.context];
-    glViewport(0, 0, self.width, self.height);
-    glBindFramebuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
     glBindRenderbuffer(GL_RENDERBUFFER, _colorRenderBuffer);
+    glBindFramebuffer(GL_FRAMEBUFFER, _defaultFrameBuffer);
     [self.context presentRenderbuffer:GL_RENDERBUFFER];
 }
 

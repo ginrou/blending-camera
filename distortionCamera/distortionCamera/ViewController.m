@@ -40,6 +40,7 @@
 
 @property (nonatomic, assign) dispatch_queue_t videoDataOutputQueue;
 
+@property (atomic, assign) BOOL semaphore;
 
 @end
 
@@ -72,7 +73,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     self.stillImageView = [[UIImageView alloc] initWithFrame:_previewView.frame];
     [self.view insertSubview:_stillImageView belowSubview:_controllTabBar];
-    [_previewView startAnimating];
+
+    [self start];
 }
 
 - (void)viewDidUnload {
@@ -93,8 +95,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     NSError *error = nil;
     self.session = [AVCaptureSession new];
     [_session beginConfiguration];
-    [_session setSessionPreset:AVCaptureSessionPreset1280x720];
-    self.captureSize = CGSizeMake(720, 1280);
+    [_session setSessionPreset:AVCaptureSessionPreset640x480];
+    self.captureSize = CGSizeMake(480, 640);
     
     
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
@@ -134,7 +136,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     [_session addOutput:_videoDataOutput];
     [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
     [_session commitConfiguration];
-    [_session startRunning];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -169,6 +170,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 #pragma mark -- processings
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
+    if (_semaphore == NO) return;
+    if (_stillImageOutput.isCapturingStillImage) return;
+
     // got an image
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
     CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, sampleBuffer, kCMAttachmentMode_ShouldPropagate);
@@ -178,8 +182,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     UIDeviceOrientation deviceOrientaion = [[UIDevice currentDevice] orientation];
     static int exifOrientation = 1;
 
-    //NSDictionary *imageOption = @{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]};
-    NSMutableDictionary *imageOption = [NSMutableDictionary dictionary];
 	enum {
 		PHOTOS_EXIF_0ROW_TOP_0COL_LEFT			= 1, //   1  =  0th row is at the top, and 0th column is on the left (THE DEFAULT).
 		PHOTOS_EXIF_0ROW_TOP_0COL_RIGHT			= 2, //   2  =  0th row is at the top, and 0th column is on the right.
@@ -194,15 +196,12 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 	switch (deviceOrientaion) {
 		case UIDeviceOrientationPortraitUpsideDown:  // Device oriented vertically, home button on the top
 			exifOrientation = PHOTOS_EXIF_0ROW_LEFT_0COL_BOTTOM;
-            imageOption[CIDetectorImageOrientation] = @8;
 			break;
 		case UIDeviceOrientationLandscapeLeft:       // Device oriented horizontally, home button on the right
             exifOrientation = PHOTOS_EXIF_0ROW_BOTTOM_0COL_RIGHT;
-            imageOption[CIDetectorImageOrientation] = @3;
 			break;
 		case UIDeviceOrientationLandscapeRight:      // Device oriented horizontally, home button on the left
             exifOrientation = PHOTOS_EXIF_0ROW_TOP_0COL_LEFT;
-            imageOption[CIDetectorImageOrientation] = @1;
 			break;
 		case UIDeviceOrientationPortrait:            // Device oriented vertically, home button on the bottom
 		default:
@@ -210,7 +209,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 			break;
 	}
 
-    CIImage *outputImage = [_processor applyEffect:ciImage options:imageOption];
+    __block CIImage *outputImage = [_processor applyEffect:ciImage options:@{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]}];
     outputImage = [self applyRotationForCurrentOrientation:outputImage];
     
     CGRect inRect = CGRectMake(0, 0, _outputSize.width, _outputSize.height);
@@ -218,9 +217,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
     [_processor.ciContext drawImage:outputImage inRect:inRect fromRect:fromRect];
     
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [_previewView updateView];
-//    });
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [_previewView updateView];
+    });
 }
 
 
@@ -230,19 +229,26 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
 	// Find out the current orientation and tell the still image output.
 	AVCaptureConnection *stillImageConnection = [_stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
+    for (AVCaptureConnection *connection in _stillImageOutput.connections) {
+        for (AVCaptureInputPort *port in connection.inputPorts) {
+            if ([port.mediaType isEqual:AVMediaTypeVideo]) {
+                stillImageConnection = connection;
+                break;
+            }
+        }
+    }
+
 	UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
 	AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
 	[stillImageConnection setVideoOrientation:avcaptureOrientation];
 	
-	
 	[_stillImageOutput captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
-        [_session stopRunning];
-        [_previewView stopAnimating];
 
         if (error) {
             NSLog(@"failed to take picture, %@", error);
             return ;
         }
+        _semaphore = NO;
         // Got an image.
         CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(imageDataSampleBuffer);
         CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, imageDataSampleBuffer, kCMAttachmentMode_ShouldPropagate);
@@ -256,7 +262,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
         // queueing this block to execute on the videoDataOutputQueue serial queue ensures this
         // see the header doc for setSampleBufferDelegate:queue: for more information
         dispatch_sync(_videoDataOutputQueue, ^(void) {
-            
             // still be based on those of the image.
             CIImage *outputImage = [_processor applyEffect:ciImage options:imageOptions];
             outputImage = [self applyRotationForCurrentOrientation:outputImage];
@@ -265,9 +270,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self takePictureDone:uiImage];
             });
-            
+            return;
         });
-        
+        return;
     }];
 }
 
@@ -319,6 +324,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)takePictureDone:(UIImage *)uiImage;
 {
+    [self stop];
     self.stillImageView.image = uiImage;
     [_controllTabBar moveControllToolbar:savePhotoToolBar];
 }
@@ -334,6 +340,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     _outputSize.height = scale * _captureSize.height;
     _outputSize.width = scale * _captureSize.width;
+
+    _outputSize.height = 1096;
+    _outputSize.width = 640;
     
 }
 
@@ -404,18 +413,31 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 - (void)cancelSavePhoto:(DistControllToolBar *)toolBar
 {
     [_controllTabBar moveControllToolbar:mainToolBar];
-    [_session startRunning];
-    [_previewView startAnimating];
-    _stillImageView.image = nil;
-
+    //[self start];
+    [self performSelector:@selector(start) withObject:nil afterDelay:1.0];
 }
 
 - (void)savePhoto:(DistControllToolBar *)toolBar
 {
     [_controllTabBar moveControllToolbar:mainToolBar];
+    [self start];
+}
+
+- (void)start
+{
+    NSLog(@"start");
+    self.stillImageView.image = nil;
     [_session startRunning];
     [_previewView startAnimating];
-    _stillImageView.image = nil;
+    _semaphore = YES;
+}
+
+- (void)stop
+{
+    NSLog(@"stop");
+    [_session stopRunning];
+    [_previewView stopAnimating];
+    _semaphore = NO;
 }
 
 @end
