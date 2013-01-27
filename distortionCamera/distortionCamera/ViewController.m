@@ -41,6 +41,7 @@
 @property (nonatomic, assign) dispatch_queue_t videoDataOutputQueue;
 
 @property (atomic, assign) BOOL semaphore;
+@property (atomic, assign) NSInteger dry_run;
 
 @end
 
@@ -64,7 +65,10 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     _toolbar.height = 60.0;
     _toolbar.bottom = self.view.height;
     _toolbar.alpha = 0.f;
-    
+
+    self.dry_run = 0;
+
+
     self.controllTabBar = [[DistControllToolBar alloc] initWithFrame:_toolbar.frame];
     self.controllTabBar.delegate = self;
     [self.view addSubview:_controllTabBar];
@@ -119,9 +123,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     [_stillImageOutput setOutputSettings:[NSDictionary dictionaryWithObject:[NSNumber numberWithInt:kCMPixelFormat_32BGRA]
                                                                      forKey:(id)kCVPixelBufferPixelFormatTypeKey]];
     [_session addOutput:_stillImageOutput];
-    
-    
-    
+
+
     // make a video data output
     self.videoDataOutput = [[AVCaptureVideoDataOutput alloc] init];
     
@@ -134,7 +137,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     dispatch_retain(_videoDataOutputQueue);
     
     [_session addOutput:_videoDataOutput];
-    [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
     [_session commitConfiguration];
 }
 
@@ -170,8 +172,17 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 #pragma mark -- processings
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
-    if (_semaphore == NO) return;
+
+    if (self.semaphore == NO) return;
     if (_stillImageOutput.isCapturingStillImage) return;
+    if (self.dry_run > 0) {
+        self.dry_run--;
+        NSLog(@"dry run = %d", self.dry_run);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.previewView updateView];
+        });
+        return;
+    }
 
     // got an image
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
@@ -209,7 +220,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 			break;
 	}
 
-    CIImage *outputImage = [_processor applyEffect:ciImage options:@{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]}];
+    CIImage *outputImage = [_processor applyEffect:ciImage options:@{CIDetectorImageOrientation : [NSNumber numberWithInt:6]}];
     outputImage = [self applyRotationForCurrentOrientation:outputImage];
     
     CGRect inRect = CGRectMake(0, 0, _outputSize.width, _outputSize.height);
@@ -217,7 +228,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
     dispatch_async(dispatch_get_main_queue(), ^{
         [_processor.ciContext drawImage:outputImage inRect:inRect fromRect:fromRect];
-        [_previewView updateView];
+        [self.previewView updateView];
     });
 }
 
@@ -237,31 +248,37 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
         }
     }
 
-	UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
-	AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
-	[stillImageConnection setVideoOrientation:avcaptureOrientation];
-	
+    static int called = 0;
+    if (called == 0) {
+        UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
+        AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
+        [stillImageConnection setVideoOrientation:avcaptureOrientation];
+        called++;
+    }
+
 	[_stillImageOutput captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
 
         if (error) {
             NSLog(@"failed to take picture, %@", error);
             return ;
         }
-        _semaphore = NO;
+//        _semaphore = NO;
         // Got an image.
-        CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(imageDataSampleBuffer);
-        CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, imageDataSampleBuffer, kCMAttachmentMode_ShouldPropagate);
-        CIImage *ciImage = [[CIImage alloc] initWithCVPixelBuffer:pixelBuffer options:(NSDictionary *)CFBridgingRelease(attachments)];
-        
-        NSDictionary *imageOptions = nil;
-        NSNumber *orientation = CFBridgingRelease(CMGetAttachment(imageDataSampleBuffer, kCGImagePropertyOrientation, NULL));
-        if (orientation) imageOptions = [NSDictionary dictionaryWithObject:orientation forKey:CIDetectorImageOrientation];
-        
+
         // when processing an existing frame we want any new frames to be automatically dropped
         // queueing this block to execute on the videoDataOutputQueue serial queue ensures this
         // see the header doc for setSampleBufferDelegate:queue: for more information
         dispatch_sync(_videoDataOutputQueue, ^(void) {
             // still be based on those of the image.
+
+            CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(imageDataSampleBuffer);
+            CFDictionaryRef attachments = CMCopyDictionaryOfAttachments(kCFAllocatorDefault, imageDataSampleBuffer, kCMAttachmentMode_ShouldPropagate);
+            CIImage *ciImage = [[CIImage alloc] initWithCVPixelBuffer:pixelBuffer options:(NSDictionary *)CFBridgingRelease(attachments)];
+
+            NSDictionary *imageOptions = nil;
+            NSNumber *orientation = (__bridge NSNumber *)(CMGetAttachment(imageDataSampleBuffer, kCGImagePropertyOrientation, NULL));
+            if (orientation) imageOptions = [NSDictionary dictionaryWithObject:orientation forKey:CIDetectorImageOrientation];
+
             CIImage *outputImage = [_processor applyEffect:ciImage options:imageOptions];
             outputImage = [self applyRotationForCurrentOrientation:outputImage];
             UIImage *uiImage = [UIImage imageWithCIImage:outputImage];
@@ -427,8 +444,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     self.stillImageView.image = nil;
     dispatch_release(_videoDataOutputQueue);
     [_session startRunning];
-    [_previewView startAnimating];
-    _semaphore = YES;
+    [self.previewView startAnimating];
+    self.semaphore = YES;
+    self.dry_run = 5;
 }
 
 - (void)stop
@@ -436,7 +454,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     NSLog(@"stop");
     dispatch_retain(_videoDataOutputQueue);
     [_session stopRunning];
-    [_previewView stopAnimating];
+    [self.previewView stopAnimating];
     _semaphore = NO;
 }
 

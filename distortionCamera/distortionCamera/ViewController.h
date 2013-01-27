@@ -21,7 +21,7 @@ DistControllToolBarDelegate>
     //dispatch_queue_t _videoDataOutputQueue;
 }
 
-@property (weak, nonatomic) IBOutlet DistPreviewView *previewView;
+@property (weak, atomic) IBOutlet DistPreviewView *previewView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 //- (IBAction)expandBottomBar:(id)sender;
