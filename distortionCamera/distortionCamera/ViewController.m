@@ -131,7 +131,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     // create a serial dispatch queue
     self.videoDataOutputQueue = dispatch_queue_create("VideoDataOutputQueue", DISPATCH_QUEUE_SERIAL);
     [_videoDataOutput setSampleBufferDelegate:self queue:_videoDataOutputQueue];
-    dispatch_release(_videoDataOutputQueue);
+    dispatch_retain(_videoDataOutputQueue);
     
     [_session addOutput:_videoDataOutput];
     [[_videoDataOutput connectionWithMediaType:AVMediaTypeVideo] setEnabled:YES];
@@ -209,15 +209,14 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 			break;
 	}
 
-    __block CIImage *outputImage = [_processor applyEffect:ciImage options:@{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]}];
+    CIImage *outputImage = [_processor applyEffect:ciImage options:@{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]}];
     outputImage = [self applyRotationForCurrentOrientation:outputImage];
     
     CGRect inRect = CGRectMake(0, 0, _outputSize.width, _outputSize.height);
     CGRect fromRect = CGRectMake(0, 0, _captureSize.width, _captureSize.height);
 
-    [_processor.ciContext drawImage:outputImage inRect:inRect fromRect:fromRect];
-    
     dispatch_async(dispatch_get_main_queue(), ^{
+        [_processor.ciContext drawImage:outputImage inRect:inRect fromRect:fromRect];
         [_previewView updateView];
     });
 }
@@ -270,9 +269,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self takePictureDone:uiImage];
             });
-            return;
+
         });
-        return;
+
     }];
 }
 
@@ -413,8 +412,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 - (void)cancelSavePhoto:(DistControllToolBar *)toolBar
 {
     [_controllTabBar moveControllToolbar:mainToolBar];
-    //[self start];
-    [self performSelector:@selector(start) withObject:nil afterDelay:1.0];
+    [self start];
 }
 
 - (void)savePhoto:(DistControllToolBar *)toolBar
@@ -427,6 +425,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
     NSLog(@"start");
     self.stillImageView.image = nil;
+    dispatch_release(_videoDataOutputQueue);
     [_session startRunning];
     [_previewView startAnimating];
     _semaphore = YES;
@@ -435,6 +434,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 - (void)stop
 {
     NSLog(@"stop");
+    dispatch_retain(_videoDataOutputQueue);
     [_session stopRunning];
     [_previewView stopAnimating];
     _semaphore = NO;
