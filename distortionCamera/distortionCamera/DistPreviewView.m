@@ -76,21 +76,4 @@
     [self.context presentRenderbuffer:GL_RENDERBUFFER];
 }
 
-- (void)startAnimating
-{
-    if (_isAnimating)  return;
-
-    self.displayLink = [NSClassFromString(@"CADisplayLink") displayLinkWithTarget:self selector:@selector(updateView)];
-    [_displayLink setFrameInterval:1.0/30.0];
-    [_displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-    _isAnimating = YES;
-}
-
-- (void)stopAnimating
-{
-    [_displayLink invalidate];
-    self.displayLink = nil;
-    _isAnimating = NO;
-}
-
 @end

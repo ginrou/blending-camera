@@ -53,14 +53,13 @@
     else if (targetToolBar == savePhotoToolBar) offset = CGPointMake(320, 0);
     else offset = CGPointMake(0, 0);
 
-    [_scrollView setContentOffset:offset animated:NO];
+    [_scrollView setContentOffset:offset animated:YES];
 }
 
 #pragma mark action handlers
 
 - (IBAction)filterButtonTapped:(id)sender {
-    //[_delegate changeFilter:self];
-    [_delegate cancelSavePhoto:self];
+    [_delegate changeFilter:self];
 }
 
 - (IBAction)takePictureButtonTapped:(id)sender {

@@ -40,9 +40,6 @@
 
 @property (nonatomic, assign) dispatch_queue_t videoDataOutputQueue;
 
-@property (atomic, assign) BOOL semaphore;
-@property (atomic, assign) NSInteger dry_run;
-
 @end
 
 // used for KVO observation of the @"capturingStillImage" property to perform flash bulb animation
@@ -66,9 +63,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     _toolbar.bottom = self.view.height;
     _toolbar.alpha = 0.f;
 
-    self.dry_run = 0;
-
-
     self.controllTabBar = [[DistControllToolBar alloc] initWithFrame:_toolbar.frame];
     self.controllTabBar.delegate = self;
     [self.view addSubview:_controllTabBar];
@@ -76,6 +70,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     self.isFrontFacing = YES;
     
     self.stillImageView = [[UIImageView alloc] initWithFrame:_previewView.frame];
+    _stillImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    _stillImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view insertSubview:_stillImageView belowSubview:_controllTabBar];
 
     [self start];
@@ -173,16 +169,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection
 {
 
-    if (self.semaphore == NO) return;
     if (_stillImageOutput.isCapturingStillImage) return;
-    if (self.dry_run > 0) {
-        self.dry_run--;
-        NSLog(@"dry run = %d", self.dry_run);
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self.previewView updateView];
-        });
-        return;
-    }
+
 
     // got an image
     CVPixelBufferRef pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
@@ -220,7 +208,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 			break;
 	}
 
-    CIImage *outputImage = [_processor applyEffect:ciImage options:@{CIDetectorImageOrientation : [NSNumber numberWithInt:6]}];
+    CIImage *outputImage = [_processor applyEffect:ciImage options:@{CIDetectorImageOrientation : [NSNumber numberWithInt:exifOrientation]}];
     outputImage = [self applyRotationForCurrentOrientation:outputImage];
     
     CGRect inRect = CGRectMake(0, 0, _outputSize.width, _outputSize.height);
@@ -262,7 +250,6 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
             NSLog(@"failed to take picture, %@", error);
             return ;
         }
-//        _semaphore = NO;
         // Got an image.
 
         // when processing an existing frame we want any new frames to be automatically dropped
@@ -351,15 +338,21 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
     CGFloat maxWitdh = _previewView.frame.size.width * 2;
     CGFloat maxHeight = _previewView.frame.size.height * 2;
-    
+
     CGFloat scale = ( maxHeight > maxWitdh) ? maxHeight / _captureSize.height : maxWitdh / _captureSize.width;
     
     _outputSize.height = scale * _captureSize.height;
     _outputSize.width = scale * _captureSize.width;
+//    _outputSize.height = maxHeight;
+//    _outputSize.width  = maxWitdh;
 
-    _outputSize.height = 1096;
-    _outputSize.width = 640;
-    
+    _previewView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    _previewView.contentMode = UIViewContentModeScaleAspectFill;
+
+    NSLog(@"%@", NSStringFromCGSize(_captureSize));
+    NSLog(@"%@", NSStringFromCGSize(_outputSize));
+    NSLog(@"%@", NSStringFromCGSize(_previewView.frame.size));
+
 }
 
 
@@ -440,22 +433,13 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)start
 {
-    NSLog(@"start");
     self.stillImageView.image = nil;
-    dispatch_release(_videoDataOutputQueue);
     [_session startRunning];
-    [self.previewView startAnimating];
-    self.semaphore = YES;
-    self.dry_run = 5;
 }
 
 - (void)stop
 {
-    NSLog(@"stop");
-    dispatch_retain(_videoDataOutputQueue);
     [_session stopRunning];
-    [self.previewView stopAnimating];
-    _semaphore = NO;
 }
 
 @end
