@@ -71,8 +71,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     self.stillImageView = [[UIImageView alloc] initWithFrame:_previewView.frame];
     _stillImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    _stillImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.view insertSubview:_stillImageView belowSubview:_controllTabBar];
+    _stillImageView.contentMode = UIViewContentModeScaleAspectFit;
+    
 
     [self start];
 }
@@ -95,8 +96,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     NSError *error = nil;
     self.session = [AVCaptureSession new];
     [_session beginConfiguration];
-    [_session setSessionPreset:AVCaptureSessionPreset640x480];
-    self.captureSize = CGSizeMake(480, 640);
+    [_session setSessionPreset:AVCaptureSessionPreset1280x720];
+    self.captureSize = CGSizeMake(720, 1280);
     
     
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
@@ -227,22 +228,10 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
 	// Find out the current orientation and tell the still image output.
 	AVCaptureConnection *stillImageConnection = [_stillImageOutput connectionWithMediaType:AVMediaTypeVideo];
-    for (AVCaptureConnection *connection in _stillImageOutput.connections) {
-        for (AVCaptureInputPort *port in connection.inputPorts) {
-            if ([port.mediaType isEqual:AVMediaTypeVideo]) {
-                stillImageConnection = connection;
-                break;
-            }
-        }
-    }
 
-    static int called = 0;
-    if (called == 0) {
-        UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
-        AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
-        [stillImageConnection setVideoOrientation:avcaptureOrientation];
-        called++;
-    }
+    UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
+    AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];
+    [stillImageConnection setVideoOrientation:avcaptureOrientation];
 
 	[_stillImageOutput captureStillImageAsynchronouslyFromConnection:stillImageConnection completionHandler:^(CMSampleBufferRef imageDataSampleBuffer, NSError *error) {
 
@@ -336,23 +325,18 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)setupOutputSize
 {
-    CGFloat maxWitdh = _previewView.frame.size.width * 2;
-    CGFloat maxHeight = _previewView.frame.size.height * 2;
 
-    CGFloat scale = ( maxHeight > maxWitdh) ? maxHeight / _captureSize.height : maxWitdh / _captureSize.width;
+    CGFloat xSCale = _previewView.width * 2.0 / _captureSize.width;
+    CGFloat ySCale = _previewView.height * 2.0 / _captureSize.height;
+    CGFloat scale = MIN(xSCale, ySCale);
     
     _outputSize.height = scale * _captureSize.height;
     _outputSize.width = scale * _captureSize.width;
-//    _outputSize.height = maxHeight;
-//    _outputSize.width  = maxWitdh;
-
-    _previewView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-    _previewView.contentMode = UIViewContentModeScaleAspectFill;
 
     NSLog(@"%@", NSStringFromCGSize(_captureSize));
     NSLog(@"%@", NSStringFromCGSize(_outputSize));
     NSLog(@"%@", NSStringFromCGSize(_previewView.frame.size));
-
+    NSLog(@"%f", scale);
 }
 
 

@@ -7,6 +7,7 @@
 //
 
 #import "DistControllToolBar.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface DistControllToolBar ()
 - (IBAction)filterButtonTapped:(id)sender;
@@ -19,8 +20,10 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *mainToolBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *savePhotoToolBar;
 @property (strong, nonatomic) IBOutlet UIView *view;
-
 @end
+
+static const CGFloat scrollBarHeight = 60;
+static const CGFloat scrollBarButtonHeight = 45;
 
 @implementation DistControllToolBar
 
@@ -35,6 +38,9 @@
         _mainToolBar.top = 0.0;
         _savePhotoToolBar.height = 60.0;
         _savePhotoToolBar.top = 0.0;
+        NSMutableArray *items = [NSMutableArray arrayWithArray:_mainToolBar.items];
+        [items addObject:[DistControllToolBar customBarButtonItemWithImage:[UIImage imageNamed:@"lenna.jpg"] target:self selector:@selector(hogefuga)]];
+        [_mainToolBar setItems:items animated:NO];
     }
     return self;
 }
@@ -45,6 +51,30 @@
     [self addSubview:self.view];
 }
 
+- (void)setupToolBar
+{
+}
+
++ (UIBarButtonItem *)customBarButtonItemWithImage:(UIImage *)image target:(id)target selector:(SEL)sender
+{
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:image forState:UIControlStateNormal];
+    CGFloat height = scrollBarButtonHeight;
+    CGFloat width = (image.size.width / image.size.height) * height;
+    button.frame = CGRectMake(0, 0, width, height);
+
+    if (sender && target) [button addTarget:target action:sender forControlEvents:UIControlEventTouchUpInside];
+
+
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
+- (void)hogefuga
+{
+    NSLog(@"hogefuga");
+}
+
+#pragma mark - public methods
 - (void)moveControllToolbar:(DistToolBarType)targetToolBar
 {
     CGPoint offset;

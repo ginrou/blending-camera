@@ -43,7 +43,7 @@
 						<array class="NSMutableArray" key="NSSubviews">
 							<object class="IBUIToolbar" id="123123988">
 								<reference key="NSNextResponder" ref="677343701"/>
-								<int key="NSvFlags">266</int>
+								<int key="NSvFlags">258</int>
 								<string key="NSFrame">{{0, 16}, {320, 44}}</string>
 								<reference key="NSSuperview" ref="677343701"/>
 								<reference key="NSWindow"/>
@@ -93,7 +93,7 @@
 							</object>
 							<object class="IBUIToolbar" id="355680572">
 								<reference key="NSNextResponder" ref="677343701"/>
-								<int key="NSvFlags">266</int>
+								<int key="NSvFlags">258</int>
 								<string key="NSFrame">{{320, 16}, {320, 44}}</string>
 								<reference key="NSSuperview" ref="677343701"/>
 								<reference key="NSWindow"/>

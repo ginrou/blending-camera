@@ -16,7 +16,7 @@ typedef enum {
 }DistToolBarType;
 
 @interface DistControllToolBar : UIView
-@property (nonatomic, strong) id<DistControllToolBarDelegate> delegate;
+@property (nonatomic, weak) id<DistControllToolBarDelegate> delegate;
 - (void)moveControllToolbar:(DistToolBarType)targetToolBar;
 @end
 
