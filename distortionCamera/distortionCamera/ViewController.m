@@ -16,6 +16,7 @@
 #import "DistImageProcessor.h"
 #import "DistOptions.h"
 #import "DistControllToolBar.h"
+#import "DistFilterSelectionViewController.h"
 
 @interface FaceViewController ()
 {
@@ -32,6 +33,7 @@
 
 @property (nonatomic, strong) DistOptionTableViewController *optionViewController;
 @property (nonatomic, strong) DistImageProcessor *processor;
+@property (nonatomic, strong) DistFilterSelectionViewController *filterSelectionViewController;
 @property (nonatomic, strong) DistControllToolBar *controllTabBar;
 
 @property (nonatomic, strong) UIView *flashView;
@@ -101,7 +103,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
-    AVCaptureDevice *frontCamera;
+    AVCaptureDevice *frontCamera = nil;
     for (AVCaptureDevice *device in devices) {
         if (device.position == AVCaptureDevicePositionFront) {
             frontCamera = device;
@@ -110,6 +112,10 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     }
     
     error = nil;
+    if (!frontCamera) {
+        self.session = nil;
+        return;
+    }
     AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:frontCamera error:&error];
     [_session addInput:input];
     
@@ -344,7 +350,31 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 #pragma mark - controll tool bar delegate
 - (void)changeFilter:(DistControllToolBar *)toolBar
 {
-    
+    if (_filterSelectionViewController) {
+        [self hideFilterSelectionViewController];
+    } else {
+        [self showFilterSelectionViewController];
+    }
+}
+
+- (void)hideFilterSelectionViewController
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        _filterSelectionViewController.view.alpha = 0.f;
+    } completion:^(BOOL finished) {
+        [_filterSelectionViewController.view removeFromSuperview];
+        self.filterSelectionViewController = nil;
+    }];
+}
+
+- (void)showFilterSelectionViewController
+{
+    self.filterSelectionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DistFilterSelectionViewController"];
+    _filterSelectionViewController.view.alpha = 0.f;
+    [self.view addSubview:_filterSelectionViewController.view];
+    [UIView animateWithDuration:0.25 animations:^{
+        _filterSelectionViewController.view.alpha = 1.f;
+    } completion:nil];
 }
 
 - (void)changeSetting:(DistControllToolBar *)toolBar

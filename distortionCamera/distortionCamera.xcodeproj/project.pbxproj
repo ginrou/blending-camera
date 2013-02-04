@@ -13,6 +13,7 @@
 		54D1CC52168DFB6700C4209E /* DistControllToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1CC51168DFB6700C4209E /* DistControllToolBar.m */; };
 		54D1CC55168DFB8C00C4209E /* DistControllToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC54168DFB8C00C4209E /* DistControllToolBar.xib */; };
 		9A23F91716BEB68000BB8982 /* DistFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23F91616BEB68000BB8982 /* DistFilter.m */; };
+		9A23F91A16C0160000BB8982 /* DistFilterSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */; };
 		9ACD36E0167F674200D6A376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36DF167F674200D6A376 /* UIKit.framework */; };
 		9ACD36E2167F674200D6A376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E1167F674200D6A376 /* Foundation.framework */; };
 		9ACD36E4167F674200D6A376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E3167F674200D6A376 /* CoreGraphics.framework */; };
@@ -49,6 +50,8 @@
 		54D1CC54168DFB8C00C4209E /* DistControllToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DistControllToolBar.xib; path = ../DistControllToolBar.xib; sourceTree = "<group>"; };
 		9A23F91516BEB68000BB8982 /* DistFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistFilter.h; sourceTree = "<group>"; };
 		9A23F91616BEB68000BB8982 /* DistFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistFilter.m; sourceTree = "<group>"; };
+		9A23F91816C0160000BB8982 /* DistFilterSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DistFilterSelectionViewController.h; path = ../DistFilterSelectionViewController.h; sourceTree = "<group>"; };
+		9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DistFilterSelectionViewController.m; path = ../DistFilterSelectionViewController.m; sourceTree = "<group>"; };
 		9ACD36DB167F674200D6A376 /* distortionCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = distortionCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACD36DF167F674200D6A376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9ACD36E1167F674200D6A376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -180,6 +183,8 @@
 				9ACD37201689E28200D6A376 /* DistOptions.m */,
 				54A6D8CF16892661008F15A6 /* DistOptionTableViewController.h */,
 				54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */,
+				9A23F91816C0160000BB8982 /* DistFilterSelectionViewController.h */,
+				9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */,
 				9ACD37231689F28E00D6A376 /* DistPreviewView.h */,
 				9ACD37241689F28F00D6A376 /* DistPreviewView.m */,
 				9ACD37261689FA7000D6A376 /* DistImageProcessor.h */,
@@ -286,6 +291,7 @@
 				9ACD37281689FA7000D6A376 /* DistImageProcessor.m in Sources */,
 				54D1CC52168DFB6700C4209E /* DistControllToolBar.m in Sources */,
 				9A23F91716BEB68000BB8982 /* DistFilter.m in Sources */,
+				9A23F91A16C0160000BB8982 /* DistFilterSelectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
