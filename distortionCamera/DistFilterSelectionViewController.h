@@ -10,5 +10,5 @@
 
 @interface DistFilterSelectionViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
-@property (nonatomic, weak) IBOutlet UIScrollView *scrollView;
+
 @end

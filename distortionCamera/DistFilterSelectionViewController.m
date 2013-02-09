@@ -9,7 +9,6 @@
 #import "DistFilterSelectionViewController.h"
 
 @interface DistFilterSelectionViewController ()
-
 @end
 
 @implementation DistFilterSelectionViewController
@@ -26,7 +25,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blackColor];
+    self.view.backgroundColor = [UIColor clearColor];
+    UIImage *backgroundImage = [UIImage imageNamed:@"00357_4.png"];
+    _backgroundImageView.image = [backgroundImage resizableImageWithCapInsets:UIEdgeInsetsMake(100, 0, 250, 584)];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +36,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload {
+    [self setBackgroundImageView:nil];
+    [super viewDidUnload];
+}
 @end

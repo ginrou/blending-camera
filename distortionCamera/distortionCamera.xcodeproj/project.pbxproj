@@ -14,6 +14,7 @@
 		54D1CC55168DFB8C00C4209E /* DistControllToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC54168DFB8C00C4209E /* DistControllToolBar.xib */; };
 		9A23F91716BEB68000BB8982 /* DistFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23F91616BEB68000BB8982 /* DistFilter.m */; };
 		9A23F91A16C0160000BB8982 /* DistFilterSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */; };
+		9A23F91C16C15B5200BB8982 /* 00357_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A23F91B16C15B5200BB8982 /* 00357_4.png */; };
 		9ACD36E0167F674200D6A376 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36DF167F674200D6A376 /* UIKit.framework */; };
 		9ACD36E2167F674200D6A376 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E1167F674200D6A376 /* Foundation.framework */; };
 		9ACD36E4167F674200D6A376 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ACD36E3167F674200D6A376 /* CoreGraphics.framework */; };
@@ -52,6 +53,7 @@
 		9A23F91616BEB68000BB8982 /* DistFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistFilter.m; sourceTree = "<group>"; };
 		9A23F91816C0160000BB8982 /* DistFilterSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DistFilterSelectionViewController.h; path = ../DistFilterSelectionViewController.h; sourceTree = "<group>"; };
 		9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DistFilterSelectionViewController.m; path = ../DistFilterSelectionViewController.m; sourceTree = "<group>"; };
+		9A23F91B16C15B5200BB8982 /* 00357_4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 00357_4.png; sourceTree = "<group>"; };
 		9ACD36DB167F674200D6A376 /* distortionCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = distortionCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ACD36DF167F674200D6A376 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9ACD36E1167F674200D6A376 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +113,7 @@
 		543A652A16B5EEC500B81A70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9A23F91B16C15B5200BB8982 /* 00357_4.png */,
 				543A652B16B5F42400B81A70 /* lenna.jpg */,
 			);
 			name = Images;
@@ -271,6 +274,7 @@
 				9ACD36F9167F674200D6A376 /* MainStoryboard.storyboard in Resources */,
 				54D1CC55168DFB8C00C4209E /* DistControllToolBar.xib in Resources */,
 				543A652C16B5F42400B81A70 /* lenna.jpg in Resources */,
+				9A23F91C16C15B5200BB8982 /* 00357_4.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
