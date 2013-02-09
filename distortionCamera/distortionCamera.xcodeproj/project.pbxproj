@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		543A652C16B5F42400B81A70 /* lenna.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 543A652B16B5F42400B81A70 /* lenna.jpg */; };
+		54A53D1B16C5EB6900EB68D2 /* take_picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D1A16C5EB6900EB68D2 /* take_picture.png */; };
+		54A53D1E16C5F47600EB68D2 /* take_picture_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D1D16C5F47600EB68D2 /* take_picture_press.png */; };
+		54A53D2016C5FB2500EB68D2 /* switch_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D1F16C5FB2500EB68D2 /* switch_camera.png */; };
+		54A53D2216C6028D00EB68D2 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D2116C6028D00EB68D2 /* setting.png */; };
 		54A6D8CE1689217A008F15A6 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8CD1689217A008F15A6 /* UIView+frame.m */; };
 		54A6D8D116892661008F15A6 /* DistOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */; };
 		54D1CC52168DFB6700C4209E /* DistControllToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1CC51168DFB6700C4209E /* DistControllToolBar.m */; };
@@ -42,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		543A652B16B5F42400B81A70 /* lenna.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lenna.jpg; sourceTree = "<group>"; };
+		54A53D1A16C5EB6900EB68D2 /* take_picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = take_picture.png; path = images/take_picture.png; sourceTree = "<group>"; };
+		54A53D1D16C5F47600EB68D2 /* take_picture_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = take_picture_press.png; path = images/take_picture_press.png; sourceTree = "<group>"; };
+		54A53D1F16C5FB2500EB68D2 /* switch_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = switch_camera.png; path = images/switch_camera.png; sourceTree = "<group>"; };
+		54A53D2116C6028D00EB68D2 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting.png; path = images/setting.png; sourceTree = "<group>"; };
 		54A6D8CC1689217A008F15A6 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		54A6D8CD1689217A008F15A6 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		54A6D8CF16892661008F15A6 /* DistOptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistOptionTableViewController.h; sourceTree = "<group>"; };
@@ -115,6 +123,10 @@
 			children = (
 				9A23F91B16C15B5200BB8982 /* 00357_4.png */,
 				543A652B16B5F42400B81A70 /* lenna.jpg */,
+				54A53D1A16C5EB6900EB68D2 /* take_picture.png */,
+				54A53D1D16C5F47600EB68D2 /* take_picture_press.png */,
+				54A53D1F16C5FB2500EB68D2 /* switch_camera.png */,
+				54A53D2116C6028D00EB68D2 /* setting.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -275,6 +287,10 @@
 				54D1CC55168DFB8C00C4209E /* DistControllToolBar.xib in Resources */,
 				543A652C16B5F42400B81A70 /* lenna.jpg in Resources */,
 				9A23F91C16C15B5200BB8982 /* 00357_4.png in Resources */,
+				54A53D1B16C5EB6900EB68D2 /* take_picture.png in Resources */,
+				54A53D1E16C5F47600EB68D2 /* take_picture_press.png in Resources */,
+				54A53D2016C5FB2500EB68D2 /* switch_camera.png in Resources */,
+				54A53D2216C6028D00EB68D2 /* setting.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

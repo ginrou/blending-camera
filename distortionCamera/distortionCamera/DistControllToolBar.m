@@ -24,6 +24,7 @@
 
 static const CGFloat scrollBarHeight = 60;
 static const CGFloat scrollBarButtonHeight = 45;
+#define FlexibleSpaceBarButtonItem [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil]
 
 @implementation DistControllToolBar
 
@@ -38,8 +39,33 @@ static const CGFloat scrollBarButtonHeight = 45;
         _mainToolBar.top = 0.0;
         _savePhotoToolBar.height = 60.0;
         _savePhotoToolBar.top = 0.0;
-        NSMutableArray *items = [NSMutableArray arrayWithArray:_mainToolBar.items];
-        [items addObject:[DistControllToolBar customBarButtonItemWithImage:[UIImage imageNamed:@"lenna.jpg"] target:self selector:@selector(hogefuga)]];
+        NSMutableArray *items = [NSMutableArray array];
+
+        UIBarButtonItem *filterButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"lenna.jpg"]  highlitedImage:[UIImage imageNamed:@"lenna.jpg"]  target:self selector:@selector(filterButtonTapped:)];
+
+        UIBarButtonItem *takePictureButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"take_picture"]
+                                                                         highlitedImage:[UIImage imageNamed:@"take_picture_press"]
+                                                                                 target:self
+                                                                               selector:@selector(takePictureButtonTapped:)];
+
+        UIBarButtonItem *switchCameraButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"switch_camera"]
+                                                                          highlitedImage:nil
+                                                                                  target:self
+                                                                                selector:@selector(switchCameraButtonTapped:)];
+
+
+        UIBarButtonItem *settingButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"setting"]
+                                                                     highlitedImage:nil
+                                                                             target:self
+                                                                           selector:@selector(settingButtonTapped:)];
+
+        [items addObject:filterButton];
+        [items addObject:FlexibleSpaceBarButtonItem];
+        [items addObject:takePictureButton];
+        [items addObject:FlexibleSpaceBarButtonItem];
+        [items addObject:switchCameraButton];
+        [items addObject:settingButton];
+
         [_mainToolBar setItems:items animated:NO];
     }
     return self;
@@ -55,10 +81,14 @@ static const CGFloat scrollBarButtonHeight = 45;
 {
 }
 
-+ (UIBarButtonItem *)customBarButtonItemWithImage:(UIImage *)image target:(id)target selector:(SEL)sender
+
++ (UIBarButtonItem *)customBarButtonItemWithImage:(UIImage *)image highlitedImage:(UIImage *)highlitedImage target:(id)target selector:(SEL)sender
 {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:image forState:UIControlStateNormal];
+
+    if (highlitedImage) [button setImage:highlitedImage forState:UIControlStateHighlighted];
+
     CGFloat height = scrollBarButtonHeight;
     CGFloat width = (image.size.width / image.size.height) * height;
     button.frame = CGRectMake(0, 0, width, height);
