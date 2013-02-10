@@ -10,6 +10,9 @@
 
 @interface DistFilter : NSObject
 
++ (NSArray *)buildInFilters;
+
+
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSArray *filters;
 

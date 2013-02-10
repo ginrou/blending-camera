@@ -16,7 +16,6 @@
 #import "DistImageProcessor.h"
 #import "DistOptions.h"
 #import "DistControllToolBar.h"
-#import "DistFilterSelectionViewController.h"
 
 @interface FaceViewController ()
 {
@@ -141,6 +140,17 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     
     [_session addOutput:_videoDataOutput];
     [_session commitConfiguration];
+}
+
+- (void)start
+{
+    self.stillImageView.image = nil;
+    [_session startRunning];
+}
+
+- (void)stop
+{
+    [_session stopRunning];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -371,6 +381,9 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
     self.filterSelectionViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DistFilterSelectionViewController"];
     _filterSelectionViewController.view.alpha = 0.f;
+    _filterSelectionViewController.view.height = self.view.height - _toolbar.height - 20; // top mergin
+    _filterSelectionViewController.view.bottom = _toolbar.top ;
+    _filterSelectionViewController.delegate = self;
     [self.view addSubview:_filterSelectionViewController.view];
     [UIView animateWithDuration:0.25 animations:^{
         _filterSelectionViewController.view.alpha = 1.f;
@@ -403,7 +416,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     _optionViewController.view.alpha = 0.f;
     [self.view addSubview:_optionViewController.view];
     _optionViewController.view.bottom = _toolbar.top - 5.0;
-    
+
     [UIView animateWithDuration:0.25 animations:^{
         _optionViewController.view.alpha = 1.0;
     } completion:nil];
@@ -445,15 +458,11 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     [self start];
 }
 
-- (void)start
+#pragma mark FilterSelection Delegate
+- (void)filterSelected:(NSDictionary *)filterDict
 {
-    self.stillImageView.image = nil;
-    [_session startRunning];
-}
-
-- (void)stop
-{
-    [_session stopRunning];
+    [self.processor changeFilter:filterDict];
+    [self hideFilterSelectionViewController];
 }
 
 @end

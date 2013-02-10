@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DistFilterSelectionViewController : UIViewController
-@property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
+@protocol DistDistFilterSelectionDelegate;
 
+@interface DistFilterSelectionViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@property (nonatomic, weak) id<DistDistFilterSelectionDelegate> delegate;
+@property (nonatomic, weak) IBOutlet UIImageView *backgroundImageView;
+@end
+
+@protocol DistDistFilterSelectionDelegate <NSObject>
+- (void) filterSelected:(NSDictionary *)filterDict;
 @end

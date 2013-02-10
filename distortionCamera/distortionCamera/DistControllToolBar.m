@@ -41,7 +41,10 @@ static const CGFloat scrollBarButtonHeight = 45;
         _savePhotoToolBar.top = 0.0;
         NSMutableArray *items = [NSMutableArray array];
 
-        UIBarButtonItem *filterButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"lenna.jpg"]  highlitedImage:[UIImage imageNamed:@"lenna.jpg"]  target:self selector:@selector(filterButtonTapped:)];
+        UIBarButtonItem *filterButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"lenna.jpg"]
+                                                                    highlitedImage:nil
+                                                                            target:self
+                                                                          selector:@selector(filterButtonTapped:)];
 
         UIBarButtonItem *takePictureButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"take_picture"]
                                                                          highlitedImage:[UIImage imageNamed:@"take_picture_press"]

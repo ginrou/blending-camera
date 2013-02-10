@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>big nose</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>rightEye</string>
+					<key>radius</key>
+					<real>0.1</real>
+					<key>inputScale</key>
+					<real>0.7</real>
+				</dict>
+			</dict>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>leftEye</string>
+					<key>radius</key>
+					<real>0.1</real>
+					<key>inputScale</key>
+					<real>0.7</real>
+				</dict>
+			</dict>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>nose</string>
+					<key>radius</key>
+					<real>0.3</real>
+					<key>inputScale</key>
+					<real>0.8</real>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

@@ -11,7 +11,6 @@
 
 @interface DistImageProcessor : NSObject
 @property (nonatomic, strong) CIDetector *faceDetector;
-@property (nonatomic, strong) CIFilter *filter;
 @property (nonatomic, strong) CIFilter *colorAdjustmentFilter;
 @property (nonatomic, strong) CIContext *ciContext;
 @property (nonatomic, readonly) CIImage *ouputImage;
@@ -19,5 +18,6 @@
 
 - (id)initWithEAGLContext:(EAGLContext *)eaglContext;
 - (CIImage *)applyEffect:(CIImage *)srcImage options:(NSDictionary *)options;
+- (void)changeFilter:(NSDictionary *)filterDict;
 
 @end

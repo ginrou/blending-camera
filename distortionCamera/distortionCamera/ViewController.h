@@ -11,12 +11,16 @@
 #import <GLKit/GLKit.h>
 #import "DistPreviewView.h"
 #import "DistControllToolBar.h"
+#import "DistFilterSelectionViewController.h"
+
+
 @class CIDetector;
 
 @interface FaceViewController : UIViewController
 <AVCaptureVideoDataOutputSampleBufferDelegate,
-DistControllToolBarDelegate>
-
+DistControllToolBarDelegate,
+DistDistFilterSelectionDelegate
+>
 {
     //dispatch_queue_t _videoDataOutputQueue;
 }
@@ -24,9 +28,6 @@ DistControllToolBarDelegate>
 @property (weak, atomic) IBOutlet DistPreviewView *previewView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
-//- (IBAction)expandBottomBar:(id)sender;
-//- (IBAction)takePicture:(id)sender;
-//- (IBAction)switchCamera:(id)sender;
 
 @end
 

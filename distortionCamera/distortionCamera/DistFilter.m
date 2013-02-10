@@ -18,7 +18,17 @@
 #define kMouseKey    @"mouse"
 #define kNoseKey     @"nose"
 
+static NSArray *sharedBuildInFilters;
 @implementation DistFilter
++ (NSArray *)buildInFilters
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"filter" ofType:@"plist"];
+        sharedBuildInFilters = [NSArray arrayWithContentsOfFile:filePath];
+    });
+    return sharedBuildInFilters;
+}
 
 /* input format
  dict = {

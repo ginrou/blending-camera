@@ -12,6 +12,10 @@
 		54A53D1E16C5F47600EB68D2 /* take_picture_press.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D1D16C5F47600EB68D2 /* take_picture_press.png */; };
 		54A53D2016C5FB2500EB68D2 /* switch_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D1F16C5FB2500EB68D2 /* switch_camera.png */; };
 		54A53D2216C6028D00EB68D2 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D2116C6028D00EB68D2 /* setting.png */; };
+		54A53D2416C6A5CA00EB68D2 /* filter_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D2316C6A5CA00EB68D2 /* filter_popup.png */; };
+		54A53D2716C7606A00EB68D2 /* DistFilterCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A53D2616C7606A00EB68D2 /* DistFilterCell.m */; };
+		54A53D2B16C766DF00EB68D2 /* face.png in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D2A16C766DE00EB68D2 /* face.png */; };
+		54A53D2D16C78CBA00EB68D2 /* filter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D2C16C78CBA00EB68D2 /* filter.plist */; };
 		54A6D8CE1689217A008F15A6 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8CD1689217A008F15A6 /* UIView+frame.m */; };
 		54A6D8D116892661008F15A6 /* DistOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */; };
 		54D1CC52168DFB6700C4209E /* DistControllToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1CC51168DFB6700C4209E /* DistControllToolBar.m */; };
@@ -50,6 +54,11 @@
 		54A53D1D16C5F47600EB68D2 /* take_picture_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = take_picture_press.png; path = images/take_picture_press.png; sourceTree = "<group>"; };
 		54A53D1F16C5FB2500EB68D2 /* switch_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = switch_camera.png; path = images/switch_camera.png; sourceTree = "<group>"; };
 		54A53D2116C6028D00EB68D2 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = setting.png; path = images/setting.png; sourceTree = "<group>"; };
+		54A53D2316C6A5CA00EB68D2 /* filter_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = filter_popup.png; path = images/filter_popup.png; sourceTree = "<group>"; };
+		54A53D2516C7606A00EB68D2 /* DistFilterCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistFilterCell.h; sourceTree = "<group>"; };
+		54A53D2616C7606A00EB68D2 /* DistFilterCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistFilterCell.m; sourceTree = "<group>"; };
+		54A53D2A16C766DE00EB68D2 /* face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = face.png; path = images/face.png; sourceTree = "<group>"; };
+		54A53D2C16C78CBA00EB68D2 /* filter.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = filter.plist; sourceTree = "<group>"; };
 		54A6D8CC1689217A008F15A6 /* UIView+frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+frame.h"; sourceTree = "<group>"; };
 		54A6D8CD1689217A008F15A6 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		54A6D8CF16892661008F15A6 /* DistOptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistOptionTableViewController.h; sourceTree = "<group>"; };
@@ -121,8 +130,10 @@
 		543A652A16B5EEC500B81A70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				54A53D2A16C766DE00EB68D2 /* face.png */,
 				9A23F91B16C15B5200BB8982 /* 00357_4.png */,
 				543A652B16B5F42400B81A70 /* lenna.jpg */,
+				54A53D2316C6A5CA00EB68D2 /* filter_popup.png */,
 				54A53D1A16C5EB6900EB68D2 /* take_picture.png */,
 				54A53D1D16C5F47600EB68D2 /* take_picture_press.png */,
 				54A53D1F16C5FB2500EB68D2 /* switch_camera.png */,
@@ -145,6 +156,11 @@
 			children = (
 				9A23F91516BEB68000BB8982 /* DistFilter.h */,
 				9A23F91616BEB68000BB8982 /* DistFilter.m */,
+				9A23F91816C0160000BB8982 /* DistFilterSelectionViewController.h */,
+				9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */,
+				54A53D2516C7606A00EB68D2 /* DistFilterCell.h */,
+				54A53D2616C7606A00EB68D2 /* DistFilterCell.m */,
+				54A53D2C16C78CBA00EB68D2 /* filter.plist */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -198,8 +214,6 @@
 				9ACD37201689E28200D6A376 /* DistOptions.m */,
 				54A6D8CF16892661008F15A6 /* DistOptionTableViewController.h */,
 				54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */,
-				9A23F91816C0160000BB8982 /* DistFilterSelectionViewController.h */,
-				9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */,
 				9ACD37231689F28E00D6A376 /* DistPreviewView.h */,
 				9ACD37241689F28F00D6A376 /* DistPreviewView.m */,
 				9ACD37261689FA7000D6A376 /* DistImageProcessor.h */,
@@ -291,6 +305,9 @@
 				54A53D1E16C5F47600EB68D2 /* take_picture_press.png in Resources */,
 				54A53D2016C5FB2500EB68D2 /* switch_camera.png in Resources */,
 				54A53D2216C6028D00EB68D2 /* setting.png in Resources */,
+				54A53D2416C6A5CA00EB68D2 /* filter_popup.png in Resources */,
+				54A53D2B16C766DF00EB68D2 /* face.png in Resources */,
+				54A53D2D16C78CBA00EB68D2 /* filter.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +329,7 @@
 				54D1CC52168DFB6700C4209E /* DistControllToolBar.m in Sources */,
 				9A23F91716BEB68000BB8982 /* DistFilter.m in Sources */,
 				9A23F91A16C0160000BB8982 /* DistFilterSelectionViewController.m in Sources */,
+				54A53D2716C7606A00EB68D2 /* DistFilterCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,41 +32,13 @@
 
 - (void)initializeFilter
 {
-    self.filter = [CIFilter filterWithName:@"CIBumpDistortion"];
-    [_filter setDefaults];
-
-    NSDictionary *filter = @{
-    @"name" : @"bump_test",
-    @"filters" : @[
-    @{
-    @"filterType" : @"CIBumpDistortion",
-    @"inputs" : @{
-    @"center" :  @"rightEye",
-    @"radius" : @0.1,
-    @"inputScale" : @0.7
-    }
-    },
-    @{
-    @"filterType" : @"CIBumpDistortion",
-    @"inputs" : @{
-    @"center" :  @"leftEye",
-    @"radius" : @0.1,
-    @"inputScale" : @0.7
-    }
-    },
-    @{
-    @"filterType" : @"CIBumpDistortion",
-    @"inputs" : @{
-    @"center" :  @"nose",
-    @"radius" : @0.3,
-    @"inputScale" : @0.8
-    }
-    }
-
-    ]
-    };
+    NSDictionary *filter = [DistFilter buildInFilters][0];
     self.distFilter = [[DistFilter alloc] initWithDict:filter];
+}
 
+- (void)changeFilter:(NSDictionary *)filterDict
+{
+    self.distFilter = [[DistFilter alloc] initWithDict:filterDict];
 }
 
 - (void)setupFaceDetection
@@ -103,18 +75,7 @@
     CIImage *bufferImage = [srcImage copy];
 
     for (CIFaceFeature *f in faceFeatures) {
-//        [_filter setValue:bufferImage forKey:@"inputImage"];
-//
-//        // bump distortion のみの特別処理
-//        // できれば [filter applyFaceFeature:f] とかですませたい
-//        CGFloat r = (f.bounds.size.height + f.bounds.size.width) * 0.2;
-//        [_filter setValue:[NSNumber numberWithFloat:r] forKey:@"inputRadius"];
-//
-//        CGPoint center = CGPointMake(f.bounds.origin.x + f.bounds.size.width / 2.0,
-//                                     f.bounds.origin.y + f.bounds.size.height / 2.0);
-//        [_filter setValue:[CIVector vectorWithCGPoint:center] forKey:@"inputCenter"];
-//        [_filter setValue:@(-0.8) forKey:@"inputScale"];
-//        bufferImage = _filter.outputImage;
+
         bufferImage = [_distFilter applyEffect:bufferImage feature:f];
 
     }
@@ -123,8 +84,6 @@
         [_colorAdjustmentFilter setValue:bufferImage forKey:@"inputImage"];
         bufferImage = _colorAdjustmentFilter.outputImage;
     }
-
-    [_filter setValue:nil forKey:@"inputImage"];
     return [bufferImage copy];
 
 }
