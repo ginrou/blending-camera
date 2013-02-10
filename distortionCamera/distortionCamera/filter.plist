@@ -48,5 +48,52 @@
 			</dict>
 		</array>
 	</dict>
+	<dict>
+		<key>name</key>
+		<string>gone eye</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIHoleDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>rightEye</string>
+					<key>radius</key>
+					<real>0.07000000000000001</real>
+				</dict>
+			</dict>
+			<dict>
+				<key>filterType</key>
+				<string>CIHoleDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>leftEye</string>
+					<key>radius</key>
+					<real>0.07000000000000001</real>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>something</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CICircleSplashDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>nose</string>
+					<key>radius</key>
+					<real>0.25</real>
+				</dict>
+			</dict>
+		</array>
+	</dict>
 </array>
 </plist>

@@ -93,6 +93,7 @@ static NSArray *sharedBuildInFilters;
 
     NSDictionary *inputs = dict[@"inputs"];
 
+
     CIVector *center = [self filterCenter:inputs[@"center"] feature:feature];
     [filter setValue:center forKey:@"inputCenter"];
 
@@ -100,11 +101,14 @@ static NSArray *sharedBuildInFilters;
 
     if (inputs[@"inputScale"]) [filter setValue:inputs[@"inputScale"] forKey:@"inputScale"];
 
+    if (inputs[@"inputAngle"]) [filter setValue:inputs[@"inputAngle"] forKey:@"inputAngle"];
+
+
     if (inputs[@"radius"]) {
         CGFloat radian = [inputs[@"radius"] floatValue] * scale;
         [filter setValue:[NSNumber numberWithFloat:radian] forKey:@"inputRadius"];
     }
-
+    
     return filter.outputImage;
 }
 
