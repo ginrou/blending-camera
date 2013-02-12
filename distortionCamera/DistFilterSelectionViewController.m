@@ -68,39 +68,9 @@ static NSString *cellIdentifier = @"filterCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSDictionary *dict = @{
-    @"name" : @"bump_test",
-    @"filters" : @[
-    @{
-    @"filterType" : @"CIBumpDistortion",
-    @"inputs" : @{
-    @"center" :  @"rightEye",
-    @"radius" : @0.1,
-    @"inputScale" : @0.7
-    }
-    },
-    @{
-    @"filterType" : @"CIBumpDistortion",
-    @"inputs" : @{
-    @"center" :  @"leftEye",
-    @"radius" : @0.1,
-    @"inputScale" : @0.7
-    }
-    },
-    @{
-    @"filterType" : @"CIBumpDistortion",
-    @"inputs" : @{
-    @"center" :  @"nose",
-    @"radius" : @0.3,
-    @"inputScale" : @-0.8
-    }
-    }
-
-    ]
-    };
-
+    NSDictionary *filter = [DistFilter buildInFilters][indexPath.row];
     if ([_delegate respondsToSelector:@selector(filterSelected:)]) {
-        [_delegate filterSelected:dict];
+        [_delegate filterSelected:filter];
     }
 
 }

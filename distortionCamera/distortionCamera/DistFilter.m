@@ -92,18 +92,19 @@ static NSArray *sharedBuildInFilters;
     [filter setValue:image forKey:@"inputImage"];
 
     NSDictionary *inputs = dict[@"inputs"];
-
-
-    CIVector *center = [self filterCenter:inputs[@"center"] feature:feature];
-    [filter setValue:center forKey:@"inputCenter"];
-
     CGFloat scale = LENGTH(feature.bounds.size.width, feature.bounds.size.height);
 
+    CIVector *center = [self filterCenter:inputs[@"center"] feature:feature];
+    if (inputs[@"offset"]) {
+        CGPoint offset = CGPointMake([inputs[@"offset"][@"x"] floatValue], [inputs[@"offset"][@"y"] floatValue]);
+        CIVector *offsetCenter = [self offsetFilterCenter:center offset:offset scale:scale];
+        [filter setValue:offsetCenter forKey:@"inputCenter"];
+    } else {
+        [filter setValue:center forKey:@"inputCenter"];
+    }
+
     if (inputs[@"inputScale"]) [filter setValue:inputs[@"inputScale"] forKey:@"inputScale"];
-
     if (inputs[@"inputAngle"]) [filter setValue:inputs[@"inputAngle"] forKey:@"inputAngle"];
-
-
     if (inputs[@"radius"]) {
         CGFloat radian = [inputs[@"radius"] floatValue] * scale;
         [filter setValue:[NSNumber numberWithFloat:radian] forKey:@"inputRadius"];
@@ -137,5 +138,12 @@ static NSArray *sharedBuildInFilters;
     }
 }
 
+- (CIVector *)offsetFilterCenter:(CIVector *)center offset:(CGPoint)offset scale:(CGFloat)scale
+{
+    CGPoint offsetCenter;
+    offsetCenter.x = center.X + offset.x * scale;
+    offsetCenter.y = center.Y + offset.y * scale;
+    return [CIVector vectorWithCGPoint:offsetCenter];
+}
 
 @end
