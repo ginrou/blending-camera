@@ -98,18 +98,23 @@ static NSArray *sharedBuildInFilters;
     if (inputs[@"offset"]) {
         CGPoint offset = CGPointMake([inputs[@"offset"][@"x"] floatValue], [inputs[@"offset"][@"y"] floatValue]);
         CIVector *offsetCenter = [self offsetFilterCenter:center offset:offset scale:scale];
-        [filter setValue:offsetCenter forKey:@"inputCenter"];
-    } else {
-        [filter setValue:center forKey:@"inputCenter"];
+        center = offsetCenter;
     }
+
+    [filter setValue:center forKey:@"inputCenter"];
+
 
     if (inputs[@"inputScale"]) [filter setValue:inputs[@"inputScale"] forKey:@"inputScale"];
     if (inputs[@"inputAngle"]) [filter setValue:inputs[@"inputAngle"] forKey:@"inputAngle"];
     if (inputs[@"radius"]) {
         CGFloat radian = [inputs[@"radius"] floatValue] * scale;
         [filter setValue:[NSNumber numberWithFloat:radian] forKey:@"inputRadius"];
+        //NSLog(@"%@", NSStringFromCGRect(image.extent));
+        [self cropRadius:filter center:center radius:radian imageSize:image.extent.size];
     }
-    
+
+
+
     return filter.outputImage;
 }
 
@@ -145,5 +150,29 @@ static NSArray *sharedBuildInFilters;
     offsetCenter.y = center.Y + offset.y * scale;
     return [CIVector vectorWithCGPoint:offsetCenter];
 }
+
+- (void)cropRadius:(CIFilter *)filter center:(CIVector *)center radius:(CGFloat)radius imageSize:(CGSize)size
+{
+    CGFloat left = center.X - radius;
+    CGFloat top = center.Y - radius;
+    CGFloat bottom = center.Y + radius - size.height;
+    CGFloat right = center.X + radius - size.width;
+
+    if (left >= 0 && top >= 0 && bottom >= 0 && right >= 0) return;
+
+    CGFloat max = MAX(left, MAX(top, MAX(bottom, right)));
+    CGFloat newRadius = 0.0;
+
+    if (max == left) newRadius = center.X;
+    else if (max == top) newRadius = center.Y;
+    else if (max == right) newRadius = size.width - center.X;
+    else newRadius = size.height - center.Y;  // max == bottom
+
+    [filter setValue:[NSNumber numberWithFloat:newRadius] forKey:@"inputRadius"];
+
+    NSLog(@"%@ : %f -> %f", NSStringFromCGSize(size),radius, newRadius);
+
+}
+
 
 @end
