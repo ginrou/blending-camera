@@ -10,9 +10,8 @@
 #import "DistOptions.h"
 #import <ImageIO/ImageIO.h>
 #import <AssetsLibrary/AssetsLibrary.h>
-#import "DistFilter.h"
+
 @interface DistImageProcessor ()
-@property (nonatomic, strong) DistFilter *distFilter;
 @end
 
 @implementation DistImageProcessor

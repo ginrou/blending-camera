@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DistFilter.h"
 
 @protocol DistControllToolBarDelegate;
 
@@ -18,6 +19,7 @@ typedef enum {
 @interface DistControllToolBar : UIView
 @property (nonatomic, weak) id<DistControllToolBarDelegate> delegate;
 - (void)moveControllToolbar:(DistToolBarType)targetToolBar;
+- (void)updateFilterImage:(DistFilter *)filter;
 @end
 
 @protocol DistControllToolBarDelegate <NSObject>

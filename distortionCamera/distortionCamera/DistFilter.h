@@ -18,5 +18,6 @@
 
 - (id)initWithDict:(NSDictionary *)dict;
 - (CIImage *)applyEffect:(CIImage *)image feature:(CIFaceFeature *)feature;
++ (UIImage *)sampleImage:(CIImage *)faceImage filter:(DistFilter *)filter  feature:(CIFaceFeature *)feature;
 
 @end

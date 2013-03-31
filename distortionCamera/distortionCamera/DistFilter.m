@@ -13,10 +13,11 @@
 @property (nonatomic, strong) NSArray *requiredParts;
 @end
 
-#define kLeftEyeKey  @"leftEye"
-#define kRightEyeKey @"rightEye"
-#define kMouseKey    @"mouse"
-#define kNoseKey     @"nose"
+#define kLeftEyeKey     @"leftEye"
+#define kRightEyeKey    @"rightEye"
+#define kMouseKey       @"mouse"
+#define kNoseKey        @"nose"
+#define kFaceCenterKey  @"center"
 
 static NSArray *sharedBuildInFilters;
 @implementation DistFilter
@@ -109,7 +110,6 @@ static NSArray *sharedBuildInFilters;
     if (inputs[@"radius"]) {
         CGFloat radian = [inputs[@"radius"] floatValue] * scale;
         [filter setValue:[NSNumber numberWithFloat:radian] forKey:@"inputRadius"];
-        //NSLog(@"%@", NSStringFromCGRect(image.extent));
         [self cropRadius:filter center:center radius:radian imageSize:image.extent.size];
     }
 
@@ -120,7 +120,12 @@ static NSArray *sharedBuildInFilters;
 
 - (CIVector *)filterCenter:(NSString *)centerType feature:(CIFaceFeature *)feature
 {
-    if ([centerType isEqualToString:kLeftEyeKey])       return [CIVector vectorWithCGPoint:feature.leftEyePosition];
+    if ([centerType isEqualToString:kFaceCenterKey]) {
+        CGRect bounds = feature.bounds;
+        CGPoint center = CGPointMake(bounds.origin.x + bounds.size.width / 2.0, bounds.origin.y + bounds.size.height / 2.0);
+        return [CIVector vectorWithCGPoint:center];
+    }
+    else if ([centerType isEqualToString:kLeftEyeKey])       return [CIVector vectorWithCGPoint:feature.leftEyePosition];
     else if ([centerType isEqualToString:kRightEyeKey]) return [CIVector vectorWithCGPoint:feature.rightEyePosition];
     else if ([centerType isEqualToString:kMouseKey])    return [CIVector vectorWithCGPoint:feature.mouthPosition];
     else if ([centerType isEqualToString:kNoseKey]) {
@@ -155,8 +160,8 @@ static NSArray *sharedBuildInFilters;
 {
     CGFloat left = center.X - radius;
     CGFloat top = center.Y - radius;
-    CGFloat bottom = center.Y + radius - size.height;
-    CGFloat right = center.X + radius - size.width;
+    CGFloat bottom = size.height - center.Y - radius;
+    CGFloat right = size.width - center.X - radius;
 
     if (left >= 0 && top >= 0 && bottom >= 0 && right >= 0) return;
 
@@ -170,9 +175,37 @@ static NSArray *sharedBuildInFilters;
 
     [filter setValue:[NSNumber numberWithFloat:newRadius] forKey:@"inputRadius"];
 
-    NSLog(@"%@ : %f -> %f", NSStringFromCGSize(size),radius, newRadius);
+//    NSLog(@"%f, %f, %f, %f", left, top, bottom, right);
+//    NSLog(@"(%f, %f), %@ : %f -> %f", center.X, center.Y, NSStringFromCGSize(size),radius, newRadius);
 
 }
 
+
++ (UIImage *)sampleImage:(CIImage *)faceImage filter:(DistFilter *)filter  feature:(CIFaceFeature *)feature
+{
+    CIImage *preTransformedImage = [DistFilter preTransformedImage:faceImage];
+    CIImage *filteredImage = [filter applyEffect:preTransformedImage feature:feature];
+    CIImage *outputImage = [DistFilter setbackPreTransform:filteredImage];
+    return [UIImage imageWithCIImage:outputImage];
+}
+
+
++ (CIImage *)preTransformedImage:(CIImage *)ciImage
+{
+    ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeRotation(-M_PI / 2.0)];
+    CGPoint origin = ciImage.extent.origin;
+    ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-origin.x, -origin.y)];
+
+    return ciImage;
+}
+
++ (CIImage *)setbackPreTransform:(CIImage *)ciImage
+{
+    ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeRotation(M_PI / 2.0)];
+    CGPoint origin = ciImage.extent.origin;
+    ciImage = [ciImage imageByApplyingTransform:CGAffineTransformMakeTranslation(-origin.x, -origin.y)];
+
+    return ciImage;
+}
 
 @end

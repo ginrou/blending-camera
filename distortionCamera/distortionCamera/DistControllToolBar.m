@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *mainToolBar;
 @property (weak, nonatomic) IBOutlet UIToolbar *savePhotoToolBar;
 @property (strong, nonatomic) IBOutlet UIView *view;
+@property (strong, nonatomic) UIBarButtonItem *filterButton;
 @end
 
 static const CGFloat scrollBarHeight = 60;
@@ -41,10 +42,10 @@ static const CGFloat scrollBarButtonHeight = 45;
         _savePhotoToolBar.top = 0.0;
         NSMutableArray *items = [NSMutableArray array];
 
-        UIBarButtonItem *filterButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"lenna.jpg"]
-                                                                    highlitedImage:nil
-                                                                            target:self
-                                                                          selector:@selector(filterButtonTapped:)];
+        self.filterButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"face.png"]
+                                                        highlitedImage:nil
+                                                                target:self
+                                                              selector:@selector(filterButtonTapped:)];
 
         UIBarButtonItem *takePictureButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"take_picture"]
                                                                          highlitedImage:[UIImage imageNamed:@"take_picture_press"]
@@ -57,17 +58,11 @@ static const CGFloat scrollBarButtonHeight = 45;
                                                                                 selector:@selector(switchCameraButtonTapped:)];
 
 
-        UIBarButtonItem *settingButton = [[self class] customBarButtonItemWithImage:[UIImage imageNamed:@"setting"]
-                                                                     highlitedImage:nil
-                                                                             target:self
-                                                                           selector:@selector(settingButtonTapped:)];
-
-        [items addObject:filterButton];
+        [items addObject:_filterButton];
         [items addObject:FlexibleSpaceBarButtonItem];
         [items addObject:takePictureButton];
         [items addObject:FlexibleSpaceBarButtonItem];
         [items addObject:switchCameraButton];
-        [items addObject:settingButton];
 
         [_mainToolBar setItems:items animated:NO];
     }
@@ -102,9 +97,15 @@ static const CGFloat scrollBarButtonHeight = 45;
     return [[UIBarButtonItem alloc] initWithCustomView:button];
 }
 
-- (void)hogefuga
+- (void)updateFilterImage:(DistFilter *)filter
 {
-    NSLog(@"hogefuga");
+    UIImage *faceImage = [UIImage imageNamed:@"face.png"];
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy : CIDetectorAccuracyLow}];
+    CIImage *ciImage = [CIImage imageWithCGImage:faceImage.CGImage];
+    CIFaceFeature *feature = [detector featuresInImage:ciImage][0];
+    UIImage *image = [DistFilter sampleImage:ciImage filter:filter feature:feature];
+    UIButton *button = (UIButton *)_filterButton.customView;
+    [button setImage:image forState:UIControlStateNormal];
 }
 
 #pragma mark - public methods

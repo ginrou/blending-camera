@@ -13,32 +13,6 @@
 				<key>inputs</key>
 				<dict>
 					<key>center</key>
-					<string>rightEye</string>
-					<key>radius</key>
-					<real>0.1</real>
-					<key>inputScale</key>
-					<real>0.7</real>
-				</dict>
-			</dict>
-			<dict>
-				<key>filterType</key>
-				<string>CIBumpDistortion</string>
-				<key>inputs</key>
-				<dict>
-					<key>center</key>
-					<string>leftEye</string>
-					<key>radius</key>
-					<real>0.1</real>
-					<key>inputScale</key>
-					<real>0.7</real>
-				</dict>
-			</dict>
-			<dict>
-				<key>filterType</key>
-				<string>CIBumpDistortion</string>
-				<key>inputs</key>
-				<dict>
-					<key>center</key>
 					<string>nose</string>
 					<key>radius</key>
 					<real>0.3</real>
@@ -50,47 +24,294 @@
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>gone eye</string>
+		<string>三日月</string>
 		<key>filters</key>
 		<array>
 			<dict>
 				<key>filterType</key>
-				<string>CIHoleDistortion</string>
+				<string>CITwirlDistortion</string>
 				<key>inputs</key>
 				<dict>
 					<key>center</key>
-					<string>rightEye</string>
+					<string>center</string>
+					<key>inputAngle</key>
+					<real>1.57</real>
 					<key>radius</key>
-					<real>0.07000000000000001</real>
-				</dict>
-			</dict>
-			<dict>
-				<key>filterType</key>
-				<string>CIHoleDistortion</string>
-				<key>inputs</key>
-				<dict>
-					<key>center</key>
-					<string>leftEye</string>
-					<key>radius</key>
-					<real>0.07000000000000001</real>
+					<real>0.3</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<real>-0.25</real>
+						<key>y</key>
+						<real>0.1</real>
+					</dict>
 				</dict>
 			</dict>
 		</array>
 	</dict>
 	<dict>
 		<key>name</key>
-		<string>something</string>
+		<string>tate naga</string>
 		<key>filters</key>
 		<array>
 			<dict>
 				<key>filterType</key>
-				<string>CICircleSplashDistortion</string>
+				<string>CIBumpDistortionLinear</string>
 				<key>inputs</key>
 				<dict>
 					<key>center</key>
 					<string>nose</string>
 					<key>radius</key>
 					<real>0.25</real>
+					<key>inputAngle</key>
+					<real>1.57</real>
+					<key>inputScale</key>
+					<real>0.2</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<integer>0</integer>
+						<key>y</key>
+						<real>0.7</real>
+					</dict>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>split</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortionLinear</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>nose</string>
+					<key>radius</key>
+					<real>0.2</real>
+					<key>inputAngle</key>
+					<real>3.14</real>
+					<key>inputScale</key>
+					<real>-0.5</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<integer>0</integer>
+						<key>y</key>
+						<integer>0</integer>
+					</dict>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>big eye</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>leftEye</string>
+					<key>radius</key>
+					<real>0.1</real>
+					<key>inputScale</key>
+					<real>0.3</real>
+				</dict>
+			</dict>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>rightEye</string>
+					<key>radius</key>
+					<real>0.1</real>
+					<key>inputScale</key>
+					<real>0.3</real>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>little eye</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>leftEye</string>
+					<key>radius</key>
+					<real>0.2</real>
+					<key>inputScale</key>
+					<real>-0.5</real>
+				</dict>
+			</dict>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>rightEye</string>
+					<key>radius</key>
+					<real>0.2</real>
+					<key>inputScale</key>
+					<real>-0.5</real>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>circle eye</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CITwirlDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>leftEye</string>
+					<key>inputAngle</key>
+					<real>2.355</real>
+					<key>radius</key>
+					<real>0.06</real>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>tatenaga 2</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortionLinear</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>nose</string>
+					<key>radius</key>
+					<real>0.25</real>
+					<key>inputAngle</key>
+					<real>1.57</real>
+					<key>inputScale</key>
+					<real>-0.3</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<integer>0</integer>
+						<key>y</key>
+						<real>0.5</real>
+					</dict>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>squirrel</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>center</string>
+					<key>radius</key>
+					<real>0.25</real>
+					<key>inputScale</key>
+					<real>0.8</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<real>0.2</real>
+						<key>y</key>
+						<real>0.2</real>
+					</dict>
+				</dict>
+			</dict>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>center</string>
+					<key>radius</key>
+					<real>0.25</real>
+					<key>inputScale</key>
+					<real>0.8</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<real>0.2</real>
+						<key>y</key>
+						<real>-0.2</real>
+					</dict>
+				</dict>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>forehead</string>
+		<key>filters</key>
+		<array>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>center</string>
+					<key>radius</key>
+					<real>0.25</real>
+					<key>inputScale</key>
+					<real>0.8</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<real>-0.2</real>
+						<key>y</key>
+						<real>0.2</real>
+					</dict>
+				</dict>
+			</dict>
+			<dict>
+				<key>filterType</key>
+				<string>CIBumpDistortion</string>
+				<key>inputs</key>
+				<dict>
+					<key>center</key>
+					<string>center</string>
+					<key>radius</key>
+					<real>0.25</real>
+					<key>inputScale</key>
+					<real>0.8</real>
+					<key>offset</key>
+					<dict>
+						<key>x</key>
+						<real>-0.2</real>
+						<key>y</key>
+						<real>-0.2</real>
+					</dict>
 				</dict>
 			</dict>
 		</array>

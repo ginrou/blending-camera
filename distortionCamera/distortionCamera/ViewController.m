@@ -16,6 +16,7 @@
 #import "DistImageProcessor.h"
 #import "DistOptions.h"
 #import "DistControllToolBar.h"
+#import "DistUtil.h"
 
 @interface FaceViewController ()
 {
@@ -28,6 +29,7 @@
 
 @property (nonatomic, assign) CGSize captureSize;
 @property (nonatomic, assign) CGSize outputSize;
+@property (nonatomic, assign) CGRect outputFrame;
 @property (nonatomic, assign) BOOL isFrontFacing;
 
 @property (nonatomic, strong) DistOptionTableViewController *optionViewController;
@@ -38,6 +40,7 @@
 @property (nonatomic, strong) UIView *flashView;
 
 @property (nonatomic, strong) UIImageView *stillImageView;
+@property (nonatomic, strong) UIImage *picture;
 
 @property (nonatomic, assign) dispatch_queue_t videoDataOutputQueue;
 
@@ -67,13 +70,14 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     self.controllTabBar = [[DistControllToolBar alloc] initWithFrame:_toolbar.frame];
     self.controllTabBar.delegate = self;
     [self.view addSubview:_controllTabBar];
+    [_controllTabBar updateFilterImage:_processor.distFilter];
 
     self.isFrontFacing = YES;
     
     self.stillImageView = [[UIImageView alloc] initWithFrame:_previewView.frame];
     _stillImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     [self.view insertSubview:_stillImageView belowSubview:_controllTabBar];
-    _stillImageView.contentMode = UIViewContentModeScaleAspectFit;
+    _stillImageView.contentMode = UIViewContentModeScaleAspectFill;
     
 
     [self start];
@@ -97,9 +101,8 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
     NSError *error = nil;
     self.session = [AVCaptureSession new];
     [_session beginConfiguration];
-    [_session setSessionPreset:AVCaptureSessionPreset1280x720];
+    [_session setSessionPreset:AVCaptureSessionPresetHigh];
     self.captureSize = CGSizeMake(720, 1280);
-    
     
     NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
     AVCaptureDevice *frontCamera = nil;
@@ -273,7 +276,12 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
             CIImage *outputImage = [_processor applyEffect:ciImage options:imageOptions];
             outputImage = [self applyRotationForCurrentOrientation:outputImage];
-            UIImage *uiImage = [UIImage imageWithCIImage:outputImage];
+
+            CIContext *context = [CIContext contextWithOptions:nil];
+            CGImageRef cgImage = [context createCGImage:outputImage fromRect:CGRectMake(0, 0, _captureSize.width, _captureSize.height)];
+
+            UIImage *uiImage = [UIImage imageWithCGImage:cgImage scale:1.0 orientation:UIImageOrientationUp];
+            NSLog(@"%@", NSStringFromCGSize(uiImage.size));
 
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self takePictureDone:uiImage];
@@ -333,8 +341,28 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 - (void)takePictureDone:(UIImage *)uiImage;
 {
     [self stop];
+    self.picture = uiImage;
     self.stillImageView.image = uiImage;
     [_controllTabBar moveControllToolbar:savePhotoToolBar];
+}
+
+- (void)makeSampleImage
+{
+    UIImage *sample = [UIImage imageNamed:@"face.png"];
+    sample = [[UIImage alloc] initWithCGImage:sample.CGImage scale:1.20 orientation:UIImageOrientationLeft];
+    CIDetector *detector = [CIDetector detectorOfType:CIDetectorTypeFace context:nil options:@{CIDetectorAccuracy: CIDetectorAccuracyHigh}];
+    CIImage *ciimage = [[CIImage alloc] initWithCGImage:sample.CGImage];
+    CIFaceFeature *feature = [detector featuresInImage:ciimage][0];
+
+    for (CIFaceFeature *f in [detector featuresInImage:ciimage]) {
+        NSLog(@"%@", NSStringFromCGPoint(f.leftEyePosition));
+        NSLog(@"%@", NSStringFromCGPoint(f.rightEyePosition));
+        NSLog(@"%@", NSStringFromCGPoint(f.bounds.origin));
+    }
+
+    UIImage *dst = [DistFilter sampleImage:ciimage filter:_processor.distFilter feature:feature];
+    [self takePictureDone:dst];
+
 }
 
 #pragma mark - view utilities
@@ -344,7 +372,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
     CGFloat xSCale = _previewView.width * 2.0 / _captureSize.width;
     CGFloat ySCale = _previewView.height * 2.0 / _captureSize.height;
-    CGFloat scale = MIN(xSCale, ySCale);
+    CGFloat scale = MAX(xSCale, ySCale);
     
     _outputSize.height = scale * _captureSize.height;
     _outputSize.width = scale * _captureSize.width;
@@ -454,6 +482,16 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 
 - (void)savePhoto:(DistControllToolBar *)toolBar
 {
+    NSData *jpgData = UIImageJPEGRepresentation(self.picture, 0.8);
+    UIImage *imageToSave = [UIImage imageWithData:jpgData];
+    UIImageWriteToSavedPhotosAlbum(imageToSave, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+}
+
+- (void)image: (UIImage *) image
+didFinishSavingWithError: (NSError *) error
+  contextInfo: (void *) contextInfo
+{
+    NSLog(@"error : %@", error);
     [_controllTabBar moveControllToolbar:mainToolBar];
     [self start];
 }
@@ -463,6 +501,7 @@ static const NSString *AVCaptureStillImageIsCapturingStillImageContext = @"AVCap
 {
     [self.processor changeFilter:filterDict];
     [self hideFilterSelectionViewController];
+    [_controllTabBar updateFilterImage:_processor.distFilter];
 }
 
 @end

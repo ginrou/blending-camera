@@ -18,8 +18,13 @@
 		54A53D2D16C78CBA00EB68D2 /* filter.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54A53D2C16C78CBA00EB68D2 /* filter.plist */; };
 		54A6D8CE1689217A008F15A6 /* UIView+frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8CD1689217A008F15A6 /* UIView+frame.m */; };
 		54A6D8D116892661008F15A6 /* DistOptionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */; };
+		54CEFEC616EE4262008DD62E /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CEFEC516EE4262008DD62E /* icon.png */; };
+		54CEFEC816EE432A008DD62E /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 54CEFEC716EE432A008DD62E /* icon@2x.png */; };
 		54D1CC52168DFB6700C4209E /* DistControllToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D1CC51168DFB6700C4209E /* DistControllToolBar.m */; };
 		54D1CC55168DFB8C00C4209E /* DistControllToolBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54D1CC54168DFB8C00C4209E /* DistControllToolBar.xib */; };
+		54F90C3A16FF331E00135541 /* DistUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F90C3916FF331E00135541 /* DistUtil.m */; };
+		54F90C3E1706F4F100135541 /* sample.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F90C3D1706F4F100135541 /* sample.png */; };
+		54F90C401706F53300135541 /* sample2.png in Resources */ = {isa = PBXBuildFile; fileRef = 54F90C3F1706F53300135541 /* sample2.png */; };
 		9A23F91716BEB68000BB8982 /* DistFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23F91616BEB68000BB8982 /* DistFilter.m */; };
 		9A23F91A16C0160000BB8982 /* DistFilterSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A23F91916C0160000BB8982 /* DistFilterSelectionViewController.m */; };
 		9A23F91C16C15B5200BB8982 /* 00357_4.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A23F91B16C15B5200BB8982 /* 00357_4.png */; };
@@ -63,9 +68,15 @@
 		54A6D8CD1689217A008F15A6 /* UIView+frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+frame.m"; sourceTree = "<group>"; };
 		54A6D8CF16892661008F15A6 /* DistOptionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistOptionTableViewController.h; sourceTree = "<group>"; };
 		54A6D8D016892661008F15A6 /* DistOptionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistOptionTableViewController.m; sourceTree = "<group>"; };
+		54CEFEC516EE4262008DD62E /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		54CEFEC716EE432A008DD62E /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		54D1CC50168DFB6700C4209E /* DistControllToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistControllToolBar.h; sourceTree = "<group>"; };
 		54D1CC51168DFB6700C4209E /* DistControllToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistControllToolBar.m; sourceTree = "<group>"; };
 		54D1CC54168DFB8C00C4209E /* DistControllToolBar.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DistControllToolBar.xib; path = ../DistControllToolBar.xib; sourceTree = "<group>"; };
+		54F90C3816FF331E00135541 /* DistUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DistUtil.h; path = ../DistUtil.h; sourceTree = "<group>"; };
+		54F90C3916FF331E00135541 /* DistUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DistUtil.m; path = ../DistUtil.m; sourceTree = "<group>"; };
+		54F90C3D1706F4F100135541 /* sample.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample.png; sourceTree = "<group>"; };
+		54F90C3F1706F53300135541 /* sample2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sample2.png; sourceTree = "<group>"; };
 		9A23F91516BEB68000BB8982 /* DistFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistFilter.h; sourceTree = "<group>"; };
 		9A23F91616BEB68000BB8982 /* DistFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistFilter.m; sourceTree = "<group>"; };
 		9A23F91816C0160000BB8982 /* DistFilterSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DistFilterSelectionViewController.h; path = ../DistFilterSelectionViewController.h; sourceTree = "<group>"; };
@@ -130,6 +141,8 @@
 		543A652A16B5EEC500B81A70 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				54F90C3D1706F4F100135541 /* sample.png */,
+				54F90C3F1706F53300135541 /* sample2.png */,
 				54A53D2A16C766DE00EB68D2 /* face.png */,
 				9A23F91B16C15B5200BB8982 /* 00357_4.png */,
 				543A652B16B5F42400B81A70 /* lenna.jpg */,
@@ -168,6 +181,8 @@
 		9ACD36D0167F674200D6A376 = {
 			isa = PBXGroup;
 			children = (
+				54CEFEC716EE432A008DD62E /* icon@2x.png */,
+				54CEFEC516EE4262008DD62E /* icon.png */,
 				9ACD36E5167F674200D6A376 /* distortionCamera */,
 				9ACD36DE167F674200D6A376 /* Frameworks */,
 				9ACD36DC167F674200D6A376 /* Products */,
@@ -205,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				9A23F91416BEB66900BB8982 /* Filters */,
+				54F90C3816FF331E00135541 /* DistUtil.h */,
+				54F90C3916FF331E00135541 /* DistUtil.m */,
 				9ACD36EE167F674200D6A376 /* AppDelegate.h */,
 				9ACD36EF167F674200D6A376 /* AppDelegate.m */,
 				9ACD36F7167F674200D6A376 /* MainStoryboard.storyboard */,
@@ -308,6 +325,10 @@
 				54A53D2416C6A5CA00EB68D2 /* filter_popup.png in Resources */,
 				54A53D2B16C766DF00EB68D2 /* face.png in Resources */,
 				54A53D2D16C78CBA00EB68D2 /* filter.plist in Resources */,
+				54CEFEC616EE4262008DD62E /* icon.png in Resources */,
+				54CEFEC816EE432A008DD62E /* icon@2x.png in Resources */,
+				54F90C3E1706F4F100135541 /* sample.png in Resources */,
+				54F90C401706F53300135541 /* sample2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +351,7 @@
 				9A23F91716BEB68000BB8982 /* DistFilter.m in Sources */,
 				9A23F91A16C0160000BB8982 /* DistFilterSelectionViewController.m in Sources */,
 				54A53D2716C7606A00EB68D2 /* DistFilterCell.m in Sources */,
+				54F90C3A16FF331E00135541 /* DistUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,11 +430,15 @@
 		9ACD3700167F674200D6A376 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: YUUICHI TAKEDA";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: YUUICHI TAKEDA";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "distortionCamera/distortionCamera-Prefix.pch";
 				INFOPLIST_FILE = "distortionCamera/distortionCamera-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3371A130-831B-476E-9231-D79A1979314A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3371A130-831B-476E-9231-D79A1979314A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -420,11 +446,15 @@
 		9ACD3701167F674200D6A376 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: YUUICHI TAKEDA";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: YUUICHI TAKEDA";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "distortionCamera/distortionCamera-Prefix.pch";
 				INFOPLIST_FILE = "distortionCamera/distortionCamera-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "3371A130-831B-476E-9231-D79A1979314A";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "3371A130-831B-476E-9231-D79A1979314A";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

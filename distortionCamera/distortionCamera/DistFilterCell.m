@@ -29,7 +29,8 @@
 {
 
     self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.width, self.width)];
-    _imageView.image = [UIImage imageWithCIImage:[_filter applyEffect:faceImage feature:feature]];
+
+    _imageView.image = [DistFilter sampleImage:faceImage filter:_filter feature:feature];
     [self addSubview:_imageView];
 
     self.filterNameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, _imageView.bottom+2, self.width, 13)];
@@ -42,6 +43,5 @@
     [self addSubview:_filterNameLabel];
 
 }
-
 
 @end
